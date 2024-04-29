@@ -7,7 +7,7 @@
   <meta name="robots" content="noindex" />
 
   <!-- meta情報 -->
-  <title>CodeUps</title>
+  <title>CodeUps diving</title>
   <meta name="description" content="" />
   <meta name="keywords" content="" />
 
@@ -35,9 +35,140 @@
   <script defer src="./assets/js/script.js"></script>
 </head>
 <body>
-  <header>
-
+  <!-- header -->
+  <header class="header">
+    <div class="header__inner">
+      <div class="header__logo">
+        <a href="#"><img src="./assets/images/common/logo.png" alt="CodeUps"></a>
+      </div>
+      <nav class="header__nav">
+        <a href="#" class="header__link">
+          <p class="header__text-en">Campaign</p>
+          <p class="header__text-ja">キャンペーン</p>
+        </a>
+        <a href="#" class="header__link">
+          <p class="header__text-en">About us</p>
+          <p class="header__text-ja">私たちについて</p>
+        </a>
+        <a href="#" class="header__link">
+          <p class="header__text-en">Information</p>
+          <p class="header__text-ja">ダイビング情報</p>
+        </a>
+        <a href="#" class="header__link">
+          <p class="header__text-en">Blog</p>
+          <p class="header__text-ja">ブログ</p>
+        </a>
+        <a href="#" class="header__link">
+          <p class="header__text-en">Voice</p>
+          <p class="header__text-ja">お客様の声</p>
+        </a>
+        <a href="#" class="header__link">
+          <p class="header__text-en">Price</p>
+          <p class="header__text-ja">料金一覧</p>
+        </a>
+        <a href="#" class="header__link">
+          <p class="header__text-en">FAQ</p>
+          <p class="header__text-ja">よくある質問</p>
+        </a>
+        <a href="#" class="header__link">
+          <p class="header__text-en">Contact</p>
+          <p class="header__text-ja">お問い合せ</p>
+        </a>
+      </nav>
+      <button id="js-header__btn" class="header__btn">
+        <span class="header__bar"></span>
+        <span class="header__bar"></span>
+        <span class="header__bar"></span>
+      </button>
+    </div>
   </header>
+
+  <!-- ドロワーメニュー -->
+  <div id="js-drawer-menu" class="drawer-menu">
+    <div class="drawer-menu__wrap">
+      <div class="drawer-menu__left">
+        <div class="drawer-menu__link drawer-link">
+          <a href="#" class="drawer-link__main">
+            <div class="drawer-link__icon"><img src="./assets/images/common/starfish.png" alt="ヒトデのアイコン"></div>
+            <p class="drawer-link__text">キャンペーン</p>
+          </a>
+          <div class="drawer-link__details">
+            <a href="#" class="drawer-link__detail">ライセンス取得</a>
+            <a href="#" class="drawer-link__detail">貸切体験ダイビング</a>
+            <a href="#" class="drawer-link__detail">ナイトダイビング</a>
+          </div>
+        </div>
+        <div class="drawer-menu__link drawer-link">
+          <a href="#" class="drawer-link__main">
+            <div class="drawer-link__icon"><img src="./assets/images/common/starfish.png" alt="ヒトデのアイコン"></div>
+            <p class="drawer-link__text">私たちについて</p>
+          </a>
+        </div>
+        <div class="drawer-menu__link drawer-link">
+          <a href="#" class="drawer-link__main">
+            <div class="drawer-link__icon"><img src="./assets/images/common/starfish.png" alt="ヒトデのアイコン"></div>
+            <p class="drawer-link__text">ダイビング情報</p>
+          </a>
+          <div class="drawer-link__details">
+            <a href="#" class="drawer-link__detail">ライセンス講習</a>
+            <a href="#" class="drawer-link__detail">体験ダイビング</a>
+            <a href="#" class="drawer-link__detail">ファンダイビング</a>
+          </div>
+        </div>
+        <div class="drawer-menu__link drawer-link">
+          <a href="#" class="drawer-link__main">
+            <div class="drawer-link__icon"><img src="./assets/images/common/starfish.png" alt="ヒトデのアイコン"></div>
+            <p class="drawer-link__text">ブログ</p>
+          </a>
+        </div>
+      </div>
+      <div class="drawer-menu__right">
+        <div class="drawer-menu__link drawer-link">
+          <a href="#" class="drawer-link__main">
+            <div class="drawer-link__icon"><img src="./assets/images/common/starfish.png" alt="ヒトデのアイコン"></div>
+            <p class="drawer-link__text">お客様の声</p>
+          </a>
+        </div>
+        <div class="drawer-menu__link drawer-link">
+          <a href="#" class="drawer-link__main">
+            <div class="drawer-link__icon"><img src="./assets/images/common/starfish.png" alt="ヒトデのアイコン"></div>
+            <p class="drawer-link__text">料金一覧</p>
+          </a>
+          <div class="drawer-link__details">
+            <a href="#" class="drawer-link__detail">ライセンス講習</a>
+            <a href="#" class="drawer-link__detail">体験ダイビング</a>
+            <a href="#" class="drawer-link__detail">ファンダイビング</a>
+          </div>
+        </div>
+        <div class="drawer-menu__link drawer-link">
+          <a href="#" class="drawer-link__main">
+            <div class="drawer-link__icon"><img src="./assets/images/common/starfish.png" alt="ヒトデのアイコン"></div>
+            <p class="drawer-link__text">よくある質問</p>
+          </a>
+        </div>
+        <div class="drawer-menu__link drawer-link">
+          <a href="#" class="drawer-link__main">
+            <div class="drawer-link__icon"><img src="./assets/images/common/starfish.png" alt="ヒトデのアイコン"></div>
+            <p class="drawer-link__text">プライバシー<br>ポリシー</p>
+          </a>
+        </div>
+        <div class="drawer-menu__link drawer-link">
+          <a href="#" class="drawer-link__main">
+            <div class="drawer-link__icon"><img src="./assets/images/common/starfish.png" alt="ヒトデのアイコン"></div>
+            <p class="drawer-link__text">利用規約</p>
+          </a>
+        </div>
+        <div class="drawer-menu__link drawer-link">
+          <a href="#" class="drawer-link__main">
+            <div class="drawer-link__icon"><img src="./assets/images/common/starfish.png" alt="ヒトデのアイコン"></div>
+            <p class="drawer-link__text">お問わ合せ</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- main -->
   <main>
     <div class="inner">
       <p class="test">変更のテスト</p>

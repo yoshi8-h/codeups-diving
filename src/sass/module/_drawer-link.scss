@@ -1,0 +1,46 @@
+@use "global" as *;
+
+
+.drawer-link {
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  gap: rem(24);
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.drawer-link__main {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: rem(4);
+}
+
+.drawer-link__icon {
+
+}
+
+.drawer-link__icon img {
+  max-width: rem(18);
+  width: 100%;
+}
+
+.drawer-link__text {
+  font-size: rem(16);
+  font-weight: $bold;
+  line-height: 1.125;
+}
+
+.drawer-link__details {
+  margin-left: rem(22);
+  display: flex;
+  flex-direction: column;
+  gap: rem(24);
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.drawer-link__detail {
+
+}

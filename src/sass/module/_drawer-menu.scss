@@ -1,0 +1,43 @@
+@use "global" as *;
+
+
+.drawer-menu {
+  background: $color-accent1;
+  transform: translateY(-200%);
+  transition: transform 0.3s linear;  // 最初は上に隠れている。
+}
+
+.drawer-menu.is-clicked {
+  transform: translateY(0);
+  position: relative;
+  z-index: 100;
+}
+
+.drawer-menu__wrap {
+  height: 100vh;
+  padding-top: rem(104);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: rem(7);
+}
+
+.drawer-menu__left {
+  display: flex;
+  flex-direction: column;
+  gap: rem(40);
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.drawer-menu__right {
+  display: flex;
+  flex-direction: column;
+  gap: rem(40);
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.drawer-menu__link {
+
+}

@@ -1,0 +1,134 @@
+@use "global" as *;
+
+
+.is-fixed {  // ドロワーが開いている際にスクロール出来ないようにするクラス。jsで『html,body』に付与。
+  overflow: hidden;
+}
+
+.header {
+  background: rgba(13, 41, 54, 0.68);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: background 0.3s ease-out;
+  z-index: 200;
+}
+
+.header.is-clicked {
+  background: $color-accent1;
+}
+
+.header__inner {
+  padding-block: rem(21);
+  padding-inline: rem(15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include mq(md) {
+    padding-block: rem(20);
+    padding-inline: rem(40);
+  }
+}
+
+.header__logo {
+}
+
+.header__logo a img {
+  width: rem(102);
+}
+
+.header__nav {
+  display: none;
+
+  @include mq(md) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: rem(40);
+  }
+}
+
+.header__link {
+  @include mq(md) {
+    color: $color-background-base;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: rem(4);
+  }
+}
+
+.header__text-en {
+  @include mq(md) {
+    font-family: $font-family-en-1;
+    font-size: rem(18);
+    font-weight: $normal;
+    line-height: 1;
+  }
+}
+
+.header__text-ja {
+  @include mq(md) {
+    font-size: rem(10);
+    font-weight: $normal;
+    line-height: 1.5;
+  }
+}
+
+.header__btn {
+  width: rem(32);
+  height: rem(24);
+  position: relative;
+  z-index: 100;
+  transition: width 0.3s ease-out;
+
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.header__btn.is-clicked {
+  width: rem(40);
+}
+
+.header__btn.is-clicked .header__bar:nth-of-type(1),
+.header__btn.is-clicked .header__bar:nth-of-type(3) {
+  top: rem(12);
+}
+
+.header__btn.is-clicked .header__bar:nth-of-type(1) {
+  transform: rotate(36.87deg);
+}
+
+.header__btn.is-clicked .header__bar:nth-of-type(2) {
+  opacity: 0;
+}
+
+.header__btn.is-clicked .header__bar:nth-of-type(3) {
+  transform: rotate(-36.87deg);
+}
+
+
+.header__bar {
+  display: inline-block;
+  width: 100%;
+  height: rem(1);
+  border-radius: rem(6);
+  background: $color-background-base;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: transform 0.3s ease-out, top 0.3s ease-out, opacity 0.2s ease-out;
+}
+
+.header__bar:nth-of-type(2) {
+  top: rem(12);
+}
+
+.header__bar:nth-of-type(3) {
+  top: rem(24);
+}
