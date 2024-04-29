@@ -1,1 +1,10 @@
 @use "global" as *;
+
+.test {
+  color: red;
+  font-weight: $bold;
+}
+
+.test-en {
+  font-family: $font-family-en-1;
+}
