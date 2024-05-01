@@ -1,0 +1,26 @@
+@use "global" as *;
+
+
+.section-head {
+  text-align: center;
+}
+
+.section-head__title {
+  color: $color-font-base;
+  font-family: $font-family-en-1;
+  font-size: rem(32);
+  font-weight: $normal;
+  line-height: 1.25;
+}
+
+.section-head__first {  // 先頭の文字だけ青色に
+  color: $color-accent1;
+}
+
+.section-head__subtitle {
+  color: $color-accent1;
+  font-size: rem(12);
+  font-weight: $normal;
+  line-height: 1.5;
+  margin-top: rem(4);
+}
