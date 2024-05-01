@@ -52,17 +52,7 @@
 }
 
 .card__category {
-  border: rem(1) solid $color-accent1;
-  padding: rem(3) rem(11);
-  text-align: center;
-  color: $color-accent1;
-  font-size: rem(12);
-  font-weight: $normal;
-  line-height: 1.8333;
-
-  @include mq(md) {
-    padding: rem(5) rem(15);
-  }
+  width: fit-content;
 }
 
 .card__title {
