@@ -1,0 +1,134 @@
+@use "global" as *;
+
+
+.footer {
+  background: $color-accent1;
+  padding-top: rem(48);
+  padding-bottom: rem(56);
+
+  @include mq(md) {
+    padding-top: rem(80);
+    padding-bottom: rem(80);
+  }
+}
+
+.footer__wrap {
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.footer__top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: rem(18.25);
+
+  @include mq(md) {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: rem(43);
+  }
+}
+
+.footer__logo {
+}
+
+.footer__logo img {
+  max-width: rem(120);
+  width: 100%;
+
+  @include mq(md) {
+    min-width: rem(200);
+    width: 100%;
+  }
+}
+
+.footer__sns-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: rem(20.5);
+
+  @include mq(md) {
+    gap: rem(22);
+    margin-bottom: rem(5);
+  }
+}
+
+.footer__sns {
+
+}
+
+.footer__sns img {
+  max-width: rem(19.5);
+  width: 100%;
+}
+
+.footer__menu {
+  margin-top: rem(42.25);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: rem(7);
+
+  @include mq(md) {
+    margin-top: rem(24);
+    gap: rem(120);
+  }
+}
+
+.footer__left {
+  display: flex;
+  flex-direction: column;
+  gap: rem(40);
+  justify-content: center;
+  align-items: flex-start;
+
+  @include mq(md) {
+    flex-direction: row;
+    gap: rem(120);
+  }
+}
+
+.footer__block-pc {
+  display: flex;
+  flex-direction: column;
+  gap: rem(40);
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.footer__right {
+  display: flex;
+  flex-direction: column;
+  gap: rem(40);
+  justify-content: center;
+  align-items: flex-start;
+
+  @include mq(md) {
+    flex-direction: row;
+    gap: rem(120);
+  }
+}
+
+.footer__link {
+
+}
+
+.footer__copyright {
+  display: block;
+  text-align: center;
+  font-family: $font-family-en-1;
+  color: $color-background-base;
+  margin-top: rem(40);
+  font-size: rem(12);
+  line-height: 1.5;
+
+  @include mq(md) {
+    margin-top: rem(80);
+    font-size: rem(14);
+    line-height: 1.285;
+  }
+}

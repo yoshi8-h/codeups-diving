@@ -1,5 +1,17 @@
-// jQuery(function ($) {  // この中であればWordpressでも「$」が使用可能になる
-// });
+jQuery(function ($) {  // この中であればWordpressでも「$」が使用可能になる
+
+  // ハンバーガーメニュー(ドロワー)
+  // $('#js-header__btn').on('click',function () {
+  //   if($('#js-header__btn').hasClass('is-open')) {
+  //     $('#js-header__btn').fadeOut();
+  //     $(this).removeClass('is-open');
+  //   } else {
+  //     $('#js-header__btn').fadeIn();
+  //     $(this).addClass('is-open');
+  //   }
+  // });
+
+});
 
 
 /* ハンバーガーメニュー(ドロワー) */

@@ -35,3 +35,14 @@ $color-font-base: #0D2936;
 $color-background-base: #FFF;
 $color-accent1: #408F95;
 
+
+// 共通クラスを定義
+// .hidden-sp {  // sp時に非表示
+//   display: none;
+// }
+
+// .hidden-pc {  // pc時に非表示
+//   @include mq(md) {
+//     display: none;
+//   }
+// }
