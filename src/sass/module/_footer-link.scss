@@ -15,6 +15,11 @@
   justify-content: flex-start;
   align-items: center;
   gap: rem(4);
+  transition: opacity 0.15s ease-out;
+}
+
+.footer-link__main:hover {
+  opacity: 0.6;
 }
 
 .footer-link__icon {
@@ -48,5 +53,9 @@
 }
 
 .footer-link__detail {
+  transition: opacity 0.15s ease-out;
+}
 
+.footer-link__detail:hover {
+  opacity: 0.6;
 }

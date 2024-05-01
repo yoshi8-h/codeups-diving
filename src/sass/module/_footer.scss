@@ -33,6 +33,12 @@
 }
 
 .footer__logo {
+  display: block;
+  transition: opacity 0.1s ease-out;
+}
+
+.footer__logo:hover {
+  opacity: 0.6;
 }
 
 .footer__logo img {
@@ -58,7 +64,15 @@
 }
 
 .footer__sns {
+  display: block;
+}
 
+.footer__sns img {
+  transition: transform 0.15s ease-out;
+}
+
+.footer__sns:hover img {
+  transform: scale(1.2);
 }
 
 .footer__sns img {
