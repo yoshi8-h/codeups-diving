@@ -1,0 +1,6 @@
+@use "global" as *;
+
+
+.title {
+  border-bottom: rem(1) solid $color-accent1;  // タイトルの下の長い仕切り線
+}
