@@ -78,7 +78,9 @@
 }
 
 .header__link:hover::after {  // hover時のアクション
-  transform: translateX(-50%) scaleX(1);
+  @include mq(md) {
+    transform: translateX(-50%) scaleX(1);
+  }
 }
 
 .header__text-en {

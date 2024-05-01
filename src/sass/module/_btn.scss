@@ -1,0 +1,88 @@
+@use "global" as *;
+
+
+.btn {
+  display: inline-block;
+  // margin-top: 100px;  // あとで消す
+  // margin-bottom: 100px;  // あとで消す
+}
+
+.btn:hover .btn__main::after {
+  transform: scaleX(1);
+}
+
+.btn:hover .btn__text {
+  color: $color-accent1;
+}
+
+.btn:hover .btn__arrow svg path {
+  stroke: $color-accent1;
+}
+
+.btn__wrap {
+  width: rem(206);
+  padding-block: rem(29);
+  position: relative;
+}
+
+.btn__main {
+  border: 1px solid $color-accent1;
+  background: $color-accent1;
+  padding-block: rem(15);
+  padding-inline: rem(39);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: rem(6);
+  width: rem(202);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.btn__main::after {  // hover時に左から表示される白い背景色
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #FFF;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left top;
+  transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+.btn__text {
+  color: $color-background-base;
+  font-family: $font-family-en-1;
+  font-size: rem(14);
+  font-weight: $normal;
+  line-height: 1.57;
+  transition: color 0.1s ease-out;
+  z-index: 8;
+}
+
+.btn__arrow {
+  line-height: 1;
+  z-index: 8;
+}
+
+.btn__arrow svg {
+  margin-bottom: rem(6);
+}
+
+.btn__arrow svg path {
+  transition: stroke 0.2s ease-out;
+}
+
+.btn__behind {
+  border: 1px solid $color-accent1;
+  width: rem(202);
+  padding-block: rem(26);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
