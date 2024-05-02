@@ -12,7 +12,22 @@
   @include mq(md) {
     padding-top: rem(140);
     padding-bottom: rem(160);
-    padding-inline: rem(30);  // 念の為指定
+    padding-inline: rem(30);
+    position: relative;
+    max-width: rem(1360);  // 魚の位置調整のため。( 1080+(130+10)*2 )  (10は、「.cta__wrap::after」にrightで指定した値)
+    margin-inline: auto;
+  }
+}
+
+.cta__wrap::after {  // 魚の群れ(PC時)
+  @include mq(md) {
+    content: "";
+    background: url(../images/common/fishes.png) no-repeat center center / contain;
+    width: rem(301);
+    height: rem(138);
+    position: absolute;
+    top: rem(100);
+    right: rem(10);  // 画面幅が小さい時の位置を調整
   }
 }
 
@@ -28,22 +43,12 @@
   @include mq(md) {
     box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
     flex-direction: row;
-    gap: 0;
+    justify-content: space-between;
     max-width: rem(1080);
-    width: fit-content;
-    position: relative;
-  }
-}
-
-.cta__box::after {  // 魚の群れ(PC時)
-  @include mq(md) {
-    content: "";
-    background: url(../images/common/fishes.png) no-repeat center center / contain;
-    width: rem(301);
-    height: rem(138);
-    position: absolute;
-    top: rem(-40);
-    right: rem(-130);
+    width: 100%;
+    padding-block: rem(80);
+    padding-left: rem(50);
+    padding-right: rem(120);
   }
 }
 
@@ -53,24 +58,8 @@
   text-align: center;
 
   @include mq(md) {
+    flex-shrink: 0;
     width: auto;
-    padding-block: rem(80);
-    padding-left: rem(50);
-    padding-right: rem(81);
-    position: relative;
-  }
-}
-
-.cta__top::after {  // 緑の縦の仕切り線(PC時のみ表示)
-  @include mq(md) {
-    content: "";
-    width: 1px;
-    height: rem(255);
-    background: $color-accent1;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
   }
 }
 
@@ -80,7 +69,7 @@
 
 .cta__head::after {  // 緑の仕切り線
   content: "";
-  max-width: rem(500);  // 良い感じに自分で調整(広がり過ぎないように)
+  max-width: rem(500);  // 広がり過ぎないように良い感じに自分で調整
   width: 100%;
   height: 1px;
   background: $color-accent1;
@@ -149,6 +138,7 @@
   gap: rem(4);
 
   @include mq(md) {
+    flex-shrink: 0;
     align-items: flex-start;
   }
 }
@@ -188,11 +178,18 @@
   }
 }
 
-.cta__contact {
+.cta__divide {  // 緑の縦の仕切り線(PC時のみ表示)
+  display: none;
+
   @include mq(md) {
-    padding-top: rem(100);
-    padding-bottom: rem(99);
-    padding-left: rem(81);
-    padding-right: rem(112);
+    display: block;
+    content: "";
+    width: 1px;
+    height: rem(255);
+    background: $color-accent1;
   }
+}
+
+.cta__contact {
+
 }
