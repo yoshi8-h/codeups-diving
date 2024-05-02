@@ -24,3 +24,10 @@
   line-height: 1.5;
   margin-top: rem(4);
 }
+
+
+// Contact特有の指定(モディファイヤ)
+.section-head__title--contact {
+  font-size: rem(80);
+  line-height: 1;
+}
