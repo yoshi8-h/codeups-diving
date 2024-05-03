@@ -6,7 +6,7 @@
 }
 
 .fv__wrap {
-  height: 100vh;
+  // height: 100vh;
 }
 
 // swiper
@@ -28,6 +28,7 @@
 .fv__slide-img img {
   width: 100%;
   height: 100vh;
+  max-height: rem(1200);
   object-fit: cover;
 }
 

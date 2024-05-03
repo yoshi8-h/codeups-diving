@@ -59,8 +59,8 @@ const campaignSwiper = new Swiper("#js-campaign-swiper", {
 
   // Navigation arrows（以下、矢印のオプションの指定）
   navigation: {
-    nextEl: '#js-spots-next',
-    prevEl: '#js-spots-prev',
+    nextEl: '#js-campaign-next',
+    prevEl: '#js-campaign-prev',
   },
 });
 

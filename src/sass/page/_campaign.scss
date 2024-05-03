@@ -3,9 +3,16 @@
 
 .campaign {
   margin-top: rem(40);
+
+  @include mq(md) {
+    margin-top: rem(120);
+  }
 }
 
 .campaign__wrap {
+  @include mq(md) {
+    position: relative;
+  }
 }
 
 .campaign__title {
@@ -13,15 +20,21 @@
 
 .campaign__contents {
   margin-top: rem(28);
+
+  @include mq(md) {
+    margin-top: rem(40);
+  }
 }
+
 
 // swiper
 .campaign__swiper {
-  padding-bottom: rem(10);  // カード下の影が見切れないように少しだけpbを追加。
+  padding-bottom: rem(20);  // カード下の影(box-shadow)が見切れないように少しだけ「padding-bottom」を追加。
   padding-left: rem(15);
 
   @include mq(md) {
-    padding-left: rem(180);
+    padding-left: rem(20);  // １番左端のカード左側の影(box-shadow)が見切れないように少しだけ「padding-left」を追加。
+    margin-left: rem(160);  // calc(180 - 20)  「padding-left: rem(20);」分の20pxを考慮。180pxを全てpadding-leftで制御すると挙動がおかしくなる。marginで制御しつつ、１番左端のカード左側の影(box-shadow)が見切れないように少しだけ「padding-left」を付与。
   }
 }
 
@@ -29,9 +42,90 @@
 
 }
 
+
+// swiperの「前へ」「次へ」ボタン
+.campaign__arrows {
+  display: none;
+
+  @include mq(md) {
+    width: rem(240);
+    height: rem(80);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: rem(80);
+    position: absolute;
+    top: 0;
+    right: rem(180);
+  }
+}
+
+.campaign__prev,
+.campaign__next {  // ボタンの緑の円 (共通の指定)
+  width: rem(80);
+  height: rem(80);
+  border: 1px solid $color-accent1;
+  border-radius: 50%;
+  background: $color-background-base;
+  margin-top: 0;  // デフォルトの指定を打ち消し
+
+  display: grid;
+  place-items: center;
+}
+
+.campaign__prev {
+  top: 0;  // デフォルトの指定を打ち消し
+  left: 0;  // デフォルトの指定を打ち消し
+}
+
+.campaign__prev::after,
+.campaign__next::after {
+  display: none;  // swiperのデフォルトの青い矢印(ボタン)を消す
+}
+
+.campaign__prev-img,
+.campaign__next-img {
+  @include mq(md) {
+    display: grid;
+    place-items: center;
+  }
+}
+
+.campaign__prev-img {
+  @include mq(md) {
+    display: grid;
+    place-items: center;
+  }
+}
+
+.campaign__prev-img svg {
+}
+
+.campaign__prev-img svg path {
+}
+
+.campaign__next {
+  top: 0;  // デフォルトの指定を打ち消し
+  right: 0;  // デフォルトの指定を打ち消し
+}
+
+.campaign__next-img {
+}
+
+.campaign__next-img svg {
+}
+
+.campaign__next-img svg path {
+}
+
+
 .campaign__btn-wrap {
-  margin-top: rem(30);  // calc(40 - 10)  「.campaign__swiper」の「padding-bottom」分の10pxを考慮。
+  margin-top: rem(20);  // calc(40 - 20)  「.campaign__swiper」の「padding-bottom」分の20pxを考慮。
   text-align: center;
+
+  @include mq(md) {
+  margin-top: rem(80);
+  }
 }
 
 .campaign__btn {
