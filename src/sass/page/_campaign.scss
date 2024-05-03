@@ -1,0 +1,39 @@
+@use "global" as *;
+
+
+.campaign {
+  margin-top: rem(40);
+}
+
+.campaign__wrap {
+}
+
+.campaign__title {
+}
+
+.campaign__contents {
+  margin-top: rem(28);
+}
+
+// swiper
+.campaign__swiper {
+  padding-bottom: rem(10);  // カード下の影が見切れないように少しだけpbを追加。
+  padding-left: rem(15);
+
+  @include mq(md) {
+    padding-left: rem(180);
+  }
+}
+
+.campaign__cards {
+
+}
+
+.campaign__btn-wrap {
+  margin-top: rem(30);  // calc(40 - 10)  「.campaign__swiper」の「padding-bottom」分の10pxを考慮。
+  text-align: center;
+}
+
+.campaign__btn {
+
+}

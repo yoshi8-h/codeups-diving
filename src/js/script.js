@@ -29,8 +29,8 @@ document.querySelector("#js-header__btn").addEventListener("click", function (e)
 });
 
 /* -------------------------------------------------------------------------------- */
-/* swiper (スワイパー、fv) */
-const swiper = new Swiper("#js-fv-swiper", {
+/* swiper (スワイパー) fv */
+const fvSwiper = new Swiper("#js-fv-swiper", {
   loop: true,
   effect: 'fade',
 
@@ -38,6 +38,29 @@ const swiper = new Swiper("#js-fv-swiper", {
   autoplay: {  // 自動再生ON
     delay: 4000,  // 次のスライドに切り替わるまでの時間
     disableOnInteraction: false,  // ユーザーがドラッグなどの操作をしても自動再生が止まらないように。
+  },
+});
+
+/* -------------------------------------------------------------------------------- */
+/* swiper (スワイパー) campaignセクション */
+const campaignSwiper = new Swiper("#js-campaign-swiper", {
+  loop: true,
+
+  slidesPerView: 'auto', // スライドの幅をCSSで指定
+  spaceBetween: 24,
+
+  grabCursor: true,  // PCでホバー時にマウスカーソルを「掴む」マークに。
+
+  breakpoints: {
+    768: {  // 768px以上の場合 (PC時)
+      spaceBetween: 40,
+    },
+  },
+
+  // Navigation arrows（以下、矢印のオプションの指定）
+  navigation: {
+    nextEl: '#js-spots-next',
+    prevEl: '#js-spots-prev',
   },
 });
 
