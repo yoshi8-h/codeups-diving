@@ -11,7 +11,7 @@
   right: 0;
   z-index: 30;
   transform: translateY(-200%);
-  transition: transform 0.3s linear;  // 最初は上に隠れている。
+  transition: transform 0.25s ease-out;  // 最初は上に隠れている。
 
   @include mq(md) {
     display: none;
