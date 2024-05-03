@@ -9,15 +9,17 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 5;
+  z-index: 6;
   transform: translateY(-200%);
   transition: transform 0.3s linear;  // 最初は上に隠れている。
+
+  @include mq(md) {
+    display: none;
+  }
 }
 
 .drawer-menu.is-clicked {
   transform: translateY(0);
-  position: relative;
-  z-index: 100;
 }
 
 .drawer-menu__wrap {

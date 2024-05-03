@@ -13,7 +13,7 @@ jQuery(function ($) {  // この中であればWordpressでも「$」が使用�
 
 });
 
-
+/* -------------------------------------------------------------------------------- */
 /* ハンバーガーメニュー(ドロワー) */
 // クリックされた時に『is-checked』クラスを付け外ししてボタンを変形・ドロワーメニューを表示/非表示
 // .headerにも『is-checked』クラスを付け外しして背景色を透明に
@@ -25,5 +25,20 @@ document.querySelector("#js-header__btn").addEventListener("click", function (e)
   document.querySelector(".header").classList.toggle("is-clicked");
   document.querySelector("#js-drawer-menu").classList.toggle("is-clicked");
   document.documentElement.classList.toggle("is-fixed");  // htmlタグにis-fixedクラスをトグル
-  document.body.classList.toggle("is-fixed");  // bodyタグにも適用
+  document.body.classList.toggle("is-fixed");  // bodyタグにもis-fixedクラスをトグル
 });
+
+/* -------------------------------------------------------------------------------- */
+/* swiper (スワイパー、fv) */
+const swiper = new Swiper("#js-fv-swiper", {
+  loop: true,
+  effect: 'fade',
+
+  speed: 700,  // 切り替わる最中のスピード(ミリ秒)
+  autoplay: {  // 自動再生ON
+    delay: 4000,  // 次のスライドに切り替わるまでの時間
+    disableOnInteraction: false,  // ユーザーがドラッグなどの操作をしても自動再生が止まらないように。
+  },
+});
+
+/* -------------------------------------------------------------------------------- */

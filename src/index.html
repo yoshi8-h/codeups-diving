@@ -28,9 +28,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Gotu&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
 
   <!-- css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="./assets/css/style.css" />
 
   <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script defer src="./assets/js/script.js"></script>
 </head>
@@ -176,7 +178,34 @@
           <div class="fv__swiper-wrapper swiper-wrapper">
             <div class="fv__swiper-slide swiper-slide">
               <div class="fv__slide-item">
-                <div class="fv__slide-img"><img src="./assets/images/top/sp/slide-1.jpg" alt="fv-slide1"></div>
+                <picture class="fv__slide-img">
+                  <source media="(min-width: 768px)" srcset="./assets/images/top/pc/slide-1.jpg">
+                  <img src="./assets/images/top/sp/slide-1.jpg" alt="fv-slide1">
+                </picture>
+              </div>
+            </div>
+            <div class="fv__swiper-slide swiper-slide">
+              <div class="fv__slide-item">
+                <picture class="fv__slide-img">
+                  <source media="(min-width: 768px)" srcset="./assets/images/top/pc/slide-2.jpg">
+                  <img src="./assets/images/top/sp/slide-2.jpg" alt="fv-slide2">
+                </picture>
+              </div>
+            </div>
+            <div class="fv__swiper-slide swiper-slide">
+              <div class="fv__slide-item">
+                <picture class="fv__slide-img">
+                  <source media="(min-width: 768px)" srcset="./assets/images/top/pc/slide-3.jpg">
+                  <img src="./assets/images/top/sp/slide-3.jpg" alt="fv-slide3">
+                </picture>
+              </div>
+            </div>
+            <div class="fv__swiper-slide swiper-slide">
+              <div class="fv__slide-item">
+                <picture class="fv__slide-img">
+                  <source media="(min-width: 768px)" srcset="./assets/images/top/pc/slide-4.jpg">
+                  <img src="./assets/images/top/sp/slide-4.jpg" alt="fv-slide4">
+                </picture>
               </div>
             </div>
           </div>
