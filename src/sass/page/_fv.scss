@@ -1,0 +1,62 @@
+@use "global" as *;
+
+
+.fv {
+  position: relative;
+}
+
+.fv__wrap {
+  height: 100vh;
+}
+
+// swiper
+.fv__swiper {
+}
+
+.fv__swiper-wrapper.swiper-wrapper {
+}
+
+.fv__swiper-slide.swiper-slide {
+}
+
+.fv__slide-item {
+}
+
+.fv__slide-img {
+}
+
+.fv__slide-img img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.fv__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+}
+
+.fv__title {
+  color: $color-background-base;
+  font-family: $font-family-en-2;
+  font-size: rem(40);
+  font-weight: $normal;
+  line-height: normal;
+  letter-spacing: rem(21.6);
+}
+
+.fv__subtitle {
+  color: $color-background-base;
+  font-family: $font-family-en-1;
+  font-size: rem(20);
+  font-weight: $normal;
+  line-height: normal;
+}
