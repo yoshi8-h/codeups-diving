@@ -1,0 +1,39 @@
+@use "global" as *;
+
+
+.voice {
+  padding-block: rem(80);
+
+  @include mq(md) {
+    padding-block: rem(140);
+  }
+}
+
+.voice__wrap {
+}
+
+.voice__inner {
+}
+
+.voice__heading {
+}
+
+.voice__posts {
+  margin-top: rem(44);
+
+  @include mq(md) {
+    margin-top: rem(30);
+  }
+}
+
+.voice__btn-wrap {
+  text-align: center;
+  margin-top: rem(40);
+
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}
+
+.voice__btn.btn {
+}

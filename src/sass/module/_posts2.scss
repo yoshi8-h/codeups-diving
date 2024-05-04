@@ -1,15 +1,27 @@
 @use "global" as *;
 
 
+.posts2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: rem(40);
 
-
+  @include mq(md) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  // 『grid-template-rows』は指定しない事で、行の高さは、その行に含まれるコンテンツのサイズに基づいて自動的に調整される。
+    column-gap: rem(40);
+    row-gap: rem(80);  // 『Voice ページ』を想定して設定。
+  }
+}
 
 .posts2__item {
-  max-width: rem(345);
+  // max-width: rem(345);
+  max-width: rem(500);  // 良いくらいに調整
   width: 100%;
 
   @include mq(md) {
     max-width: rem(520);
   }
 }
-
