@@ -1,0 +1,75 @@
+@use "global" as *;
+
+
+.blog {
+  padding-top: rem(80);
+
+  @include mq(md) {
+    padding-top: rem(100);
+    position: relative;
+  }
+}
+
+.blog::after {  // 背景画像
+  @include mq(md) {
+    content: "";
+    width: 100%;
+    height: rem(500);
+    background: url(../images/top/pc/blog-bg.jpg) no-repeat center center / cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -3;
+  }
+}
+
+.blog__wrap {  // 擬似要素(魚の群れ)の位置調整の為のwrap
+  @include mq(md) {
+    position: relative;
+    max-width: rem(1260);  // 「魚の群れ」の『left: rem(10);』を考慮(blogからの位置は本来「left:100px;」)。→ ( 1440 - (100 - 10) * 2 ) = 1260
+    margin-inline: auto;
+  }
+}
+
+.blog__wrap::after {  // 魚の群れ (薄い色ver)
+  @include mq(md) {
+    content: "";
+    background: url(../images/common/fishes-pale.png) no-repeat center center / contain;
+    // width: rem(473);
+    // height: rem(201);
+    width: calc(437px / 1440px * 100vw);
+    max-width: rem(437);
+    height: calc(201px / 1440px * 100vw);
+    max-height: rem(201);
+    position: absolute;
+    top: rem(-76);
+    left: rem(10);  // 画面幅が小さい時を考慮して位置を調整
+  }
+}
+
+.blog__inner {
+}
+
+.blog__heading {
+}
+
+.blog__posts {
+  margin-top: rem(28);
+
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}
+
+.blog__btn-wrap {
+  margin-top: rem(40);
+  text-align: center;
+
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}
+
+.blog__btn {
+}

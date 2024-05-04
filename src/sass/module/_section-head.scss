@@ -26,8 +26,24 @@
 }
 
 
-// Contact特有の指定(モディファイヤ)
+// Contact特有の指定(モディファイア)
 .section-head__title--contact {
   font-size: rem(80);
   line-height: 1;
+}
+
+
+// 白いタイトル(PC時のみ) (モディファイア)
+// 先頭以外の文字 (白)
+.section-head__title--white {
+  @include mq(md) {
+    color: #FFF;
+  }
+}
+
+// 先頭の文字 (薄い青色)
+.section-head__first--white {
+  @include mq(md) {
+    color: #DDF0F1;
+  }
 }

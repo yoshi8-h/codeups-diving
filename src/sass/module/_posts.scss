@@ -1,8 +1,20 @@
 @use "global" as *;
 
 
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: rem(40);
 
-
+  @include mq(md) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: rem(40);
+    row-gap: rem(40);
+  }
+}
 
 .posts__item {
   max-width: rem(333);
