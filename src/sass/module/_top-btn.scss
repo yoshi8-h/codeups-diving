@@ -6,12 +6,21 @@
   display: block;
 }
 
+.top-btn:hover .top-btn__wrap {
+  background: $color-accent1;
+}
+
+.top-btn:hover .top-btn__arrow svg path {
+  stroke: $color-background-base;
+}
+
 .top-btn__wrap {
   width: rem(48);
   height: rem(48);
   border: 1px solid $color-accent1;
   border-radius: 50%;
   position: relative;
+  transition: background 0.2s ease-out;
 
   @include mq(md) {
     width: rem(80);
@@ -48,22 +57,23 @@
   }
 }
 
-// .top-btn__arrow svg {
-//   width: rem(6);
-//   height: rem(28);
+.top-btn__arrow svg {
+  // width: rem(6);
+  // height: rem(28);
 
-//   @include mq(md) {
-//     width: rem(6);
-//     height: rem(40);
-//   }
-// }
+  // @include mq(md) {
+  //   width: rem(6);
+  //   height: rem(40);
+  // }
+}
 
-// .top-btn__arrow svg path {
-//   width: rem(6);
-//   height: rem(28);
+.top-btn__arrow svg path {
+  transition: stroke 0.2s ease-out;
+  // width: rem(6);
+  // height: rem(28);
 
-//   @include mq(md) {
-//     width: rem(6);
-//     height: rem(40);
-//   }
-// }
+  // @include mq(md) {
+  //   width: rem(6);
+  //   height: rem(40);
+  // }
+}

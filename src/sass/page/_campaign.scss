@@ -68,9 +68,22 @@
   border-radius: 50%;
   background: $color-background-base;
   margin-top: 0;  // デフォルトの指定を打ち消し
-
   display: grid;
   place-items: center;
+  transition: background 0.2s ease-out;
+}
+
+.campaign__prev:hover,
+.campaign__next:hover {
+  background: $color-accent1;
+}
+
+.campaign__prev:hover .campaign__prev-img svg path {
+  stroke: $color-background-base;
+}
+
+.campaign__next:hover .campaign__next-img svg path {
+  stroke: $color-background-base;
 }
 
 .campaign__prev {
@@ -102,6 +115,7 @@
 }
 
 .campaign__prev-img svg path {
+  transition: stroke 0.2s ease-out;
 }
 
 .campaign__next {
@@ -116,6 +130,7 @@
 }
 
 .campaign__next-img svg path {
+  transition: stroke 0.2s ease-out;
 }
 
 
