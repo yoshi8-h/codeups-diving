@@ -12,7 +12,23 @@
 
   @include mq(md) {
     padding-block: rem(100);
-    max-width: none;
+    position: relative;
+    max-width: rem(1262);
+    margin-inline: auto;
+  }
+}
+
+.price__wrap::after {  // 魚の群れ
+  @include mq(md) {
+    content: "";
+    background: url(../images/common/fishes-big.png) no-repeat center center / contain;
+    width: calc(437px / 1440px * 100vw);
+    max-width: rem(437);
+    height: calc(201px / 1440px * 100vw);
+    max-height: rem(201);
+    position: absolute;
+    bottom: rem(60);
+    left: rem(10);  // 画面幅が小さい時の位置を調整
   }
 }
 
