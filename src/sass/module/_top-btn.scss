@@ -1,0 +1,69 @@
+@use "global" as *;
+
+
+// TOPへ戻るボタン
+.top-btn {
+  display: block;
+}
+
+.top-btn__wrap {
+  width: rem(48);
+  height: rem(48);
+  border: 1px solid $color-accent1;
+  border-radius: 50%;
+  position: relative;
+
+  @include mq(md) {
+    width: rem(80);
+    height: rem(80);
+  }
+}
+
+.top-btn__arrow {
+  width: rem(6);
+  height: rem(28);
+  position: absolute;
+  top: 50%;
+  left: 43%;  // 矢印が中央に来るように調整
+  transform: translate(-50%, -50%);
+
+  @include mq(md) {
+    width: rem(6);
+    height: rem(40);
+    left: 46%;
+  }
+}
+
+.top-btn__arrow-sp {  // SP時の矢印 (PC時は非表示)
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.top-btn__arrow-pc {  // PC時の矢印 (PC時は非表示)
+  display: none;
+
+  @include mq(md) {
+    display: block;
+  }
+}
+
+// .top-btn__arrow svg {
+//   width: rem(6);
+//   height: rem(28);
+
+//   @include mq(md) {
+//     width: rem(6);
+//     height: rem(40);
+//   }
+// }
+
+// .top-btn__arrow svg path {
+//   width: rem(6);
+//   height: rem(28);
+
+//   @include mq(md) {
+//     width: rem(6);
+//     height: rem(40);
+//   }
+// }

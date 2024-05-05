@@ -2,6 +2,7 @@
 
 
 .cta {
+  position: relative;
 }
 
 .cta__wrap {
@@ -192,4 +193,16 @@
 
 .cta__contact {
 
+}
+
+.cta__top-btn {  // TOPへ戻るボタン
+  display: block;
+  position: absolute;
+  bottom: rem(16);
+  right: rem(15);
+
+  @include mq(md) {
+    bottom: rem(20);
+    right: rem(20);
+  }
 }
