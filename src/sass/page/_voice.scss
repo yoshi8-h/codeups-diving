@@ -2,14 +2,33 @@
 
 
 .voice {
+
+}
+
+.voice__wrap {
   padding-block: rem(80);
 
   @include mq(md) {
     padding-block: rem(140);
+    max-width: rem(1260);  // 魚の位置調整のため。( 1080+(80+10)*2 )  // 「.voice__wrap::before」の『left: rem(10);』を考慮！！
+    margin-inline: auto;
+    position: relative;
   }
 }
 
-.voice__wrap {
+.voice__wrap::before {  // 魚の群れ
+  @include mq(md) {
+    content: "";
+    background: url(../images/common/fishes.png) no-repeat center center / contain;
+    width: rem(301);
+    max-width: rem(301);
+    height: rem(138);
+    max-height: rem(138);
+    transform: scaleX(-1);  // 左右反転。
+    position: absolute;
+    top: rem(20);
+    left: rem(10);  // 画面幅が小さい時の位置を調整
+  }
 }
 
 .voice__inner {
@@ -23,6 +42,21 @@
 
   @include mq(md) {
     margin-top: rem(30);
+    position: relative;
+  }
+}
+
+.voice__posts::after {  // タツノオトシゴ
+  @include mq(md) {
+    content: "";
+    background: url(../images/common/dragon.png) no-repeat center center / contain;
+    width: rem(71);
+    max-width: rem(71);
+    height: rem(162);
+    max-height: rem(162);
+    position: absolute;
+    bottom: rem(-205);
+    right: 0;
   }
 }
 
