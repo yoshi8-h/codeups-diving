@@ -27,6 +27,10 @@
   justify-content: space-between;
   align-items: flex-end;
   gap: rem(13);
+
+  @include mq(md) {
+    gap: rem(16);
+  }
 }
 
 .post2__meta {
@@ -71,13 +75,19 @@
 
   @include mq(md) {
     margin-top: rem(8);
+    margin-top: 8px;
     font-size: rem(24);
+    padding-bottom: rem(3);
   }
 }
 
 .post2__img {
   max-width: 100%;
   width: 100%;
+
+  @include mq(md) {
+    max-width: rem(180);
+  }
 }
 
 .post2__img img {
@@ -88,6 +98,8 @@
 
   @include mq(md) {
     aspect-ratio: 180 / 140;
+    max-width: rem(180);
+    width: 100%;
   }
 }
 

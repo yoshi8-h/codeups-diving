@@ -6,12 +6,14 @@
 }
 
 .price__wrap {
-  padding-block: rem(80);
+  padding-top: rem(80);
+  padding-bottom: rem(75);
   max-width: rem(500);
   margin-inline: auto;
 
   @include mq(md) {
-    padding-block: rem(100);
+    padding-top: rem(100);
+    padding-bottom: rem(94);
     position: relative;
     max-width: rem(1262);  // (1080+(81+10)*2)  『.price__wrap::after』の「left: rem(10);」に、元々のコンテンツ幅からの距離を足したものを両端に足して位置調整。
     margin-inline: auto;
@@ -39,7 +41,7 @@
 }
 
 .price__contents {
-  margin-top: rem(28);
+  margin-top: rem(27);
 
   @include mq(md) {
     margin-top: rem(40);
@@ -88,7 +90,7 @@
   font-size: rem(16);
   font-weight: $bold;
   line-height: 1.5;
-  padding-bottom: rem(4);
+  padding-bottom: rem(3);
 }
 
 .price__products {
@@ -132,7 +134,7 @@
 }
 
 .price__btn-wrap {
-  margin-top: rem(40);
+  margin-top: rem(38);
   text-align: center;
 
   @include mq(md) {
