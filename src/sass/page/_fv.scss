@@ -52,11 +52,13 @@
   font-weight: $normal;
   line-height: normal;
   letter-spacing: rem(21.6);
+  text-indent: rem(21.6);
 
   @include mq(md) {
     font-size: rem(80);
     line-height: 1.25;
     letter-spacing: rem(43.2);
+    text-indent: rem(43.2);
   }
 }
 
