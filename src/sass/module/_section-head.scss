@@ -43,6 +43,13 @@
   }
 }
 
+.section-head__subtitle--white {
+  @include mq(md) {
+    color: #FFF;
+  }
+}
+
+
 // 先頭の文字 (薄い青色)
 .section-head__first--white {
   @include mq(md) {
