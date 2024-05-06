@@ -52,7 +52,7 @@
   font-weight: $normal;
   line-height: normal;
   letter-spacing: rem(21.6);
-  text-indent: rem(21.6);
+  text-indent: rem(21.6);  // letter-spacingで生じるズレを打ち消し
 
   @include mq(md) {
     font-size: rem(80);

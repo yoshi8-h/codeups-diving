@@ -13,7 +13,8 @@
 }
 
 .post__wrap {
-  padding-block: rem(16) rem(24);
+  // padding-block: rem(16) rem(24);
+  padding-block: rem(16) rem(23);  // PP調整用指定
   padding-inline: rem(16);
 }
 
@@ -53,7 +54,8 @@
   font-size: rem(16);
   font-weight: 500;
   line-height: 1.5;
-  padding-bottom: rem(4);
+  // padding-bottom: rem(4);
+  padding-bottom: rem(3);  // PP調整用指定
 }
 
 .post__text {

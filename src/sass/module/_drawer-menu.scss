@@ -34,7 +34,8 @@
 .drawer-menu__left {
   display: flex;
   flex-direction: column;
-  gap: rem(40);
+  // gap: rem(40);
+  gap: rem(38);  // PP調整用指定
   justify-content: center;
   align-items: flex-start;
 }
@@ -42,7 +43,8 @@
 .drawer-menu__right {
   display: flex;
   flex-direction: column;
-  gap: rem(40);
+  // gap: rem(40);
+  gap: rem(39);  // PP調整用指定
   justify-content: center;
   align-items: flex-start;
 }

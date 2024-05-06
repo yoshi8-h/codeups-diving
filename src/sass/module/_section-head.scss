@@ -12,6 +12,11 @@
   font-size: rem(32);
   font-weight: $normal;
   line-height: 1.25;
+
+  @include mq(md) {
+    font-size: rem(40);
+    line-height: 1;
+  }
 }
 
 .section-head__first {  // 先頭の文字だけ青色に
@@ -25,6 +30,10 @@
   font-weight: $normal;
   line-height: 1.5;
   margin-top: rem(4);
+
+  @include mq(md) {
+    margin-top: rem(8);
+  }
 }
 
 

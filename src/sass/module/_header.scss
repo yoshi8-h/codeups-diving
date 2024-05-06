@@ -42,6 +42,10 @@
 
 .header__logo a img {
   width: rem(102);
+
+  @include mq(md) {
+    width: rem(133);
+  }
 }
 
 .header__nav {

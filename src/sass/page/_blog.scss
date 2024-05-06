@@ -55,7 +55,8 @@
 }
 
 .blog__posts {
-  margin-top: rem(28);
+  // margin-top: rem(28);
+  margin-top: rem(27);  // PP調整用指定
 
   @include mq(md) {
     margin-top: rem(80);
