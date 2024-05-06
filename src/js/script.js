@@ -57,7 +57,7 @@ const campaignSwiper = new Swiper("#js-campaign-swiper", {
     },
   },
 
-  // Navigation arrows（以下、矢印のオプションの指定）
+  // Navigation arrows（矢印のオプション指定）
   navigation: {
     nextEl: '#js-campaign-next',
     prevEl: '#js-campaign-prev',
@@ -92,5 +92,24 @@ box.each(function(){
     }
   });
 });
+
+/* -------------------------------------------------------------------------------- */
+/* スムーススクロール */
+// (ページ上部に固定しているヘッダー(header)の高さも考慮。)
+// jQuery('a[href^="#"]').on("click", function(e) {
+//   const speed = 400;
+//   const id = jQuery(this).attr("href");
+//   const target = jQuery("#" == id ? "html" : id);
+//   const headerHeight = jQuery('.header').outerHeight();  // ヘッダーの高さを動的に取得
+//   const position = jQuery(target).offset().top - headerHeight;  // ヘッダーの高さを考慮
+
+//   jQuery("html, body").animate(
+//     {
+//       scrollTop: position,
+//     },
+//     speed,
+//     "swing"  // swing or linear
+//   );
+// });
 
 /* -------------------------------------------------------------------------------- */
