@@ -20,14 +20,14 @@
 }
 
 .header__inner {
-  padding-block: rem(21);
+  height: rem(80);
   padding-inline: rem(15);
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   @include mq(md) {
-    padding-block: rem(20);
+    height: rem(90);
     padding-inline: rem(40);
   }
 }
@@ -52,6 +52,7 @@
   display: none;
 
   @include mq(md) {
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,6 +62,7 @@
 
 .header__link {
   @include mq(md) {
+    height: 100%;
     color: $color-background-base;
     display: flex;
     flex-direction: column;
@@ -78,7 +80,7 @@
     height: 2px;
     background: #FFF;
     position: absolute;
-    bottom: rem(-8);
+    bottom: rem(16);
     left: 50%;
     transform: translateX(-50%) scaleX(0);
     transform-origin: center top;
