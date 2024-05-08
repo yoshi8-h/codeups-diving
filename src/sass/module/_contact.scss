@@ -5,7 +5,7 @@
   text-align: center;
 }
 
-.contact__head {
+.contact__heading {
 
 }
 
@@ -15,7 +15,11 @@
   font-weight: $normal;
   line-height: 1.2857;
   text-align: center;
-  margin-top: rem(8);
+  margin-top: 0;
+
+  @include mq(md) {
+    margin-top: rem(2);
+  }
 }
 
 .contact__btn.btn{

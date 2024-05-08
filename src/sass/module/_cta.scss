@@ -6,8 +6,8 @@
 }
 
 .cta__wrap {
-  padding-top: rem(80);
-  padding-bottom: rem(100);
+  padding-top: rem(79);
+  padding-bottom: rem(95);
   padding-inline: rem(30);
 
   @include mq(md) {
@@ -24,8 +24,8 @@
   @include mq(md) {
     content: "";
     background: url(../images/common/fishes.png) no-repeat center center / contain;
-    width: rem(301);
-    height: rem(138);
+    width: rem(303);
+    height: rem(144);
     position: absolute;
     top: rem(100);
     right: rem(10);  // 画面幅が小さい時の位置を調整
@@ -39,7 +39,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: rem(40);
+  gap: rem(36);
 
   @include mq(md) {
     box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
@@ -47,9 +47,10 @@
     justify-content: space-between;
     max-width: rem(1080);
     width: 100%;
-    padding-block: rem(80);
+    padding-top: rem(80);
+    padding-bottom: rem(75);
     padding-left: rem(50);
-    padding-right: rem(120);
+    padding-right: rem(113);
   }
 }
 
@@ -93,8 +94,8 @@
 
 .cta__logo::after {  // 魚の群れ(SP時)
   content: "";
-  width: rem(109);
-  height: rem(50);
+  width: rem(112);
+  height: rem(54);
   background: url(../images/common/fishes.png) no-repeat center center / contain;
   position: absolute;
   top: rem(-26);
@@ -158,7 +159,7 @@
 }
 
 .cta__map {
-  margin-top: rem(16);
+  margin-top: rem(15);
 
   @include mq(md) {
     margin-top: 0;
@@ -199,7 +200,7 @@
   display: block;
   position: absolute;
   bottom: rem(16);
-  right: rem(15);
+  right: rem(16);
 
   @include mq(md) {
     bottom: rem(20);

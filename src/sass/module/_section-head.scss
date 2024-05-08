@@ -41,6 +41,21 @@
 .section-head__title--contact {
   font-size: rem(80);
   line-height: 1;
+
+  @include mq(md) {
+    font-size: rem(80);
+    line-height: 1;
+  }
+}
+
+.section-head__subtitle--contact {
+  margin-top: 0;
+  transform: translateY(-8px);
+
+  @include mq(md) {
+    margin-top: 0;
+    transform: translateY(-7px);
+  }
 }
 
 

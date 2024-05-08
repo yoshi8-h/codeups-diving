@@ -43,6 +43,8 @@
 
 .about__contents {
   margin-top: rem(28);
+  max-width: rem(500);
+  margin-inline: auto;
 
   @include mq(md) {
     margin-top: rem(40);
@@ -51,11 +53,15 @@
 }
 
 .about__images {
-  max-width: rem(360);  // 調整済み
+  // max-width: rem(500);
+  // width: rem(345);
+  max-width: 100%;
   width: 100%;
-  margin-inline: auto;
-  max-height: rem(212);
-  height: rem(212);
+  height: calc(212px / 375px * 100vw);
+  // height: rem(212);
+  // padding-bottom: rem(212);
+  // min-height: ;
+  max-height: rem(307.24);
   position: relative;
 
   @include mq(md) {
@@ -74,8 +80,11 @@
 }
 
 .about__img-left img {
-  max-width: rem(128);
-  width: 100%;
+  max-width: rem(185.5);
+  // max-width: calc(90px / 375px  * 100vw);
+  // max-width: rem(90);
+  width: calc(128px / 375px * 100vw);
+  // width: 100%;
 
   @include mq(md) {
     max-width: rem(400);
@@ -92,8 +101,12 @@
 }
 
 .about__img-right img {
-  max-width: rem(281);
-  width: 100%;
+  max-width: rem(407.24);
+  // max-width: calc(200px / 375px  * 100vw);
+  // max-width: rem(281);
+  // width: rem(281);
+  width: calc(281px / 375px * 100vw);
+  // width: 100%;
 
   @include mq(md) {
     max-width: rem(880);
@@ -103,7 +116,6 @@
 
 .about__texts {
   margin-top: rem(40);
-  max-width: rem(500);
   width: 100%;
   margin-inline: auto;
 
