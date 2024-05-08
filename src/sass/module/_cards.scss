@@ -8,6 +8,7 @@
 .cards__item {
   max-width: rem(280);
   width: 100%;
+  height: auto;
 
   @include mq(md) {
     max-width: rem(333);
