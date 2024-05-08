@@ -109,6 +109,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: rem(15);  // 念の為、テキストと価格の間に余白を設定。
 }
 
 .price__product-name {

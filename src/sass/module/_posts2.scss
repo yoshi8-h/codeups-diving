@@ -13,6 +13,7 @@
     grid-template-columns: repeat(2, 1fr);  // 『grid-template-rows』は指定しない事で、行の高さは、その行に含まれるコンテンツのサイズに基づいて自動的に調整される。
     column-gap: rem(40);
     row-gap: rem(80);  // 『Voice ページ』を想定して設定。
+    align-items: flex-start;  // grid時も、上側に揃うように。
   }
 }
 
@@ -23,5 +24,6 @@
 
   @include mq(md) {
     max-width: rem(520);
+    height: 100%;  // 全てのポストカードの高さを揃える。
   }
 }
