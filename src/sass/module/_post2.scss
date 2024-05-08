@@ -82,7 +82,7 @@
 }
 
 .post2__img {
-  max-width: 100%;
+  max-width: rem(200);  // 良い具合に調整
   width: 100%;
 
   @include mq(md) {
