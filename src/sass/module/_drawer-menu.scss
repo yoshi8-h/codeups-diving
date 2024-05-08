@@ -2,6 +2,7 @@
 
 
 .drawer-menu {
+  overflow: scroll;  // スマホ横向けの時にメニューがはみ出る際にスクロールして閲覧可能に。
   background: $color-accent1;
   width: 100%;
   height: 100%;
