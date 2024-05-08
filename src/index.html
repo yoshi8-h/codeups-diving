@@ -420,8 +420,14 @@
         </h2>
         <div class="about__contents">
           <div class="about__images">
-            <div class="about__img-left"><img src="./assets/images/top/about-left.jpg" alt="about1"></div>
-            <div class="about__img-right"><img src="./assets/images/top/about-right.jpg" alt="about2"></div>
+            <picture class="about__img-left">
+              <source media="(min-width: 768px)" srcset="./assets/images/top/about-left-pc.jpg">
+              <img src="./assets/images/top/about-left.jpg" alt="about1">
+            </picture>
+            <picture class="about__img-right">
+              <source media="(min-width: 768px)" srcset="./assets/images/top/about-right-pc.jpg">
+              <img src="./assets/images/top/about-right.jpg" alt="about2">
+            </picture>
           </div>
           <div class="about__texts">
             <p class="about__top">
@@ -507,7 +513,8 @@
                 </div>
                 <p class="post__text">
                   ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br
-                  >ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+                  >ここにテキストが入ります。ここにテキストが入ります。ここにテキストここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+                  ここにテキストが入ります。ここにテキストが入ります。
                 </p>
               </div>
             </a>

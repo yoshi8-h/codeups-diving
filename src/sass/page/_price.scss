@@ -59,9 +59,12 @@
 .price__img img {
   max-width: 100%;
   width: 100%;
+  aspect-ratio: 345 / 227;
+  object-fit: cover;
 
   @include mq(md) {
     max-width: rem(492);
+    aspect-ratio: 492 / 746;
   }
 }
 

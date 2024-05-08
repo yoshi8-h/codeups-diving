@@ -13,10 +13,13 @@
     grid-template-columns: repeat(3, 1fr);
     column-gap: rem(40);
     row-gap: rem(40);
+    align-items: flex-start;  // 上揃えに。
   }
 }
 
 .posts__item {
   max-width: rem(500);
   width: 100%;
+  // height: auto;
+  height: 100%;  // 
 }
