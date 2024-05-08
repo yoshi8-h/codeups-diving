@@ -3,9 +3,9 @@
 
 .posts {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: rem(40);
 
   @include mq(md) {
@@ -17,6 +17,6 @@
 }
 
 .posts__item {
-  max-width: rem(333);
+  max-width: rem(500);
   width: 100%;
 }
