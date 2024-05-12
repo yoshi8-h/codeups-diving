@@ -59,8 +59,8 @@
 .price__img img {
   max-width: 100%;
   width: 100%;
-  aspect-ratio: 345 / 227;
-  object-fit: cover;
+  aspect-ratio: 345 / 227;  // 比率管理
+  object-fit: cover;  // 比率管理
 
   @include mq(md) {
     max-width: rem(492);

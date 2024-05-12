@@ -42,9 +42,12 @@
 .information__img img {
   max-width: 100%;
   width: 100%;
+  aspect-ratio: 345 / 227;  // 比率管理
+  object-fit: cover;  // 比率管理
 
   @include mq(md) {
     width: rem(540);
+    aspect-ratio: 540 / 356;  // 比率管理
   }
 }
 

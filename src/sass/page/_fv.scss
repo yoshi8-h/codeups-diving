@@ -33,11 +33,6 @@
 }
 
 .fv__text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 0;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -52,12 +47,14 @@
   font-weight: $normal;
   line-height: normal;
   letter-spacing: rem(21.6);
+  // letter-spacing: 1.35em;  // 21.6÷16=1.35だと思ったが、上手くいかなかった。
   text-indent: rem(21.6);  // letter-spacingで生じるズレを打ち消し
 
   @include mq(md) {
     font-size: rem(80);
     line-height: 1.25;
     letter-spacing: rem(43.2);
+    // letter-spacing: 2.7em;
     text-indent: rem(43.2);
   }
 }
@@ -68,4 +65,5 @@
   font-size: rem(20);
   font-weight: $normal;
   line-height: normal;
+  text-align: center;
 }
