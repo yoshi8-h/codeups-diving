@@ -19,7 +19,7 @@
   }
 }
 
-.section-head__first {  // 先頭の文字だけ青色に
+.section-head__title::first-letter {  // 先頭の文字だけを指定
   color: $color-accent1;
 }
 
@@ -75,7 +75,7 @@
 
 
 // 先頭の文字 (薄い青色)
-.section-head__first--white {
+.section-head__title--white::first-letter {
   @include mq(md) {
     color: #DDF0F1;
   }
