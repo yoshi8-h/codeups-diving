@@ -47,17 +47,17 @@
 }
 
 .top-btn__arrow {
-  width: rem(6);
-  height: rem(28);
+  width: rem(8);  // 調整
+  height: rem(28);  // 調整
   position: absolute;
   top: 50%;
-  left: 43%;  // 矢印が中央に来るように調整
+  left: 45%;  // 矢印が中央に来るように調整
   transform: translate(-50%, -50%);
 
   @include mq(md) {
-    width: rem(6);
+    width: rem(12);
     height: rem(40);
-    left: 46%;
+    left: 47%;
   }
 }
 
@@ -76,22 +76,15 @@
 }
 
 .top-btn__arrow svg {
-  // width: rem(6);
-  // height: rem(28);
+  width: rem(8);  // 調整
+  height: rem(28);  // 調整
 
-  // @include mq(md) {
-  //   width: rem(6);
-  //   height: rem(40);
-  // }
+  @include mq(md) {
+    width: rem(12);
+    height: rem(40);
+  }
 }
 
 .top-btn__arrow svg path {
   transition: stroke 0.2s ease-out;
-  // width: rem(6);
-  // height: rem(28);
-
-  // @include mq(md) {
-  //   width: rem(6);
-  //   height: rem(40);
-  // }
 }
