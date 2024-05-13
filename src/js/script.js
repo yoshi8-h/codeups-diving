@@ -113,3 +113,14 @@ box.each(function(){
 // });
 
 /* -------------------------------------------------------------------------------- */
+// トップへ戻るボタン
+// 画面を少し(今回は100px)スクロールした時に表示(通常は非表示)
+const pageTop = document.querySelector("#js-top-btn");
+
+window.addEventListener("scroll", function () {
+  if (100 < window.scrollY) {  // 100px
+    pageTop.classList.add("is-show");
+  } else {
+    pageTop.classList.remove("is-show");
+  }
+});

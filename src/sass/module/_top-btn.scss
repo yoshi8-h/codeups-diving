@@ -2,17 +2,24 @@
 
 
 // TOPへ戻るボタン
-.top-btn {  // TOPへ戻るボタン
+.top-btn {
   display: block;
   position: fixed;
   bottom: rem(10);
   right: rem(16);
   z-index: 300;
+  opacity: 0;    // 通常は透明に。(スクロールしたら現れる)
+  visibility: hidden;  // かつ、通常は押せないように。
 
   @include mq(md) {
-    bottom: rem(-140);
+    bottom: rem(30);
     right: rem(20);
   }
+}
+
+.top-btn.is-show {
+  opacity: 1;
+  visibility: visible;
 }
 
 .top-btn:hover .top-btn__wrap {
