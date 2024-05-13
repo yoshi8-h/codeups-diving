@@ -13,7 +13,7 @@
 }
 
 .card__wrap {
-
+  height: 100%;
 }
 
 .card__img {
@@ -41,6 +41,7 @@
   padding-top: rem(16);
   padding-inline: rem(16);
   padding-bottom: rem(24);
+  // position: relative;
 
   @include mq(md) {
     padding-top: rem(24);
@@ -67,15 +68,19 @@
   font-size: rem(16);
   font-weight: 500;
   line-height: 1.5;
-  // padding-bottom: rem(8);
-  padding-bottom: rem(7);  // PP調整用指定
+  padding-bottom: rem(7);
 }
 
 .card__bottom {
   padding-top: rem(7);
+  // position: absolute;
+  // left: 50%;
+  // bottom: rem(100);
+  // transform: translateX(-50%);
 
   @include mq(md) {
     padding-top: rem(16);
+    margin-top: auto;
   }
 }
 

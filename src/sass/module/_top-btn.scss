@@ -2,12 +2,22 @@
 
 
 // TOPへ戻るボタン
-.top-btn {
+.top-btn {  // TOPへ戻るボタン
   display: block;
+  position: fixed;
+  bottom: rem(10);
+  right: rem(16);
+  z-index: 300;
+
+  @include mq(md) {
+    bottom: rem(-140);
+    right: rem(20);
+  }
 }
 
 .top-btn:hover .top-btn__wrap {
   background: $color-accent1;
+  border: 1px solid $color-background-base;
 }
 
 .top-btn:hover .top-btn__arrow svg path {
@@ -15,12 +25,13 @@
 }
 
 .top-btn__wrap {
+  background: $color-background-base;
   width: rem(48);
   height: rem(48);
   border: 1px solid $color-accent1;
   border-radius: 50%;
   position: relative;
-  transition: background 0.2s ease-out;
+  transition: background 0.2s ease-out, border 0.2s ease-out;
 
   @include mq(md) {
     width: rem(80);

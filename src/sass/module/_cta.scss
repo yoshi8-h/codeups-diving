@@ -6,17 +6,10 @@
 }
 
 .cta__wrap {
-  padding-top: rem(79);
-  padding-bottom: rem(95);
   padding-inline: rem(30);
 
   @include mq(md) {
-    padding-top: rem(140);
-    padding-bottom: rem(160);
-    padding-inline: rem(30);
     position: relative;
-    max-width: rem(1360);  // 魚の位置調整のため。( 1080+(130+10)*2 )  (10は、「.cta__wrap::after」にrightで指定した値)
-    margin-inline: auto;
   }
 }
 
@@ -27,8 +20,8 @@
     width: rem(303);
     height: rem(144);
     position: absolute;
-    top: rem(100);
-    right: rem(10);  // 画面幅が小さい時の位置を調整
+    top: rem(-40);
+    right: calc(50% - min(48vw, 41.7rem));  // ※位置を制御
   }
 }
 
@@ -202,14 +195,3 @@
 
 }
 
-.cta__top-btn {  // TOPへ戻るボタン
-  display: block;
-  position: absolute;
-  bottom: rem(16);
-  right: rem(16);
-
-  @include mq(md) {
-    bottom: rem(20);
-    right: rem(20);
-  }
-}

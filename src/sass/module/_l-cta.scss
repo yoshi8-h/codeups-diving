@@ -1,0 +1,10 @@
+@use "global" as *;
+
+
+.l-cta {
+  margin-top: rem(79);
+
+  @include mq(md) {
+    margin-top: rem(140);
+  }
+}

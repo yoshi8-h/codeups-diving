@@ -3,26 +3,21 @@
 
 .price {
   background: #DDF0F1;
-}
-
-.price__wrap {
   padding-top: rem(80);
   padding-bottom: rem(75);
-  max-width: rem(530);  // calc(500 + 15*2)
-  margin-inline: auto;
-  padding-inline: rem(15);
+  position: relative;
 
   @include mq(md) {
     padding-top: rem(100);
     padding-bottom: rem(94);
-    position: relative;
-    max-width: rem(1262);  // (1080+(81+10)*2)  『.price__wrap::after』の「left: rem(10);」に、元々のコンテンツ幅からの距離を足したものを両端に足して位置調整。
-    margin-inline: auto;
-    padding-inline: rem(25);
   }
 }
 
-.price__wrap::after {  // 魚の群れ
+.price__inner {
+  max-width: rem(530);  // calc(500 + 15*2)
+}
+
+.price::after {  // 魚の群れ
   @include mq(md) {
     content: "";
     background: url(../images/common/fishes-big.png) no-repeat center center / contain;
@@ -32,7 +27,7 @@
     max-height: rem(201);
     position: absolute;
     bottom: rem(60);
-    left: rem(10);  // 画面幅が小さい時の位置を調整
+    left: calc(50% - min(48vw, 39rem));  // 画面幅が小さい時の位置を調整
   }
 }
 

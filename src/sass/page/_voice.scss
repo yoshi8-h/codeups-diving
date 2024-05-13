@@ -2,24 +2,10 @@
 
 
 .voice {
-
+  position: relative;
 }
 
-.voice__wrap {
-  // padding-block: rem(80);
-  padding-block: rem(74);  // PP調整用指定
-
-  @include mq(md) {
-    // padding-block: rem(140);
-    padding-top: rem(136);
-    padding-bottom: rem(136);
-    max-width: rem(1260);  // 魚の位置調整のため。( 1080+(80+10)*2 )  // 「.voice__wrap::before」の『left: rem(10);』を考慮。
-    margin-inline: auto;
-    position: relative;
-  }
-}
-
-.voice__wrap::before {  // 魚の群れ
+.voice::before {  // 魚の群れ
   @include mq(md) {
     content: "";
     background: url(../images/common/fishes.png) no-repeat center center / contain;
@@ -29,10 +15,8 @@
     max-height: rem(145);
     transform: scaleX(-1);  // 左右反転。
     position: absolute;
-    // top: rem(20);
-    // left: rem(10);  // 画面幅が小さい時の位置を調整
-    top: rem(16);
-    left: rem(7);
+    top: rem(-120);
+    left: calc(50% - min(48vw, 39rem));  // *位置を制御
   }
 }
 

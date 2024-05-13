@@ -2,15 +2,9 @@
 
 
 .about {
-  margin-top: rem(74);
-  margin-bottom: rem(64);
 
   @include mq(md) {
-    margin-top: rem(136);
-    margin-bottom: rem(164);
     position: relative;
-    max-width: rem(1304);  // 擬似要素(サンゴ)の位置を調整するために「max-width」を指定。→ ( 1080 + (15 + 97) * 2 )  →15は擬似要素の「right」に指定した値。97はカンプから読み取った時の画像からの距離。それが両端にある幅まで伸びれば、その時点でサンゴの位置がストップする。
-    margin-inline: auto;
   }
 }
 
@@ -24,7 +18,7 @@
     height: rem(181);
     background: url(../images/common/sango.png) no-repeat center center / contain;
     position: absolute;
-    right: rem(15);  // 画面内に収まるように調整
+    right: calc(50% - min(48vw, 40rem));  // ※min関数で制御
     bottom: rem(-90);
     z-index: 10;
   }
