@@ -46,9 +46,8 @@
   font-size: rem(40);
   font-weight: $normal;
   line-height: normal;
-  letter-spacing: rem(21.6);
-  // letter-spacing: 1.35em;  // 21.6÷16=1.35だと思ったが、上手くいかなかった。
-  text-indent: rem(21.6);  // letter-spacingで生じるズレを打ち消し
+  letter-spacing: 0.54;
+  text-indent: 0.54;  // letter-spacingで生じるズレを打ち消し
 
   @include mq(md) {
     font-size: rem(80);
