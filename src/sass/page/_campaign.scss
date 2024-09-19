@@ -141,6 +141,7 @@
 .campaign__btn-wrap {
   margin-top: rem(20);  // calc(40 - 20)  「.campaign__swiper」の「padding-bottom」分の20pxを考慮。
   text-align: center;
+  margin-bottom: rem(5);  // これを指定しないと、『.l-campaign』に指定した「overflow:hidden;」のせいで、btnの後ろ側の四角の下の部分が見えなくなってしまうから。
 
   @include mq(md) {
     margin-top: rem(60);

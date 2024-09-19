@@ -134,6 +134,8 @@
 .price__btn-wrap {
   margin-top: rem(38);
   text-align: center;
+  position: relative;
+  z-index: 10;
 
   @include mq(md) {
     margin-top: rem(80);

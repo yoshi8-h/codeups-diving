@@ -22,6 +22,11 @@
   }
 }
 
+.contact__btn-wrap {
+  position: relative;
+  z-index: 10;
+}
+
 .contact__btn.btn{
   margin-top: rem(40);
   margin-inline: auto;

@@ -88,6 +88,8 @@
   // margin-top: rem(40);
   margin-top: rem(63);
   text-align: center;
+  position: relative;
+  z-index: 10;
 
   @include mq(md) {
     margin-top: rem(40);
