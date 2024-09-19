@@ -14,6 +14,9 @@
 
 .card__wrap {
   height: 100%;
+
+  // display: flex;  // 料金を下に揃える場合のCSS
+  // flex-direction: column;
 }
 
 .card__img {
@@ -42,6 +45,10 @@
   padding-inline: rem(16);
   padding-bottom: rem(24);
   // position: relative;
+
+  // display: flex;  // 料金を下に揃える場合のCSS
+  // flex-direction: column;
+  // height: 100%;
 
   @include mq(md) {
     padding-top: rem(24);

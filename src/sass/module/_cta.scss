@@ -6,7 +6,6 @@
 }
 
 .cta__wrap {
-  padding-inline: rem(30);
 
   @include mq(md) {
     position: relative;
@@ -38,7 +37,6 @@
     box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
     flex-direction: row;
     justify-content: space-between;
-    max-width: rem(1080);
     width: 100%;
     padding-top: rem(80);
     padding-bottom: rem(75);
