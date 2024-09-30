@@ -20,7 +20,7 @@
   <meta property="og:description" content="" />
 
   <!-- ファビコン -->
-  <link rel="”icon”" href="" />
+  <link rel="icon" href="" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -78,7 +78,7 @@
           <p class="header__text-ja">お問い合わせ</p>
         </a>
       </nav>
-      <button id="js-header__btn" class="header__btn">
+      <button class="header__btn js-header__btn">
         <span class="header__bar"></span>
         <span class="header__bar"></span>
         <span class="header__bar"></span>
@@ -87,7 +87,7 @@
   </header>
 
   <!-- ドロワーメニュー -->
-  <div id="js-drawer-menu" class="drawer-menu">
+  <div class="drawer-menu js-drawer-menu">
     <div class="drawer-menu__wrap">
       <div class="drawer-menu__left">
         <div class="drawer-menu__link drawer-link">
@@ -175,7 +175,7 @@
     <!-- fv -->
     <div class="fv">
       <div class="fv__wrap">
-        <div id="js-fv-swiper" class="fv__swiper swiper">  <!-- /swiper -->
+        <div class="fv__swiper swiper js-fv-swiper">  <!-- /swiper -->
           <div class="fv__swiper-wrapper swiper-wrapper">
             <div class="fv__swiper-slide swiper-slide">
               <div class="fv__slide-item">
@@ -222,12 +222,12 @@
     <section class="campaign l-campaign">
       <div class="campaign__inner inner">
         <div class="campaign__wrap">
-          <h2 class="campaign__heading section-head">
+          <div class="campaign__heading section-head">
             <span class="section-head__title">Campaign</span>
-            <span class="section-head__subtitle">キャンペーン</span>
-          </h2>
+            <h2 class="section-head__subtitle">キャンペーン</h2>
+          </div>
           <div class="campaign__contents">
-            <div id="js-campaign-swiper" class="campaign__swiper swiper">  <!-- /swiper -->
+            <div class="campaign__swiper swiper js-campaign-swiper">  <!-- /swiper -->
               <div class="campaign__cards cards swiper-wrapper">
                 <a href="#" class="cards__item card swiper-slide">
                   <div class="card__wrap">
@@ -377,14 +377,14 @@
             </div>
           </div>
           <div class="campaign__arrows">  <!-- swiperの「前へ」「次へ」ボタン -->
-            <div id="js-campaign-prev" class="campaign__prev swiper-button-prev">
+            <div class="campaign__prev swiper-button-prev js-campaign-prev">
               <div class="campaign__prev-img">
                 <svg xmlns="http://www.w3.org/2000/svg" width="42" height="8" viewBox="0 0 42 8" fill="none">
                   <path d="M41 7H1L8 1" stroke="#408F95" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </div>
             </div>
-            <div id="js-campaign-next" class="campaign__next swiper-button-next">
+            <div class="campaign__next swiper-button-next js-campaign-next">
               <div class="campaign__next-img">
                 <svg xmlns="http://www.w3.org/2000/svg" width="42" height="8" viewBox="0 0 42 8" fill="none">
                   <path d="M1 7H41L34 1" stroke="#408F95" stroke-linecap="round" stroke-linejoin="round"/>
@@ -409,10 +409,10 @@
     <!-- About us セクション -->
     <section class="about l-about">
       <div class="about__inner inner">
-        <h2 class="about__heading section-head">
+        <div class="about__heading section-head">
           <span class="section-head__title">About us</span>
-          <span class="section-head__subtitle">私たちについて</span>
-        </h2>
+          <h2 class="section-head__subtitle">私たちについて</h2>
+        </div>
         <div class="about__contents">
           <div class="about__images">
             <picture class="about__img-left">
@@ -453,10 +453,10 @@
     <!-- Information セクション -->
     <section class="information l-information">
       <div class="information__inner inner">
-        <h2 class="information__heading section-head">
+        <div class="information__heading section-head">
           <span class="section-head__title">Information</span>
-          <span class="section-head__subtitle">ダイビング情報</span>
-        </h2>
+          <h2 class="section-head__subtitle">ダイビング情報</h2>
+        </div>
         <div class="information__contents">
           <div class="information__img js-img-colorbox"><img src="./assets/images/common/information-1.jpg" alt="information1"></div>
           <div class="information__texts">
@@ -483,10 +483,10 @@
     <!-- Blog セクション -->
     <section class="blog">
       <div class="blog__inner inner">
-        <h2 class="blog__heading section-head">
+        <div class="blog__heading section-head">
           <span class="section-head__title section-head__title--white">Blog</span>
-          <span class="section-head__subtitle section-head__subtitle--white">ブログ</span>
-        </h2>
+          <h2 class="section-head__subtitle section-head__subtitle--white">ブログ</h2>
+        </div>
         <div class="blog__posts posts">
           <a href="#" class="posts__item post">
             <div class="post__wrap">
@@ -545,10 +545,10 @@
     <!-- Voice セクション -->
     <section class="voice l-voice">
       <div class="voice__inner inner">
-        <h2 class="voice__heading section-head">
+        <div class="voice__heading section-head">
           <span class="section-head__title">Voice</span>
-          <span class="section-head__subtitle">お客様の声</span>
-        </h2>
+          <h2 class="section-head__subtitle">お客様の声</h2>
+        </div>
         <div class="voice__posts posts2">
           <a href="#" class="posts2__item post2">
             <div class="post2__wrap">
@@ -604,10 +604,10 @@
     <!-- Price セクション -->
     <section class="price l-price">
       <div class="price__inner inner">
-        <h2 class="price__heading section-head">
+        <div class="price__heading section-head">
           <span class="section-head__title">Price</span>
-          <span class="section-head__subtitle">料金一覧</span>
-        </h2>
+          <h2 class="section-head__subtitle">料金一覧</h2>
+        </div>
         <div class="price__contents">
           <picture class="price__img js-img-colorbox">
             <source media="(min-width: 768px)" srcset="./assets/images/top/pc/price-pc.jpg">
@@ -743,7 +743,7 @@
   </section>
 
   <!-- TOPへ戻るボタン -->
-  <a href="#" id="js-top-btn" class="top-btn">
+  <a href="#" class="top-btn js-top-btn">
     <div class="top-btn__wrap">
       <div class="top-btn__arrow">
         <svg class="top-btn__arrow-sp" xmlns="http://www.w3.org/2000/svg" width="8" height="30" viewBox="0 0 8 30" fill="none">

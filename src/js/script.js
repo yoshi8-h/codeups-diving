@@ -18,19 +18,19 @@ jQuery(function ($) {  // この中であればWordpressでも「$」が使用�
 // クリックされた時に『is-checked』クラスを付け外ししてボタンを変形・ドロワーメニューを表示/非表示
 // .headerにも『is-checked』クラスを付け外しして背景色を透明に
 // 「html,body」に『is-fixed』クラスを付け外ししてドロワーが開いてる時はスクロールを無効に
-document.querySelector("#js-header__btn").addEventListener("click", function (e) {
+document.querySelector(".js-header__btn").addEventListener("click", function (e) {
   e.preventDefault();
 
-  document.querySelector("#js-header__btn").classList.toggle("is-clicked");
+  document.querySelector(".js-header__btn").classList.toggle("is-clicked");
   document.querySelector(".header").classList.toggle("is-clicked");
-  document.querySelector("#js-drawer-menu").classList.toggle("is-clicked");
+  document.querySelector(".js-drawer-menu").classList.toggle("is-clicked");
   document.documentElement.classList.toggle("is-fixed");  // htmlタグにis-fixedクラスをトグル
   document.body.classList.toggle("is-fixed");  // bodyタグにもis-fixedクラスをトグル
 });
 
 /* -------------------------------------------------------------------------------- */
 /* swiper (スワイパー) fv */
-const fvSwiper = new Swiper("#js-fv-swiper", {
+const fvSwiper = new Swiper(".js-fv-swiper", {
   loop: true,
   effect: 'fade',
 
@@ -43,7 +43,7 @@ const fvSwiper = new Swiper("#js-fv-swiper", {
 
 /* -------------------------------------------------------------------------------- */
 /* swiper (スワイパー) campaignセクション */
-const campaignSwiper = new Swiper("#js-campaign-swiper", {
+const campaignSwiper = new Swiper(".js-campaign-swiper", {
   loop: true,
 
   slidesPerView: 'auto', // スライドの幅をCSSで指定
@@ -59,8 +59,8 @@ const campaignSwiper = new Swiper("#js-campaign-swiper", {
 
   // Navigation arrows（矢印のオプション指定）
   navigation: {
-    nextEl: '#js-campaign-next',
-    prevEl: '#js-campaign-prev',
+    nextEl: '.js-campaign-next',
+    prevEl: '.js-campaign-prev',
   },
 });
 
@@ -115,7 +115,7 @@ box.each(function(){
 /* -------------------------------------------------------------------------------- */
 // トップへ戻るボタン
 // 画面を少し(今回は100px)スクロールした時に表示(通常は非表示)
-const pageTop = document.querySelector("#js-top-btn");
+const pageTop = document.querySelector(".js-top-btn");
 
 window.addEventListener("scroll", function () {
   if (100 < window.scrollY) {  // 100px
