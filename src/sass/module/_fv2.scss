@@ -1,0 +1,44 @@
+@use "global" as *;
+
+
+.fv2 {
+
+}
+
+.fv2__inner {
+  min-height: rem(460);
+  display: grid;
+  place-items: center;
+
+  @include mq(md) {
+    min-height: rem(548);
+  }
+}
+
+.fv2__text {
+  color: #FFF;
+  font-family: $font-family-en-2;
+  font-size: rem(40);
+  font-weight: $normal;
+  line-height: normal;
+
+  @include mq(md) {
+    font-size: rem(80);
+    line-height: 1.25;
+    transform: translateY(50%);
+  }
+}
+
+
+
+
+// =======================================
+// モディファイア
+// =======================================
+.fv2--campaign {
+  background: url(../images/page/sp/campaign_fv-bg.webp) no-repeat center center / cover;
+
+  @include mq(md) {
+    background: url(../images/page/pc/campaign_fv-bg.webp) no-repeat center center / cover;
+  }
+}
