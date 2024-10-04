@@ -15,3 +15,35 @@
   }
 }
 
+
+
+
+// =======================================
+// モディファイア
+// =======================================
+// .cards--2 (campaign-page セクションのcards)
+.cards--2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: rem(40);
+  justify-content: center;
+  align-items: flex-start;
+
+  @include mq(md) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: rem(40);
+    row-gap: rem(80);
+    align-items: flex-start;  // 上揃えに。
+  }
+}
+
+.cards--2 .cards__item{
+  flex-grow: 1;
+  height: 100%;
+
+  @include mq(md) {
+    max-width: rem(520);
+    height: 100%;  // 全てのカードの高さが揃うように。
+  }
+}

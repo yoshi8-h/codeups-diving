@@ -1,0 +1,26 @@
+@use "global" as *;
+
+
+.tab {
+  cursor: pointer;
+  text-align: center;
+  padding-block: rem(5);
+  padding-inline: rem(15);
+  border: rem(1) solid $color-accent1;
+  background: $color-background-base;
+  color: $color-accent1;
+  font-size: rem(14);
+  font-weight: $normal;
+  line-height: 1.57;
+  transition: all 0.2s ease-out;
+}
+
+.tab:hover {  // hover
+  color: $color-background-base;
+  background: $color-accent1;
+}
+
+.tab.is-selected {  // 選択中のタブは背景色と文字色を変更
+  color: $color-background-base;
+  background: $color-accent1;
+}

@@ -1,0 +1,112 @@
+@use "global" as *;
+
+
+// プラグイン『WP-PageNavi』を使用
+.wp-pagenavi {
+
+}
+
+.previouspostslink {
+
+}
+
+.current {
+
+}
+
+.page-numbers {
+
+}
+
+.nextpostslink {
+
+}
+
+
+
+/* ページネーション全体のスタイル */
+.wp-pagenavi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: rem(12);
+}
+
+/* ページ番号リンクのスタイル */
+.wp-pagenavi .page-numbers {
+  display: inline-block;
+  padding-top: rem(8);
+  padding-bottom: rem(9);
+  padding-inline: rem(13);
+  border: rem(1) solid $color-accent1;
+  background: $color-background-base;
+
+  color: $color-accent1;
+  font-family: $font-family-en-2;
+  font-size: rem(16);
+  font-weight: $bold;
+  line-height: normal;
+  transition: all 0.2s ease-out;
+}
+
+.wp-pagenavi .page-numbers:hover {  // hover
+  background: $color-accent1;
+  color: $color-background-base;
+}
+
+/* 現在のページ番号のスタイル */
+.wp-pagenavi .current {
+  display: inline-block;
+  padding-top: rem(8);
+  padding-bottom: rem(9);
+  padding-inline: rem(13);
+  border: rem(1) solid $color-accent1;
+  font-family: $font-family-en-2;
+  font-size: rem(16);
+  font-weight: $bold;
+  line-height: normal;
+  background-color: $color-accent1;
+  color: $color-background-base;
+}
+
+/* 「次へ」「前へ」リンクのスタイル */
+.previouspostslink {
+  margin-right: rem(28);
+}
+
+.nextpostslink {
+  margin-left: rem(28);
+}
+
+.wp-pagenavi .nextpostslink,
+.wp-pagenavi .previouspostslink {
+  aspect-ratio: 1 / 1;
+  width: rem(38);
+  height: rem(38);
+  border: rem(1) solid $color-accent1;
+  background: $color-background-base;
+  display: grid;
+  place-items: center;
+  transition: background 0.2s ease-out;
+}
+
+.wp-pagenavi .nextpostslink:hover,
+.wp-pagenavi .previouspostslink:hover {  // hover
+  background: $color-accent1;
+}
+
+.wp-pagenavi .nextpostslink svg path,
+.wp-pagenavi .previouspostslink svg path {
+  transition: all 0.2s ease-out;
+}
+
+.wp-pagenavi .nextpostslink:hover svg path,
+.wp-pagenavi .previouspostslink:hover svg path {  // hover
+  fill: $color-background-base;
+}
+
+.wp-pagenavi .nextpostslink svg,
+.wp-pagenavi .previouspostslink svg {
+  width: rem(8);
+  height: rem(16);
+}

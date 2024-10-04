@@ -152,3 +152,127 @@
     font-size: rem(40);
   }
 }
+
+
+// =======================================
+// PC時のみ表示される。
+.card__content-pc {
+  @include mq(md) {
+    margin-top: rem(24);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: rem(7);
+  }
+}
+
+.card__text {
+  @include mq(md) {
+    color: $color-font-base;
+    font-size: rem(16);
+    font-weight: $normal;
+    line-height: 1.5;
+  }
+}
+
+.card__date {
+  @include mq(md) {
+    margin-top: rem(25);
+    color: $color-accent1;
+    text-align: center;
+    font-family: $font-family-en-2;
+    font-size: rem(16);
+    font-weight: $bold;
+    line-height: 1.125;
+  }
+}
+
+.card__contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: rem(16);
+}
+
+.card__contact__text {
+  @include mq(md) {
+    color: $color-accent1;
+    text-align: center;
+    font-size: rem(14);
+    font-weight: $normal;
+    line-height: 1.285;
+    flex-grow: 1;
+    height: 100%;
+  }
+}
+
+.card__btn {
+
+}
+
+
+
+
+// =======================================
+// モディファイア
+// =======================================
+// .card--2 (campaign-page セクションのcard) → <a>タグではない！(cardの中にボタンがあるため、<divタグ>)
+.card--2 {
+
+}
+
+.card--2:hover {
+  opacity: 1.0;  // 『.card--2』は<a>タグではない為、hover時のアクションは無し。
+}
+
+.card--2 .card__wrap {
+  display: flex;
+  flex-direction: column;
+
+  @include mq(md) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.card--2 .card__img img {
+  @include mq(md) {
+    aspect-ratio: 520 / 347;
+  }
+}
+
+.card--2 .card__body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100%;
+
+  @include mq(md) {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
+  }
+}
+
+.card--2 .card__top {
+  flex-grow: 1;
+  height: 100%;
+
+  @include mq(md) {
+    flex-grow: 1;
+    height: 100%;
+  }
+}
+
+.card--2 .card__bottom {
+  flex-grow: 1;
+  height: 100%;
+
+  @include mq(md) {
+    flex-grow: 1;
+    height: 100%;
+  }
+}

@@ -1,0 +1,49 @@
+@use "global" as *;
+
+
+.campaign-page {
+
+}
+
+.campaign-page__inner {
+  position: relative;
+}
+
+.campaign-page__inner::before {  // 魚の群れ
+  content: "";
+  background: url(../images/common/fishes.png) no-repeat center center / contain;
+  width: rem(120);
+  max-width: rem(120);
+  height: rem(55);
+  max-height: rem(55);
+  transform: scaleX(-1);  // 左右反転。
+  position: absolute;
+  top: rem(-24);
+  left: calc(50% - min(48vw, 39rem));  // *位置を制御
+  z-index: -1;
+
+  @include mq(md) {
+    width: rem(308);
+    max-width: rem(308);
+    height: rem(145);
+    max-height: rem(145);
+    top: rem(-73);
+    left: calc(50% - min(48vw, 39rem));  // *位置を制御
+  }
+}
+
+.campaign-page__tabs {
+
+}
+
+.campaign-page__pagenavi {
+  margin-top: rem(80);
+}
+
+.campaign-page__cards {
+  margin-top: rem(40);
+
+  @include mq(md) {
+    height: 100%;
+  }
+}
