@@ -1,0 +1,68 @@
+@use "global" as *;
+
+
+.tab2 {
+  cursor: pointer;
+  display: inline-block;
+  padding-block: rem(10);
+  padding-inline: rem(5);
+  background: #DDF0F1;
+  color: $color-accent1;
+  text-align: center;
+  font-size: rem(14);
+  font-weight: $normal;
+  line-height: normal;
+  box-shadow: rem(2) rem(2) rem(4) 0px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-out;
+
+  @include mq(md) {
+    padding-block: rem(13);
+    padding-inline: rem(10);
+    font-size: rem(24);
+    box-shadow: rem(4) rem(4) rem(8) 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: rem(8);
+  }
+}
+
+.tab2:hover {  // hover
+  color: #FFF;
+  background: $color-accent1;
+}
+
+.tab2:hover svg path {  // hover
+  @include mq(md) {
+    fill: #FFF;
+  }
+}
+
+.tab2.is-selected {  // 選択中のタブは背景色と文字色を変更、かつ、クリックできるように見せないように。
+  cursor: default;
+  color: #FFF;
+  background: $color-accent1;
+}
+
+.tab2.is-selected svg path {  // 選択中のタブはsvgを白色に。
+  @include mq(md) {
+    fill: #FFF;
+  }
+}
+
+.tab2 svg {
+  display: none;
+
+  @include mq(md) {
+    display: inline-block;
+    aspect-ratio: 1 / 1;
+    width: rem(63);
+    height: rem(63);
+  }
+}
+
+.tab2 svg path {
+  @include mq(md) {
+    transition: fill 0.2s ease-out;
+  }
+}

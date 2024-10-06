@@ -20,7 +20,8 @@
   background: $color-accent1;
 }
 
-.tab.is-selected {  // 選択中のタブは背景色と文字色を変更
+.tab.is-selected {  // 選択中のタブは背景色と文字色を変更、かつ、クリックできるように見せないように。
+  cursor: default;
   color: $color-background-base;
   background: $color-accent1;
 }

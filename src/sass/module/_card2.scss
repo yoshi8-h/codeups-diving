@@ -1,0 +1,70 @@
+@use "global" as *;
+
+
+.card2 {
+  border: rem(1) solid $color-accent1;
+  padding: rem(24);
+
+  @include mq(md) {
+    border: rem(2) solid $color-accent1;
+  }
+}
+
+.card2__wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: rem(8);
+
+  @include mq(md) {
+    flex-direction: row;
+    gap: rem(48);
+  }
+}
+
+.card2__contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: rem(7.5);
+
+  @include mq(md) {
+    flex-grow: 1;
+    width: 100%;
+  }
+}
+
+.card2__title {
+  font-size: rem(24);
+  font-weight: $bold;
+  line-height: 1.0;
+  flex-grow: 1;
+  width: 100%;
+  padding-bottom: rem(7.5);
+  border-bottom: rem(1) solid $color-accent1;
+}
+
+.card2__text {
+  color: #000;
+  font-size: rem(16);
+  font-weight: $normal;
+  line-height: 1.5;
+}
+
+.card2__img {
+  flex-grow: 1;
+  width: 100%;
+  flex-basis: 100%;
+}
+
+.card2__img img {
+  aspect-ratio: 297 / 189;
+  width: 100%;
+  object-fit: cover;
+
+  @include mq(md) {
+    aspect-ratio: 492 / 313;
+  }
+}

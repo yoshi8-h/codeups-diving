@@ -1,0 +1,25 @@
+@use "global" as *;
+
+.tabs2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: rem(19);
+  row-gap: rem(19);  // 一応設定。
+  align-items: flex-start;  // 上揃えに。
+
+  @include mq(md) {
+    column-gap: rem(30);  // 一応設定。
+    row-gap: rem(20);  // 一応設定。
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.tabs2__item {
+  @include mq(md) {
+    max-width: rem(300);
+    width: 100%;
+  }
+}

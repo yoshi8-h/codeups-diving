@@ -1,0 +1,10 @@
+@use "global" as *;
+
+
+.tab-content2 {
+  display: none;  // 初期状態では非表示
+}
+
+.tab-content2.active {
+  display: block;  // activeクラスが付与されたら表示
+}
