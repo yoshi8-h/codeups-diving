@@ -1,0 +1,49 @@
+@use "global" as *;
+
+
+.sidebar {
+
+}
+
+.sidebar__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: rem(80);
+
+  padding-inline: rem(20);
+}
+
+.sidebar__item {
+
+}
+
+.sidebar__content-title {
+
+}
+
+.sidebar__popular-posts {
+  margin-top: rem(24);
+}
+
+.sidebar__reviews {
+  margin-top: rem(24);
+}
+
+.sidebar__campaign {
+  margin-top: rem(24);
+}
+
+.sidebar__archives {
+  margin-top: rem(24);
+}
+
+.sidebar__btn-wrap {
+  margin-top: rem(44);
+  text-align: center;
+}
+
+.sidebar__btn {
+
+}

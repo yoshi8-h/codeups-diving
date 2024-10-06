@@ -1,0 +1,14 @@
+@use "global" as *;
+
+
+.reviews {  // カンプ上では1つしか口コミがないが、複数になっても対応できるようにCSSを指定
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: rem(15);
+}
+
+.reviews__item {
+
+}

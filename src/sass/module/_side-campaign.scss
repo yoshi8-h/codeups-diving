@@ -1,0 +1,14 @@
+@use "global" as *;
+
+
+.side-campaign {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: rem(40);
+}
+
+.side-campaign__item {
+
+}

@@ -1,0 +1,49 @@
+@use "global" as *;
+
+
+.review {
+  transition: opacity 0.2s ease-out;
+}
+
+.review:hover {  // hover
+  opacity: 0.8;
+}
+
+.review__wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: rem(16);
+}
+
+.review__img {
+
+}
+
+.review__img img {
+  aspect-ratio: 294 / 218;
+  object-fit: cover;
+  width: 100%;
+
+}
+
+.review__contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: rem(8);
+}
+
+.review__subtitle {
+  font-size: rem(12);
+  font-weight: $normal;
+  line-height: 1.5;
+}
+
+.review__title {
+  font-size: rem(24);
+  font-weight: 500;
+  line-height: normal;
+}

@@ -1,0 +1,36 @@
+@use "global" as *;
+
+
+.side-title {
+  font-size: rem(24);
+  font-weight: $normal;
+  line-height: normal;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: rem(8);
+
+  padding-left: rem(24);
+  position: relative;
+}
+
+.side-title::before {
+  content: "";
+  width: rem(8);
+  height: 100%;
+  background: $color-accent1;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.side-title svg {
+  aspect-ratio: 1 / 1;
+  width: rem(50);
+}
+
+.side-title svg path {
+
+}

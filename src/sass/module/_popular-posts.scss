@@ -1,0 +1,14 @@
+@use "global" as *;
+
+
+.popular-posts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: rem(24);
+}
+
+.popular-posts__item {
+
+}

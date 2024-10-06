@@ -1,0 +1,14 @@
+@use "global" as *;
+
+
+.side-archives {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: rem(4);
+}
+
+.side-archives__item {
+
+}

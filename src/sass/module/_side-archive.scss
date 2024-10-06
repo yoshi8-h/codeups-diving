@@ -1,0 +1,56 @@
+@use "global" as *;
+
+
+.side-archive {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: rem(4);
+
+  color: $color-accent1;
+  font-size: rem(24);
+  font-weight: $normal;
+  line-height: normal;
+}
+
+.side-archive__parent {
+  padding-left: rem(32);
+  position: relative;
+}
+
+.side-archive__parent::before {  // 左端の『右向き』三角形(▶︎)
+  content: "";
+  width: rem(24);
+  height: rem(24);
+  background: url(../images/common/green-arrow-right.svg) no-repeat center center / contain;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.side-archive__children {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: rem(4);
+  margin-left: rem(24);
+}
+
+.side-archive__child {
+  padding-left: rem(32);
+  position: relative;
+}
+
+.side-archive__child::before {  // 左端の『右向き』三角形(▶︎)
+  content: "";
+  width: rem(24);
+  height: rem(24);
+  background: url(../images/common/green-arrow-right.svg) no-repeat center center / contain;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
