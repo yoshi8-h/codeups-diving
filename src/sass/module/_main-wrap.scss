@@ -1,0 +1,50 @@
+@use "global" as *;
+
+
+.main-wrap {
+  position: relative;
+}
+
+.main-wrap::before {  // 魚の群れ
+  content: "";
+  background: url(../images/common/fishes.png) no-repeat center center / contain;
+  width: rem(120);
+  max-width: rem(120);
+  height: rem(55);
+  max-height: rem(55);
+  transform: scaleX(-1);  // 左右反転。
+  position: absolute;
+  top: rem(-24);
+  left: calc(50% - min(46vw, 39rem));  // *位置を制御
+  z-index: 15;
+
+  @include mq(md) {
+    width: rem(301);
+    max-width: rem(301);
+    height: rem(138);
+    max-height: rem(138);
+    top: rem(-70);
+    left: calc(50% - min(48vw, 39rem));  // *位置を制御
+    z-index: -3;
+  }
+}
+
+.main-wrap__inner {
+
+}
+
+.main-wrap__main {
+
+}
+
+.main-wrap__posts {
+
+}
+
+.main-wrap__pagenavi {
+  margin-top: rem(80);
+}
+
+.main-wrap__side {
+
+}
