@@ -6,7 +6,15 @@
 
 }
 
+.wp-pagenavi__prev {
+
+}
+
 .previouspostslink {
+
+}
+
+.wp-pagenavi__current {
 
 }
 
@@ -14,7 +22,15 @@
 
 }
 
+.wp-pagenavi__number {
+
+}
+
 .page-numbers {
+
+}
+
+.wp-pagenavi__next {
 
 }
 
@@ -102,7 +118,7 @@
 
 .wp-pagenavi .nextpostslink:hover svg path,
 .wp-pagenavi .previouspostslink:hover svg path {  // hover
-  fill: $color-background-base;
+  stroke: $color-background-base; // fillで指定すると中身が塗りつぶされてしまう為、strokeを変更
 }
 
 .wp-pagenavi .nextpostslink svg,
