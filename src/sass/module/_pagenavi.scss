@@ -1,0 +1,57 @@
+@use "global" as *;
+
+
+.pagenavi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagenavi__prev {
+
+}
+
+.pagenavi__prev.previouspostslink {
+
+}
+
+.pagenavi__next {
+
+}
+
+.pagenavi__next.nextpostslink {
+
+}
+
+.pagenavi__prev.previouspostslink,
+.pagenavi__next.nextpostslink {
+  aspect-ratio: 1 / 1;
+  width: rem(38);
+  height: rem(38);
+  border: rem(1) solid $color-accent1;
+  background: $color-background-base;
+  display: grid;
+  place-items: center;
+  transition: background 0.2s ease-out;
+}
+
+.pagenavi__prev.previouspostslink:hover,
+.pagenavi__next.nextpostslink:hover {  // hover
+  background: $color-accent1;
+}
+
+.pagenavi__prev.previouspostslink svg path,
+.pagenavi__next.nextpostslink svg path {
+  transition: all 0.2s ease-out;
+}
+
+.pagenavi__prev.previouspostslink:hover svg path,
+.pagenavi__next.nextpostslink:hover svg path {  // hover
+  stroke: $color-background-base; // fillで指定すると中身が塗りつぶされてしまう為、strokeを変更
+}
+
+.pagenavi__prev.previouspostslink svg,
+.pagenavi__next.nextpostslink svg {
+  width: rem(8);
+  height: rem(16);
+}

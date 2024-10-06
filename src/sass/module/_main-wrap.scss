@@ -41,15 +41,32 @@
 }
 
 .main-wrap__main {
+  max-width: rem(500);
+  margin-inline: auto;
 
+  @include mq(md) {
+    max-width: none;
+    margin-inline: 0;
+  }
 }
 
 .main-wrap__posts {
 
 }
 
-.main-wrap__pagenavi {
+.main-wrap__single {
+
+}
+
+.main-wrap__pagenavi {  // 投稿一覧ページのページネーション
   margin-top: rem(80);
+}
+
+.main-wrap__pagenavi2 {  // 投稿詳細ページのページネーション
+  margin-top: rem(40);
+  max-width: rem(158);
+  width: 100%;
+  margin-inline: auto;
 }
 
 .main-wrap__side {
@@ -61,5 +78,32 @@
     margin-top: 0;
     max-width: rem(294);
     margin-inline: 0;
+  }
+}
+
+
+
+
+// =======================================
+// モディファイア
+// =======================================
+// main-wrap--2 (投稿詳細ページの)
+.main-wrap--2 {
+
+}
+
+.main-wrap--2.main-wrap::before {  // 魚の群れ
+  top: rem(-18);
+  left: calc(50% - min(46vw, 39rem));  // *位置を制御
+  z-index: 15;
+
+  @include mq(md) {
+    width: rem(301);
+    max-width: rem(301);
+    height: rem(138);
+    max-height: rem(138);
+    top: rem(-70);
+    left: calc(50% - min(48vw, 39rem));  // *位置を制御
+    z-index: -3;
   }
 }

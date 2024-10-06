@@ -1,0 +1,56 @@
+@use "global" as *;
+
+
+.single-post {
+
+}
+
+.single-post__wrap {
+
+}
+
+.single-post__top {
+
+}
+
+.single-post__date {
+  font-family: $font-family-en-1;
+  font-size: rem(14);
+  font-weight: $normal;
+  line-height: 1.285;
+}
+
+.single-post__title {
+  margin-top: rem(8);
+  font-size: rem(24);
+  font-weight: 500;
+  line-height: normal;
+  padding-bottom: rem(3.5);
+  border-bottom: rem(1) solid $color-accent1;
+}
+
+.single-post__main {
+  margin-top: rem(23.5);
+}
+
+.single-post__img {
+  margin-top: rem(24);
+}
+
+.single-post__img img {
+  aspect-ratio: 345 / 231;
+  object-fit: cover;
+  width: 100%;
+}
+
+.single-post__text {
+  margin-top: rem(24);
+  color: #000;
+  font-size: rem(16);
+  font-weight: $normal;
+  line-height: 1.5;
+}
+
+.single-post__list {
+  margin-top: rem(24);
+}
