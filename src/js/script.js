@@ -125,6 +125,8 @@ window.addEventListener("scroll", function () {
   }
 });
 
+
+
 /* -------------------------------------------------------------------------------- */
 // タブの切り替え (campaign-page セクション)
 // 初期値(ページリロード時)は『all』のタブが選択されている状態にして、全てのコンテンツが表示されるように。
@@ -176,3 +178,38 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+
+
+/* -------------------------------------------------------------------------------- */
+// モーダル (gallery セクション)
+// 開閉の際にアニメーションを付与。
+// 画面のどこかをタップしたら、モーダルが閉じる仕様に。
+
+// モーダルを開く処理
+document.querySelectorAll(".js-modal-open").forEach(function(button) {
+  button.addEventListener("click", function(e) {
+    e.preventDefault();
+    var modalNumber = this.getAttribute("data-modal");
+    var modal = document.querySelector(".js-gallery-modal-" + modalNumber);
+    modal.showModal();
+    modal.classList.add("is-visible");  // クラスを追加してアニメーションを適用
+    document.documentElement.classList.add("is-fixed");
+
+    // モーダルの枠外をクリックした時の処理を追加
+    modal.addEventListener('click', function(event) {
+      if (event.target === modal) {
+        closeModal(modal);
+      }
+    });
+  });
+});
+
+// モーダルを閉じる時のアニメーション処理
+function closeModal(modal) {
+  modal.classList.remove("is-visible");  // クラスを削除してアニメーションを適用
+  // アニメーションが終わるのを待ってからモーダルを閉じる
+  setTimeout(function() {
+    modal.close();
+  }, 200);  // アニメーションの時間と同じに設定
+  document.documentElement.classList.remove("is-fixed");
+}
