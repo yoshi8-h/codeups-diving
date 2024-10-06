@@ -23,3 +23,18 @@
   // height: auto;
   height: 100%;  //
 }
+
+
+
+
+// =======================================
+// モディファイア
+// =======================================
+// .posts--2 (サイドバーの)
+.posts--2 {
+  @include mq(md) {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: rem(40);
+    row-gap: rem(80);
+  }
+}

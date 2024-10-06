@@ -13,6 +13,10 @@
   gap: rem(80);
 
   padding-inline: rem(20);
+
+  @include mq(md) {
+    padding-inline: 0;
+  }
 }
 
 .sidebar__item {
