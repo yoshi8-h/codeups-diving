@@ -17,9 +17,10 @@
 .side-archive__parent {
   padding-left: rem(32);
   position: relative;
+  transition: opacity 0.2s ease-out;
 }
 
-.side-archive__parent::before {  // 左端の『右向き』三角形(▶︎)
+.side-archive__parent::before {  // デフォルトは『右向き』三角形(▶︎)
   content: "";
   width: rem(24);
   height: rem(24);
@@ -28,6 +29,11 @@
   top: 50%;
   left: 0;
   transform: translateY(-50%);
+}
+
+// 『.side-archive__parent』の隣に『.side-archive__children』がある場合は『.has-children』を付与して、『下向き』三角形に変更する為のCSS (JSで制御)
+.side-archive__parent.has-children::before {
+  transform: translateY(-50%) rotate(90deg);
 }
 
 .side-archive__children {
@@ -42,6 +48,7 @@
 .side-archive__child {
   padding-left: rem(32);
   position: relative;
+  transition: opacity 0.2s ease-out;
 }
 
 .side-archive__child::before {  // 左端の『右向き』三角形(▶︎)
@@ -53,4 +60,10 @@
   top: 50%;
   left: 0;
   transform: translateY(-50%);
+}
+
+
+.side-archive__parent:hover ,
+.side-archive__child:hover {  // hover
+  opacity: 0.7;
 }

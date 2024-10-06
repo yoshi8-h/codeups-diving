@@ -220,53 +220,6 @@ function closeModal(modal) {
 // 初期値(ページリロード時)は『all』のタブが選択されている状態にして、全てのコンテンツが表示されるように。
 // クリックされたタブ(選択されているタブ)に『.is-selected』クラスを付与して選択中のタブのスタイルのみ変更。
 // クリックされたタブ(選択されているタブ)の『data-category』属性の値と同じ『data-category』属性の値を持つコンテンツのみ表示。
-// document.addEventListener('DOMContentLoaded', function() {
-//   // タブボタンとコンテンツを取得
-//   const tabButtons = document.querySelectorAll('.tab2');
-//   const tabContents = document.querySelectorAll('.tab-content2');
-
-//   // // 初期表示設定：「ALL」タブとすべてのコンテンツを表示
-//   // const initialTab = document.querySelector('.tab2[data-category="all"]');
-//   // initialTab.classList.add('is-selected'); // 「ALL」タブに選択クラスを追加
-//   // tabContents.forEach(content => {
-//   //     content.classList.add('active'); // すべてのコンテンツを表示
-//   // });
-
-//   // タブボタンのクリックイベントを設定
-//   tabButtons.forEach(button => {
-//       button.addEventListener('click', function() {
-//           // クリックされたタブのカテゴリーを取得
-//           const category = this.getAttribute('data-category');
-
-//           // すべてのタブから選択クラスを削除
-//           tabButtons.forEach(btn => {
-//               btn.classList.remove('is-selected');
-//           });
-
-//           // クリックされたタブに選択クラスを追加
-//           this.classList.add('is-selected');
-
-//           // すべてのコンテンツを非表示にする
-//           tabContents.forEach(content => {
-//               content.classList.remove('active');
-//           });
-
-//           if (category === 'all') {
-//               // 「ALL」がクリックされた場合、すべてのコンテンツを表示
-//               tabContents.forEach(content => {
-//                   content.classList.add('active');
-//               });
-//           } else {
-//               // 対応するカテゴリーのコンテンツを表示
-//               document.querySelectorAll(`.tab-content2[data-category="${category}"]`).forEach(content => {
-//                   content.classList.add('active');
-//               });
-//           }
-//       });
-//   });
-// });
-
-
 document.addEventListener('DOMContentLoaded', function() {
   // タブボタンとコンテンツを取得
   const tabButtons = document.querySelectorAll('.tab2');
@@ -308,3 +261,24 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+
+/* -------------------------------------------------------------------------------- */
+// サイドバー (sidebar)の、『アーカイブ』の、三角形の向きを制御
+// 『月別』のアーカイブがある場合のみ、親(年)の三角形の向きを変更 (CSSでも制御)
+document.addEventListener('DOMContentLoaded', () => {
+  // すべての年の要素を取得
+  const archiveParents = document.querySelectorAll('.side-archive__parent');
+
+  archiveParents.forEach(parent => {
+    // 年の親要素から、子要素（.side-archive__children）を探す (次の兄弟要素(隣接している要素)を取得)
+    const childrenContainer = parent.nextElementSibling;
+
+    // 親要素の隣に要素がある場合かつ、その要素が『.side-archive__children』である場合かつ、その『.side-archive__children』の中に『.side-archive__child』がある場合
+    if (childrenContainer && childrenContainer.classList.contains('side-archive__children') && childrenContainer.querySelector('.side-archive__child')) {
+      parent.classList.add('has-children');
+    }
+  });
+});
+
+
