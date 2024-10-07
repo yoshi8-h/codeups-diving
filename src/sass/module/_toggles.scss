@@ -1,0 +1,18 @@
+@use "global" as *;
+
+
+.toggles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: rem(44);
+
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}
+
+.toggles__item {
+  width: 100%;
+}

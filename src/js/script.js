@@ -113,7 +113,7 @@ box.each(function(){
 // });
 
 /* -------------------------------------------------------------------------------- */
-// トップへ戻るボタン
+/* トップへ戻るボタン */
 // 画面を少し(今回は100px)スクロールした時に表示(通常は非表示)
 const pageTop = document.querySelector(".js-top-btn");
 
@@ -128,7 +128,7 @@ window.addEventListener("scroll", function () {
 
 
 /* -------------------------------------------------------------------------------- */
-// タブの切り替え (campaign-page セクション)
+/* タブの切り替え (campaign-page セクション) */
 // 初期値(ページリロード時)は『all』のタブが選択されている状態にして、全てのコンテンツが表示されるように。
 // クリックされたタブ(選択されているタブ)に『.is-selected』クラスを付与して選択中のタブのスタイルのみ変更。
 // クリックされたタブ(選択されているタブ)の『data-category』属性の値と同じ『data-category』属性の値を持つコンテンツのみ表示。
@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 /* -------------------------------------------------------------------------------- */
-// モーダル (gallery セクション)
+/* モーダル (gallery セクション) */
 // 開閉の際にアニメーションを付与。
 // 画面のどこかをタップしたら、モーダルが閉じる仕様に。
 
@@ -216,7 +216,7 @@ function closeModal(modal) {
 
 
 /* -------------------------------------------------------------------------------- */
-// タブの切り替え (info セクション)
+/* タブの切り替え (info セクション) */
 // 初期値(ページリロード時)は『all』のタブが選択されている状態にして、全てのコンテンツが表示されるように。
 // クリックされたタブ(選択されているタブ)に『.is-selected』クラスを付与して選択中のタブのスタイルのみ変更。
 // クリックされたタブ(選択されているタブ)の『data-category』属性の値と同じ『data-category』属性の値を持つコンテンツのみ表示。
@@ -264,7 +264,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 /* -------------------------------------------------------------------------------- */
-// サイドバー (sidebar)の、『アーカイブ』の、三角形の向きを制御
+/* サイドバー (sidebar)の、『アーカイブ』の、三角形の向きを制御 */
 // 『月別』のアーカイブがある場合のみ、親(年)の三角形の向きを変更 (CSSでも制御)
 document.addEventListener('DOMContentLoaded', () => {
   // すべての年の要素を取得
@@ -283,24 +283,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 /* -------------------------------------------------------------------------------- */
-// テーブル (料金表) の構造を、SP時とPC時で制御
-// function adjustTableHeader() {
-//   const tableHeader = document.querySelectorAll('.js-table-head');
+/* アコーディオン (faq セクション) */
+jQuery(".js-accordion").on("click", function (e) {
+  e.preventDefault();
 
-//   // 画面幅の取得
-//   const screenWidth = window.innerWidth;
+  if (jQuery(this).parent().hasClass("is-open")) {
+    jQuery(this).parent().removeClass("is-open");
+    jQuery(this).next().slideUp();
+  } else {
+    jQuery(this).parent().addClass("is-open");
+    jQuery(this).next().slideDown();
+  }
+});
 
-//   // スマホ用設定
-//   if (screenWidth < 768) {
-//     tableHeader.setAttribute('colspan', '2');
-//     tableHeader.removeAttribute('rowspan');
-//   } else {
-//     // PC用設定
-//     tableHeader.setAttribute('rowspan', '3');
-//     tableHeader.removeAttribute('colspan');
-//   }
-// }
-
-// // ページ読み込み時とリサイズ時にヘッダーを調整
-// window.addEventListener('load', adjustTableHeader);
-// window.addEventListener('resize', adjustTableHeader);

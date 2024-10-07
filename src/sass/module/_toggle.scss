@@ -1,0 +1,90 @@
+@use "global" as *;
+
+
+.toggle {
+
+}
+
+.toggle.is-open .toggle__open-btn::after {  // 『.is-open』が付いた時は、縦線を90度回転。
+  transform: translate(-50%, -50%) rotate(90deg);  // 『rotate』だけだと、元々指定していた『translate(-50%, -50%)』が無しになり『rotate』だけが適用されてしまうため『rotate』と『translate』の両方の記述が必要。また『translate』と『rotate』の順番も重要。逆にすると移動と回転の順番が逆になり結果が変わる。
+}
+
+.toggle__head {
+  width: 100%;
+  background: $color-accent1;
+  padding: rem(16);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: rem(20);  // 念の為に指定。
+
+  @include mq(md) {
+    padding-block: rem(25);
+    padding-inline: rem(40);
+  }
+}
+
+.js-accordion {
+
+}
+
+.toggle__head-text {
+  color: #FFF;
+  font-size: rem(16);
+  font-weight: $normal;
+  line-height: normal;
+
+  @include mq(md) {
+    font-size: rem(20);
+  }
+}
+
+.toggle__open-btn {
+  display: block;
+  width: rem(28);
+  height: rem(28);
+  position: relative;
+}
+
+.toggle__open-btn::before,
+.toggle__open-btn::after {  // 縦線と横線の共通の指定
+  content: "";
+  background-color: #FFF;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.toggle__open-btn::before {  // 横線
+  width: rem(28);
+  height: rem(1);
+  min-height: rem(1);
+  max-height: rem(1);
+}
+
+.toggle__open-btn::after {  // 縦線
+  width: rem(1);
+  max-width: rem(1);
+  min-width: rem(1);
+  height: rem(28);
+  transition: transform 0.3s ease-out;
+}
+
+.toggle__body {
+  display: none;  // 普段(最初)は「.qa-box__body」は閉じている仕様のため。
+  border: rem(1) solid $color-accent1;
+  padding-block: rem(23);
+  padding-inline: rem(15);
+
+  @include mq(md) {
+    margin-top: rem(16);
+    padding: rem(40);
+  }
+}
+
+.toggle__text {
+  font-size: rem(16);
+  font-weight: $normal;
+  line-height: normal;
+}
