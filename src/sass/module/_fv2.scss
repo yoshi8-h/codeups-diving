@@ -82,3 +82,11 @@
     background: url(../images/page/pc/price_fv-bg.webp) no-repeat center center / cover;
   }
 }
+
+.fv2--faq {
+  background: url(../images/page/sp/faq_fv-bg.webp) no-repeat center center / cover;
+
+  @include mq(md) {
+    background: url(../images/page/pc/faq_fv-bg.webp) no-repeat center center / cover;
+  }
+}
