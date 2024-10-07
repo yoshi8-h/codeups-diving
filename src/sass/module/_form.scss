@@ -1,12 +1,16 @@
 @use "global" as *;
 
 
-.form {
+.form {  // <form> タグだから、ここにはCSSを指定しない事！！(WordPress化する際に、『Contact Form 7』を使う時に<form>タグは消すため)
 
 }
 
 .form__fields {
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: rem(24);
 }
 
 .form__sendbtn-wrap {

@@ -10,9 +10,13 @@
 }
 
 .contact-page__form-wrap {
+  max-width: rem(500);
+  margin-inline: auto;
 
+  @include mq(md) {
+    max-width: rem(700);
+  }
 }
 
-.contact-page__form {
-
+.contact-page__form {  // <form> タグだから、ここにはCSSを指定しない事！！(WordPress化する際に、『Contact Form 7』を使う時に<form>タグは消すため)
 }
