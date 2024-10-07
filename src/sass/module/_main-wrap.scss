@@ -67,6 +67,10 @@
   max-width: rem(158);
   width: 100%;
   margin-inline: auto;
+
+  @include mq(md) {
+    margin-top: rem(80);
+  }
 }
 
 .main-wrap__side {

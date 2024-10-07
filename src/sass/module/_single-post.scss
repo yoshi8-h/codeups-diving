@@ -27,20 +27,37 @@
   line-height: normal;
   padding-bottom: rem(3.5);
   border-bottom: rem(1) solid $color-accent1;
+
+  @include mq(md) {
+    font-size: rem(32);
+    padding-bottom: 0;
+  }
 }
 
 .single-post__main {
   margin-top: rem(23.5);
+
+  @include mq(md) {
+    margin-top: rem(40);
+  }
 }
 
 .single-post__img {
   margin-top: rem(24);
+
+  @include mq(md) {
+    margin-top: rem(40);
+  }
 }
 
 .single-post__img img {
   aspect-ratio: 345 / 231;
   object-fit: cover;
   width: 100%;
+
+  @include mq(md) {
+    aspect-ratio: 700 / 468;
+  }
 }
 
 .single-post__text {
@@ -49,8 +66,16 @@
   font-size: rem(16);
   font-weight: $normal;
   line-height: 1.5;
+
+  @include mq(md) {
+    margin-top: rem(40);
+  }
 }
 
 .single-post__list {
   margin-top: rem(24);
+
+  @include mq(md) {
+    margin-top: rem(40);
+  }
 }
