@@ -1,0 +1,123 @@
+@use "global" as *;
+
+
+.table {
+  border-collapse: collapse;  // ※表のセルの仕切り線を無くす記述。
+
+  @include mq(md) {
+    display: flex;
+  }
+}
+
+.table__head {
+  border: rem(1) solid $color-accent1;
+  background: $color-accent1;
+
+  @include mq(md) {
+    display: grid;
+    place-items: center;
+    flex-grow: 1;
+    width: 28.57%;
+  }
+}
+
+.table__head-row {
+  width: 100%;
+
+  @include mq(md) {
+    display: grid;
+    place-items: center;
+  }
+}
+
+.table__head-cell {
+  padding-block: rem(8);
+  padding-inline: rem(10);  // 念の為に指定
+
+  @include mq(md) {
+    padding-block: rem(41);
+  }
+}
+
+.table__head-cell:nth-of-type(2) {
+  display: none;
+
+  // @include mq(md) {
+  //   display: table-cell;
+  // }
+}
+
+.table__head-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: rem(8);
+
+  @include mq(md) {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: rem(8);
+  }
+}
+
+.table__head-content svg {  // クジラのアイコン
+  aspect-ratio: 1 / 1;
+  width: rem(24);
+
+  @include mq(md) {
+    width: rem(64);
+    height: rem(64);
+  }
+}
+
+.table__title {
+  color: #FFF;
+  font-size: rem(16);
+  font-weight: $bold;
+  line-height: 1.5;
+}
+
+.table__body {
+  @include mq(md) {
+    flex-grow: 1;
+    width: 71.42%;
+  }
+}
+
+.table__row {
+}
+
+.table__cell-text {
+  padding-block: rem(8);
+  text-align: center;
+  font-size: rem(16);
+  font-weight: $normal;
+  line-height: 1.5;
+  width: 69.56%;
+  border: rem(1) solid $color-accent1;
+
+  @include mq(md) {
+    padding-block: rem(17);
+    padding-left: rem(16);
+    text-align: left;
+    // max-width: rem(340);
+    // width: 100%;
+    width: rem(340);
+  }
+}
+
+.table__cell-price {
+  padding-right: rem(16);
+  text-align: right;
+  font-size: rem(16);
+  font-weight: $normal;
+  line-height: 1.5;
+  width: 30.43%;
+  border: rem(1) solid $color-accent1;
+
+  @include mq(md) {
+    padding-block: rem(17);
+    width: rem(162);
+  }
+}

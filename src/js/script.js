@@ -282,3 +282,25 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+/* -------------------------------------------------------------------------------- */
+// テーブル (料金表) の構造を、SP時とPC時で制御
+// function adjustTableHeader() {
+//   const tableHeader = document.querySelectorAll('.js-table-head');
+
+//   // 画面幅の取得
+//   const screenWidth = window.innerWidth;
+
+//   // スマホ用設定
+//   if (screenWidth < 768) {
+//     tableHeader.setAttribute('colspan', '2');
+//     tableHeader.removeAttribute('rowspan');
+//   } else {
+//     // PC用設定
+//     tableHeader.setAttribute('rowspan', '3');
+//     tableHeader.removeAttribute('colspan');
+//   }
+// }
+
+// // ページ読み込み時とリサイズ時にヘッダーを調整
+// window.addEventListener('load', adjustTableHeader);
+// window.addEventListener('resize', adjustTableHeader);

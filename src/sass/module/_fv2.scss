@@ -74,3 +74,11 @@
     background: url(../images/page/pc/voice_fv-bg.webp) no-repeat center center / cover;
   }
 }
+
+.fv2--price {
+  background: url(../images/page/sp/price_fv-bg.webp) no-repeat center center / cover;
+
+  @include mq(md) {
+    background: url(../images/page/pc/price_fv-bg.webp) no-repeat center center / cover;
+  }
+}
