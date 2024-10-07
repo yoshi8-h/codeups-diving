@@ -90,3 +90,11 @@
     background: url(../images/page/pc/faq_fv-bg.webp) no-repeat center center / cover;
   }
 }
+
+.fv2--contact {
+  background: url(../images/page/sp/contact_fv-bg.webp) no-repeat center center / cover;
+
+  @include mq(md) {
+    background: url(../images/page/pc/contact_fv-bg.webp) no-repeat center center / cover;
+  }
+}
