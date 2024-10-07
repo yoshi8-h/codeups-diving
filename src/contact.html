@@ -215,7 +215,7 @@
                 </div>
                 <div class="field__item input">
                   <input
-                    class="input-text js-form-input"
+                    class="input__text js-form-input"
                     type="text"
                     name="your-name"
                     id="your-name"
@@ -232,7 +232,7 @@
                 </div>
                 <div class="field__item input">
                   <input
-                    class="input-text js-form-input"
+                    class="input__text js-form-input"
                     type="email"
                     name="your-email"
                     id="your-email"
@@ -249,7 +249,7 @@
                 </div>
                 <div class="field__item input">
                   <input
-                    class="input-text js-form-input"
+                    class="input__text js-form-input"
                     type="tel"
                     name="your-tel"
                     id="your-tel"
@@ -259,24 +259,63 @@
               </div>
               <div class="fields__item field">
                 <div class="field__head">
-                  <label for="your-category" class="field__label">
+                  <div class="field__label">
                     お問合せ項目
+                    <span class="field__label-require">必須</span>
+                  </div>
+                </div>
+                <div class="field__checkboxes checkboxes">
+                  <label class="checkboxes__item checkbox">
+                    <input
+                      type="checkbox"
+                      name="your-category"
+                      class="checkbox__input js-form-input"
+                      required
+                    >
+                    <span class="checkbox__text">ダイビング講習について</span>
+                  </label>
+                  <label class="checkboxes__item checkbox">
+                    <input
+                      type="checkbox"
+                      name="your-category"
+                      class="checkbox__input js-form-input"
+                      required
+                    >
+                    <span class="checkbox__text">ファンデイビングについて</span>
+                  </label>
+                  <label class="checkboxes__item checkbox">
+                    <input
+                      type="checkbox"
+                      name="your-category"
+                      class="checkbox__input js-form-input"
+                      required
+                    >
+                    <span class="checkbox__text">体験ダイビングについて</span>
+                  </label>
+                </div>
+              </div>
+              <div class="fields__item field">
+                <div class="field__head">
+                  <label for="your-campaign" class="field__label">
+                    キャンペーン
                     <span class="field__label-require">必須</span>
                   </label>
                 </div>
-                <div class="field__item input">
-                  <input
-                    class="input-text js-form-input"
-                    type="checkbox"
-                    name="your-category"
-                    id="your-category"
-                    required
-                  >
+                <div class="field__select-wrap">
+                  <select class="field__select select js-form-input" name="your-campaign" id="your-campaign">
+                    <option value="">キャンペーン内容を選択</option>
+                    <option value="campaign1">キャンペーン1</option>
+                    <option value="campaign2">キャンペーン2</option>
+                    <option value="campaign3">キャンペーン3</option>
+                  </select>
                 </div>
               </div>
               <div class="fields__item field is-textarea">  <!-- 『テキストエリア』の項目 -->
                 <div class="field__head is-textarea">
-                  <label for="your-message" class="field__label">お問い合わせ内容<span class="is-require">*</span></label>
+                  <label for="your-message" class="field__label">
+                    お問い合わせ内容
+                    <span class="field__label-require">必須</span>
+                  </label>
                 </div>
                 <div class="field__item is-textarea">
                   <textarea
@@ -289,17 +328,28 @@
                   ></textarea>
                 </div>
               </div>
+              <div class="fields__item field is-agree">
+                <label class="field__agree-checkbox agree-checkbox">
+                  <input
+                    type="checkbox"
+                    name="your-category"
+                    class="agree-checkbox__input js-form-input"
+                    required
+                  >
+                  <span class="agree-checkbox__text">個人情報の取り扱いについて同意のうえ送信します。</span>
+                </label>
+              </div>
             </div>
-            <button type="submit" class="form__send-btn btn btn--red is-send">  <!-- 送信ボタン -->
-              <div class="btn__wrap">
-                <p class="btn__text">送信する</p>
+            <div class="form__sendbtn-wrap">
+              <button type="submit" class="form__sendbtn btn btn--send">
+                Send
                 <div class="btn__arrow">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16" fill="none">
-                    <path d="M14 8L0.499999 15.7942L0.5 0.205771L14 8Z" fill="white"/>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="42" height="8" viewBox="0 0 42 8" fill="none">
+                    <path d="M1 7H41L34 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
                 </div>
-              </div>
-            </button>
+              </button>
+            </div>
           </form>
         </div>
       </div>
