@@ -2,5 +2,11 @@
 
 
 .select {
-
+  border: rem(1) solid $color-accent1;
+  color: #000;
+  font-size: rem(12);
+  font-weight: $normal;
+  line-height: normal;
+  padding-block: rem(11);
+  padding-inline: rem(7);
 }

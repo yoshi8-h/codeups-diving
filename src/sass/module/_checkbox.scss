@@ -6,9 +6,45 @@
 }
 
 .checkbox__input {
+  width: 1px;  // デフォルトのチェックボックスを、機能は残したまま非表示に。
+  height: 1px;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
 
+.checkbox__input:checked + .checkbox__text::after {  // <input>をクリックした際の『checked属性』のON/OFFが切り替わるのを利用
+  opacity: 1;
 }
 
 .checkbox__text {
+  font-size: rem(16);
+  font-weight: $normal;
+  line-height: normal;
+  position: relative;
+  padding-left: rem(22);
+}
 
+.checkbox__text::before {  // チェックボックスの外枠の四角。
+  content: "";
+  width: rem(14);
+  height: rem(14);
+  border: 1px solid $color-accent1;
+  background: #FFF;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.checkbox__text::after {  // チェックボックスのチェックマークアイコン。
+  content: "";
+  width: rem(14);
+  height: rem(8);
+  background: url(../images/common/checkbox_check-icon.svg) no-repeat center center / contain;
+  position: absolute;
+  top: 50%;
+  left: rem(0.5);
+  transform: translateY(-50%);
+  opacity: 0;
 }

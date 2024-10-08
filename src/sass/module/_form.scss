@@ -11,12 +11,18 @@
   justify-content: center;
   align-items: center;
   gap: rem(24);
+
+  @include mq(md) {
+    gap: rem(40);
+  }
 }
 
 .form__sendbtn-wrap {
-
+  text-align: center;
+  margin-top: rem(24);
 }
 
 .form__sendbtn {
-
+  max-width: rem(202);
+  width: 100%;
 }

@@ -12,9 +12,22 @@
   height: rem(1);
   background: url(../images/common/separate-dashed-line.svg) no-repeat center center / cover;
   position: absolute;
-  bottom: 0;
+  bottom: rem(-0.5);
   left: 50%;
   transform: translateX(-50%);
+}
+
+.field.is-agree {
+  padding-bottom: 0;
+
+  color: #000;
+  font-size: rem(14);
+  font-weight: $normal;
+  line-height: 1.57;
+}
+
+.field.is-agree::after {
+  display: none;
 }
 
 .field__head {
@@ -42,6 +55,7 @@
   padding-block: rem(2);
   padding-inline: rem(16);
   background: #C94800;
+  text-align: center;
 }
 
 .field__item {
@@ -50,6 +64,8 @@
   justify-content: center;
   align-items: flex-start;
   gap: rem(16);
+
+  margin-top: rem(17);
 }
 
 .field__item input {
@@ -57,15 +73,32 @@
 }
 
 .field__checkboxes {
-
+  margin-top: rem(16);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: rem(4);
 }
 
 .field__select-wrap {
+  margin-top: rem(16);
+  position: relative;
+}
 
+.field__select-wrap::after {  // セレクトボックスの右端の下矢印アイコン
+  content: "";
+  background: url(../images/common/selectbox-arrow.svg) no-repeat center center / contain;
+  width: rem(12);
+  height: rem(12);
+  position: absolute;
+  top: 50%;
+  right: rem(8);
+  transform: translateY(-50%);
 }
 
 .field__select {
-
+  width: 100%;
 }
 
 .is-textarea {
@@ -73,11 +106,9 @@
 }
 
 .field__textarea {
-
-}
-
-.is-agree {
-
+  width: 100%;
+  border: rem(1) solid $color-accent1;
+  background: #FFF;
 }
 
 .field__agree-checkbox {

@@ -6,8 +6,19 @@
   background: #FFF;
 }
 
-.input__text {
+.input__text {  // 1行のテキスト入力エリアの共通クラス
+  padding-block: rem(8);
+  padding-inline: rem(16);
 
+  // 文字を入力した時の色を指定。
+  color: $color-font-base;
+  font-size: rem(16);
+  font-weight: $normal;
+  line-height: normal;
+}
+
+.input__text::placeholder {  // プレイスホルダーのCSS指定 (placeholder)
+  color: #DDF0F1;
 }
 
 .js-form-input {

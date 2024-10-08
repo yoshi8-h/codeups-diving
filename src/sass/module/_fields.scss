@@ -8,3 +8,9 @@
 .fields__item {
   width: 100%;
 }
+
+.fields__item.is-agree {
+  margin-top: rem(15);
+  width: calc(282px / 375px * 100vw);
+  max-width: fit-content;
+}
