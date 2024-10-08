@@ -204,7 +204,7 @@
     <section class="contact-page l-contact-page">
       <div class="contact-page__inner inner">
         <div class="contact-page__form-wrap">
-          <form class="contact-page__form form">  <!-- form -->
+          <form class="contact-page__form form" novalidate>  <!-- form -->
             <div class="form__fields fields">
               <div class="fields__item field">
                 <div class="field__head">
@@ -301,7 +301,6 @@
                 <div class="field__head">
                   <label for="your-campaign" class="field__label">
                     <span class="field__label-text">キャンペーン</span>
-                    <span class="field__label-require">必須</span>
                   </label>
                 </div>
                 <div class="field__select-wrap">
@@ -344,7 +343,7 @@
               </div>
             </div>
             <div class="form__sendbtn-wrap">
-              <button type="submit" class="form__sendbtn btn btn--send">
+              <button type="submit" value="submit" class="form__sendbtn btn btn--send">
                 Send
                 <div class="btn__arrow">
                   <svg xmlns="http://www.w3.org/2000/svg" width="42" height="8" viewBox="0 0 42 8" fill="none">

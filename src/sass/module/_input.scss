@@ -2,11 +2,13 @@
 
 
 .input {
-  border: rem(1) solid $color-accent1;
-  background: #FFF;
+
 }
 
 .input__text {  // 1行のテキスト入力エリアの共通クラス
+  border: rem(1) solid $color-accent1;
+  background: #FFF;
+
   padding-block: rem(8);
   padding-inline: rem(16);
 
@@ -28,6 +30,19 @@
   color: #DDF0F1;
 }
 
+// お問い合わせ項目のチェックボックスのエラー時に付与される『.is-error』が付いた時は、プレイスホルダーの色を白に。
+.is-error.input__text::placeholder {
+  color: #FFF;
+}
+
 .js-form-input {
 
+}
+
+
+
+// バリデーションでエラーになった際に、inputタグなどに付与されるクラス
+.is-error {
+  border: rem(1) solid #C94800;
+  background: rgba(201, 72, 0, 0.20);
 }

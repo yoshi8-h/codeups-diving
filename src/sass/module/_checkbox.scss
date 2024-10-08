@@ -53,3 +53,10 @@
   transform: translateY(-50%);
   opacity: 0;
 }
+
+
+/* お問い合わせ項目のチェックボックスのエラー時 */
+.is-error + .checkbox__text::before {
+  border: 1px solid #C94800;  /* 赤枠 */
+  background: rgba(201, 72, 0, 0.20);  /* 背景を淡い赤色に */
+}

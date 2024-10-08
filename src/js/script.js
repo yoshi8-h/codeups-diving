@@ -296,3 +296,164 @@ jQuery(".js-accordion").on("click", function (e) {
   }
 });
 
+
+/* -------------------------------------------------------------------------------- */
+/* 『お問い合わせフォーム』のバリデーション */
+
+// document.querySelector('.form').addEventListener('submit', function(event) {
+//   event.preventDefault(); // デフォルトの送信動作を防止
+
+//   let isValid = true;
+//   const requiredFields = document.querySelectorAll('.js-form-input[required]');
+//   const errorMessage = document.querySelector('.form__error-message');
+
+//   // 既存のエラーメッセージを削除
+//   if (errorMessage) {
+//     errorMessage.remove();
+//   }
+
+//   // 各必須項目を検証
+//   requiredFields.forEach(function(field) {
+//     if (!field.value.trim()) {
+//       isValid = false;
+//       // 未入力フィールドにエラークラスを追加
+//       field.classList.add('is-error');
+//     } else {
+//       // エラーがない場合、エラークラスを削除
+//       field.classList.remove('is-error');
+//     }
+//   });
+
+//   // エラーメッセージを表示
+//   if (!isValid) {
+//     const errorDiv = document.createElement('div');
+//     errorDiv.classList.add('form__error-message');
+//     errorDiv.innerText = '※必須項目が入力されていません。入力してください。';
+//     // フォームの最上部にエラーメッセージを挿入
+//     document.querySelector('.form').insertBefore(errorDiv, document.querySelector('.form').firstChild);
+//   } else {
+//     // バリデーションに成功した場合のみフォーム送信
+//     event.target.submit();
+//   }
+// });
+
+
+
+
+// document.querySelector('.form').addEventListener('submit', function(event) {
+//   event.preventDefault(); // デフォルトの送信動作を防止
+
+//   let isValid = true;
+//   const requiredFields = document.querySelectorAll('.js-form-input[required]');
+//   const errorMessage = document.querySelector('.form__error-message');
+
+//   // 既存のエラーメッセージを削除
+//   if (errorMessage) {
+//     errorMessage.remove();
+//   }
+
+//   // 各必須項目を検証（テキストやセレクトボックスなど）
+//   requiredFields.forEach(function(field) {
+//     if (!field.value.trim()) {
+//       isValid = false;
+//       // 未入力フィールドにエラークラスを追加
+//       field.classList.add('is-error');
+//     } else {
+//       // エラーがない場合、エラークラスを削除
+//       field.classList.remove('is-error');
+//     }
+//   });
+
+//   // お問い合わせ項目チェックボックスのバリデーション
+//   const categoryCheckboxes = document.querySelectorAll('input[name="your-category"].checkbox__input');
+//   const isAnyCategoryChecked = Array.from(categoryCheckboxes).some(checkbox => checkbox.checked);
+
+//   if (!isAnyCategoryChecked) {
+//     isValid = false;
+//     categoryCheckboxes.forEach(checkbox => checkbox.classList.add('is-error')); // 全てのチェックボックスにエラークラスを追加
+//   } else {
+//     categoryCheckboxes.forEach(checkbox => checkbox.classList.remove('is-error')); // エラーがない場合、エラークラスを削除
+//   }
+
+//   // 同意チェックボックスのバリデーション
+//   const agreeCheckbox = document.querySelector('input[name="your-agreement"].agree-checkbox__input');
+
+//   if (!agreeCheckbox.checked) {
+//     isValid = false;
+//     agreeCheckbox.classList.add('is-error'); // エラークラスを追加
+//   } else {
+//     agreeCheckbox.classList.remove('is-error'); // エラークラスを削除
+//   }
+
+//   // エラーメッセージを表示
+//   if (!isValid) {
+//     const errorDiv = document.createElement('div');
+//     errorDiv.classList.add('form__error-message');
+//     errorDiv.innerText = '※必須項目が入力されていません。入力してください。';
+//     // フォームの最上部にエラーメッセージを挿入
+//     document.querySelector('.form').insertBefore(errorDiv, document.querySelector('.form').firstChild);
+//   } else {
+//     // バリデーションに成功した場合のみフォーム送信
+//     event.target.submit();
+//   }
+// });
+
+
+
+
+
+document.querySelector('.form').addEventListener('submit', function(event) {
+  event.preventDefault(); // デフォルト送信をキャンセル
+
+  let isValid = true;
+
+  // エラーメッセージの削除
+  const errorMessage = document.querySelector('.form__error-message');
+  if (errorMessage) {
+    errorMessage.remove();
+  }
+
+  // 必須項目のチェック
+  const requiredFields = document.querySelectorAll('.js-form-input[required]');
+  requiredFields.forEach(function(field) {
+    if (!field.value.trim()) {
+      isValid = false;
+      field.classList.add('is-error');  // エラークラスを追加
+    } else {
+      field.classList.remove('is-error');  // エラークラスを削除
+    }
+  });
+
+  // お問い合わせ項目（どれか1つがチェックされているか確認）
+  const categoryCheckboxes = document.querySelectorAll('input[name="your-category"].checkbox__input');
+  const isAnyCategoryChecked = Array.from(categoryCheckboxes).some(checkbox => checkbox.checked);
+
+  if (!isAnyCategoryChecked) {
+    isValid = false;
+    categoryCheckboxes.forEach(checkbox => checkbox.classList.add('is-error')); // すべてのチェックボックスにエラークラスを追加
+  } else {
+    categoryCheckboxes.forEach(checkbox => checkbox.classList.remove('is-error')); // エラーがなければクラスを削除
+  }
+
+  // 同意チェックボックスのバリデーション
+  const agreeCheckbox = document.querySelector('input.agree-checkbox__input');
+  if (!agreeCheckbox.checked) {
+    isValid = false;
+    agreeCheckbox.classList.add('is-error'); // エラークラスを追加
+  } else {
+    agreeCheckbox.classList.remove('is-error'); // エラークラスを削除
+  }
+
+  // エラーメッセージの表示
+  if (!isValid) {
+    const errorDiv = document.createElement('div');
+    errorDiv.classList.add('form__error-message');
+    errorDiv.style.color = '#C94800';
+    errorDiv.innerText = '※必須項目が入力されていません。入力してください。';
+    document.querySelector('.form').insertBefore(errorDiv, document.querySelector('.form').firstChild);
+  } else {
+    event.target.submit();  // バリデーションに成功した場合のみフォームを送信
+  }
+});
+
+

@@ -60,3 +60,11 @@
     top: rem(6.5);
   }
 }
+
+
+
+/* 同意チェックボックスのエラー時 */
+.is-error + .agree-checkbox__text::before {
+  border: 1px solid #C94800;  /* 赤枠 */
+  background: rgba(201, 72, 0, 0.20);  /* 背景を淡い赤色に */
+}

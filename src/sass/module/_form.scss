@@ -5,6 +5,16 @@
 
 }
 
+.form__error-message {  // バリデーションのエラーメッセージのスタイル調整用クラス
+  color: #C94800;
+  margin-bottom: rem(40);
+  font-size: rem(14);
+  font-weight: $normal;
+  line-height: normal;
+  width: fit-content;
+  margin-inline: auto;
+}
+
 .form__fields {
   display: flex;
   flex-direction: column;
