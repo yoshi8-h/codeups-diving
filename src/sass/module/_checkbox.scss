@@ -2,7 +2,12 @@
 
 
 .checkbox {
+  transition: background 0.2s ease-out;
+}
 
+.checkbox:hover .checkbox__text::before,
+.checkbox:focus .checkbox__text::before {  //『入力時』＝『focus時』
+  background: rgba(64, 224, 208, 0.1);  /* ターコイズブルー + 透明度30％ */
 }
 
 .checkbox__input {

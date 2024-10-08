@@ -42,7 +42,6 @@
 }
 
 .field__head {
-  width: 100%;
 
   @include mq(md) {
     flex-grow: 1;

@@ -15,6 +15,13 @@
   font-size: rem(16);
   font-weight: $normal;
   line-height: normal;
+
+  transition: background 0.2s ease-out;
+}
+
+.input__text:hover,
+.input__text:focus {  //『入力時』＝『focus時』
+  background: rgba(64, 224, 208, 0.1); /* ターコイズブルー + 透明度30％ */
 }
 
 .input__text::placeholder {  // プレイスホルダーのCSS指定 (placeholder)

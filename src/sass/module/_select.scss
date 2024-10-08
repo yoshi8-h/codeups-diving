@@ -9,4 +9,11 @@
   line-height: normal;
   padding-block: rem(11);
   padding-inline: rem(7);
+
+  transition: background 0.2s ease-out;
+}
+
+.select:hover,
+.select:focus {  //『入力時』＝『focus時』
+  background: rgba(64, 224, 208, 0.1); /* ターコイズブルー + 透明度30％ */
 }

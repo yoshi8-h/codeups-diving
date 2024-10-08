@@ -2,5 +2,10 @@
 
 
 .textarea {
+  transition: background 0.2s ease-out;
+}
 
+.textarea:hover,
+.textarea:focus {  //『入力時』＝『focus時』
+  background: rgba(64, 224, 208, 0.1); /* ターコイズブルー + 透明度30％ */
 }
