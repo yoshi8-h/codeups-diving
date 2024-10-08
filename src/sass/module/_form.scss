@@ -11,8 +11,12 @@
   font-size: rem(14);
   font-weight: $normal;
   line-height: normal;
-  width: fit-content;
+  width: rem(224);
   margin-inline: auto;
+
+  @include mq(md) {
+    width: fit-content;
+  }
 }
 
 .form__fields {

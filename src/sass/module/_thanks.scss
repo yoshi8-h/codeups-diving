@@ -2,7 +2,11 @@
 
 
 .thanks {
+  padding-bottom: rem(49);
 
+  @include mq(md) {
+    padding-bottom: 0;
+  }
 }
 
 .thanks__inner {
@@ -37,11 +41,11 @@
   text-align: center;
   font-size: rem(16);
   font-weight: $normal;
-  line-height: 1.125;
+  line-height: normal;
 }
 
 .thanks__text-top {
-
+  line-height: 1.125;
 }
 
 .thanks__text-bottom {
