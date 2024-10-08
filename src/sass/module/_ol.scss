@@ -1,0 +1,17 @@
+@use "global" as *;
+
+
+.ol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: rem(1);
+
+  list-style-type: decimal;  // 『reset.css』の指定を上書きして、番号付きリストにデフォルトの番号を自動で表示
+  padding-left: rem(16);  // ※ここに『padding-left』を指定しないと、<li>が親要素のolの範囲を超えて付与されてしまうため。
+}
+
+.ol__item {
+
+}

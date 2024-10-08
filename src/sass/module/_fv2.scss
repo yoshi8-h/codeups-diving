@@ -106,3 +106,11 @@
     background: url(../images/page/pc/sitemap_fv-bg.webp) no-repeat center center / cover;
   }
 }
+
+.fv2--privacy {
+  background: url(../images/page/sp/privacy_fv-bg.webp) no-repeat center center / cover;
+
+  @include mq(md) {
+    background: url(../images/page/pc/privacy_fv-bg.webp) no-repeat center center / cover;
+  }
+}

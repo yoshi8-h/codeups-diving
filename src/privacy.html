@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="robots" content="noindex" />
+
+  <!-- meta情報 -->
+  <title>CodeUps diving</title>
+  <meta name="description" content="ダイビングサービス『CodeUps』の詳細サイトです。" />
+  <meta name="keywords" content="" />
+
+  <!-- ogp -->
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:site_name" content="" />
+  <meta property="og:description" content="" />
+
+  <!-- ファビコン -->
+  <link rel="icon" href="" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gotu&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+
+  <!-- JavaScript -->
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script defer src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script defer src="./assets/js/jquery.inview.min.js"></script>
+  <script defer src="./assets/js/script.js"></script>
+</head>
+<body>
+  <!-- header -->
+  <header class="header">
+    <div class="header__inner">
+      <h1 class="header__logo">
+        <a href="#"><img src="./assets/images/common/logo.png" alt="CodeUps"></a>
+      </h1>
+      <nav class="header__nav">
+        <a href="#" class="header__link">
+          <p class="header__text-en">Campaign</p>
+          <p class="header__text-ja">キャンペーン</p>
+        </a>
+        <a href="#" class="header__link">
+          <p class="header__text-en">About us</p>
+          <p class="header__text-ja">私たちについて</p>
+        </a>
+        <a href="#" class="header__link">
+          <p class="header__text-en">Information</p>
+          <p class="header__text-ja">ダイビング情報</p>
+        </a>
+        <a href="#" class="header__link">
+          <p class="header__text-en">Blog</p>
+          <p class="header__text-ja">ブログ</p>
+        </a>
+        <a href="#" class="header__link">
+          <p class="header__text-en">Voice</p>
+          <p class="header__text-ja">お客様の声</p>
+        </a>
+        <a href="#" class="header__link">
+          <p class="header__text-en">Price</p>
+          <p class="header__text-ja">料金一覧</p>
+        </a>
+        <a href="#" class="header__link">
+          <p class="header__text-en">FAQ</p>
+          <p class="header__text-ja">よくある質問</p>
+        </a>
+        <a href="#" class="header__link">
+          <p class="header__text-en">Contact</p>
+          <p class="header__text-ja">お問い合わせ</p>
+        </a>
+      </nav>
+      <button class="header__btn js-header__btn">
+        <span class="header__bar"></span>
+        <span class="header__bar"></span>
+        <span class="header__bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ドロワーメニュー -->
+  <div class="drawer-menu js-drawer-menu">
+    <div class="drawer-menu__wrap">
+      <div class="drawer-menu__left">
+        <div class="drawer-menu__link drawer-link">
+          <a href="#" class="drawer-link__main">
+            <div class="drawer-link__icon"><img src="./assets/images/common/starfish.png" alt="ヒトデのアイコン"></div>
+            <p class="drawer-link__text">キャンペーン</p>
+          </a>
+          <div class="drawer-link__details">
+            <a href="#" class="drawer-link__detail">ライセンス取得</a>
+            <a href="#" class="drawer-link__detail">貸切体験ダイビング</a>
+            <a href="#" class="drawer-link__detail">ナイトダイビング</a>
+          </div>
+        </div>
+        <div class="drawer-menu__link drawer-link">
+          <a href="#" class="drawer-link__main">
+            <div class="drawer-link__icon"><img src="./assets/images/common/starfish.png" alt="ヒトデのアイコン"></div>
+            <p class="drawer-link__text">私たちについて</p>
+          </a>
+        </div>
+        <div class="drawer-menu__link drawer-link">
+          <a href="#" class="drawer-link__main">
+            <div class="drawer-link__icon"><img src="./assets/images/common/starfish.png" alt="ヒトデのアイコン"></div>
+            <p class="drawer-link__text">ダイビング情報</p>
+          </a>
+          <div class="drawer-link__details">
+            <a href="#" class="drawer-link__detail">ライセンス講習</a>
+            <a href="#" class="drawer-link__detail">体験ダイビング</a>
+            <a href="#" class="drawer-link__detail">ファンダイビング</a>
+          </div>
+        </div>
+        <div class="drawer-menu__link drawer-link">
+          <a href="#" class="drawer-link__main">
+            <div class="drawer-link__icon"><img src="./assets/images/common/starfish.png" alt="ヒトデのアイコン"></div>
+            <p class="drawer-link__text">ブログ</p>
+          </a>
+        </div>
+      </div>
+      <div class="drawer-menu__right">
+        <div class="drawer-menu__link drawer-link">
+          <a href="#" class="drawer-link__main">
+            <div class="drawer-link__icon"><img src="./assets/images/common/starfish.png" alt="ヒトデのアイコン"></div>
+            <p class="drawer-link__text">お客様の声</p>
+          </a>
+        </div>
+        <div class="drawer-menu__link drawer-link">
+          <a href="#" class="drawer-link__main">
+            <div class="drawer-link__icon"><img src="./assets/images/common/starfish.png" alt="ヒトデのアイコン"></div>
+            <p class="drawer-link__text">料金一覧</p>
+          </a>
+          <div class="drawer-link__details">
+            <a href="#" class="drawer-link__detail">ライセンス講習</a>
+            <a href="#" class="drawer-link__detail">体験ダイビング</a>
+            <a href="#" class="drawer-link__detail">ファンダイビング</a>
+          </div>
+        </div>
+        <div class="drawer-menu__link drawer-link">
+          <a href="#" class="drawer-link__main">
+            <div class="drawer-link__icon"><img src="./assets/images/common/starfish.png" alt="ヒトデのアイコン"></div>
+            <p class="drawer-link__text">よくある質問</p>
+          </a>
+        </div>
+        <div class="drawer-menu__link drawer-link">
+          <a href="#" class="drawer-link__main">
+            <div class="drawer-link__icon"><img src="./assets/images/common/starfish.png" alt="ヒトデのアイコン"></div>
+            <p class="drawer-link__text">プライバシー<br>ポリシー</p>
+          </a>
+        </div>
+        <div class="drawer-menu__link drawer-link">
+          <a href="#" class="drawer-link__main">
+            <div class="drawer-link__icon"><img src="./assets/images/common/starfish.png" alt="ヒトデのアイコン"></div>
+            <p class="drawer-link__text">利用規約</p>
+          </a>
+        </div>
+        <div class="drawer-menu__link drawer-link">
+          <a href="#" class="drawer-link__main">
+            <div class="drawer-link__icon"><img src="./assets/images/common/starfish.png" alt="ヒトデのアイコン"></div>
+            <p class="drawer-link__text">お問い合わせ</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="main">
+    <!-- fv2 -->
+    <div class="fv2 l-fv2 fv2--privacy">
+      <div class="fv2__inner">
+        <p class="fv2__text">Privacy Policy</p>
+      </div>
+    </div>
+
+    <!-- パンくずリスト -->
+    <div class="breadcrumbs-area l-breadcrumbs-area">
+      <div class="breadcrumbs-area__inner inner">
+        <nav class="breadcrumbs-area__breadcrumbs breadcrumbs">
+          <span class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="/">
+              <span>TOP</span>
+            </a>
+          </span>
+          <span class="breadcrumbs__separator">
+            <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
+              <path d="M1 1L5 5L1 9" stroke="#0D2936" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="breadcrumbs__item">
+            <span>プライバシーポリシー</span>
+          </span>
+        </nav>
+      </div>
+    </div>
+
+    <!-- privacy セクション -->
+    <section class="privacy l-privacy">
+      <div class="privacy__inner inner">
+        <h2 class="privacy__title">プライバシーポリシー</h2>
+        <div class="privacy__contents-wrap">
+          <p class="privacy__top">以下は、Webサイトで使用するための一般的なプライバシーポリシーの例です。</p>
+          <div class="privacy__content">
+            <ol class="privacy__ol ol">
+              <li class="ol__item">概要 当社は、お客様の個人情報を大切に扱い、個人情報保護に努めています。本プライバシーポリシーには、当社がどのように個人情報を収集し、使用するかについて説明しています。</li>
+              <li class="ol__item">収集する情報 当社は、お客様が当社のサービスを利用する際に、お名前、住所、電話番号、メールアドレスなどの個人情報を収集する場合があります。</li>
+            </ol>
+            <p class="privacy__text-normal">また、当社のサイトを閲覧する際に、IPアドレス、ブラウザの種類、言語設定、アクセス日時などの情報も収集する場合があります。</p>
+            <ol class="privacy__ol ol">
+              <li class="ol__item">情報の使用 当社は、お客様から収集した個人情報を、以下の目的で使用することがあります。</li>
+            </ol>
+            <p class="privacy__text-normal">・お客様からのお問い合わせやサポートの提供 ・当社のサービスや製品の提供 ・当社のサイトの改善や新しいサービスの開発 ・法律や規制に基づく義務の履行</p>
+            <ol class="privacy__ol ol">
+              <li class="ol__item">情報の共有 当社は、お客様から収集した個人情報を、以下の場合に限り第三者に提供することがあります。</li>
+            </ol>
+            <p class="privacy__text-normal">・お客様の同意がある場合 ・法律や規制に基づく場合 ・当社が信頼できると判断した業務委託先に必要な範囲で提供する場合</p>
+            <ol class="privacy__ol ol">
+              <li class="ol__item">セキュリティ 当社は、お客様の個人情報を適切に保護するために、適切な安全対策を講じます。個人情報への不正アクセス、紛失、改ざん、漏洩等を防止するための措置を講じます。</li>
+              <li class="ol__item">Cookieの使用 当社は、お客様により良いサイトの利用体験を提供するために、Cookieを使用する場合があります。Cookieは、お客様が当社のサイトを訪れた際に、お客様のブラウザに保存される小さなデータファイルです。Cookieには個人情報は含まれません。</li>
+              <li class="ol__item">お問い合わせ先 当社のプライバシーポリシーに関するご質問やご意見は、以下の連絡先までお問い合わせください。 [会社名] [住所] [電話番号] [メールアドレス]</li>
+              <li class="ol__item">プライバシーポリシーの変更 当社は、必要に応じて本プライバシーポリシーを変更することがあります。変更後のプライバシーポリシーは、当社のサイトに掲載された時点から効力を有するものとします。変更があった場合、当社は適切な手段でお知らせします。</li>
+            </ol>
+          </div>
+          <p class="privacy__bottom">以上が、当社のプライバシーポリシーの概要です。お客様の個人情報保護のために、常に努めてまいります。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- CTA (Contact) -->
+  <section class="cta l-cta">
+    <div class="cta__wrap inner">
+      <div class="cta__box">
+        <div class="cta__top">
+          <div class="cta__head">
+            <div class="cta__logo"><img src="./assets/images/common/logo-blue.png" alt="CodeUps"></div>
+          </div>
+          <div class="cta__info">
+            <div class="cta__texts">
+              <address class="cta__address">沖縄県那覇市1-1</address>
+              <a href="tel:0120-000-0000" class="cta__tel">TEL:0120-000-0000</a>
+              <p class="cta_hours">営業時間:8:30-19:00</p>
+              <p class="cta__holiday">定休日:毎週火曜日</p>
+            </div>
+            <div class="cta__map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114545.97172485772!2d127.52880846795!3d26.210935295079327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e5697141a6b58b%3A0x2cd8aff616585e98!2z5rKW57iE55yM6YKj6KaH5biC!5e0!3m2!1sja!2sjp!4v1714639154821!5m2!1sja!2sjp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="cta__divide"></div>
+        <div class="cta__contact contact">
+          <h2 class="contact__heading section-head">
+            <span class="section-head__title section-head__title--contact">Contact</span>
+            <span class="section-head__subtitle section-head__subtitle--contact">お問い合わせ</span>
+          </h2>
+          <p class="contact__message">ご予約・お問い合わせはコチラ</p>
+          <a href="#" class="contact__btn btn">
+            Contact us
+            <div class="btn__arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="42" height="8" viewBox="0 0 42 8" fill="none">
+                <path d="M1 7H41L34 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOPへ戻るボタン -->
+  <a href="#" class="top-btn js-top-btn">
+    <div class="top-btn__wrap">
+      <div class="top-btn__arrow">
+        <svg class="top-btn__arrow-sp" xmlns="http://www.w3.org/2000/svg" width="8" height="30" viewBox="0 0 8 30" fill="none">
+          <path d="M7 29L7 1L1 8" stroke="#408F95" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <svg class="top-btn__arrow-pc" xmlns="http://www.w3.org/2000/svg" width="8" height="42" viewBox="0 0 8 42" fill="none">
+          <path d="M7 41L7 1L1 8" stroke="#408F95" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+  </a>
+
+  <!-- footer -->
+  <footer class="footer l-footer">
+    <div class="footer__inner inner">
+      <div class="footer__top">
+        <a href="#" class="footer__logo"><img src="./assets/images/common/logo.png" alt="CodeUps"></a>
+        <div class="footer__sns-wrap">
+          <a href="https://www.facebook.com/" target="_blank" class="footer__sns"><img src="./assets/images/common/facebook-logo.png" alt="facebookのロゴ"></a>
+          <a href="https://www.instagram.com/" target="_blank" class="footer__sns"><img src="./assets/images/common/instagram-logo.png" alt="instagramのロゴ"></a>
+        </div>
+      </div>
+      <div class="footer__menu">
+        <div class="footer__left">
+          <div class="footer__block-pc">
+            <div class="footer__link footer-link">
+              <a href="#" class="footer-link__main">
+                <div class="footer-link__icon"><img src="./assets/images/common/starfish.png" alt="ヒトデのアイコン"></div>
+                <p class="footer-link__text">キャンペーン</p>
+              </a>
+              <div class="footer-link__details">
+                <a href="#" class="footer-link__detail">ライセンス取得</a>
+                <a href="#" class="footer-link__detail">貸切体験ダイビング</a>
+                <a href="#" class="footer-link__detail">ナイトダイビング</a>
+              </div>
+            </div>
+            <div class="footer__link footer-link">
+              <a href="#" class="footer-link__main">
+                <div class="footer-link__icon"><img src="./assets/images/common/starfish.png" alt="ヒトデのアイコン"></div>
+                <p class="footer-link__text">私たちについて</p>
+              </a>
+            </div>
+          </div>
+          <div class="footer__block-pc">
+            <div class="footer__link footer-link">
+              <a href="#" class="footer-link__main">
+                <div class="footer-link__icon"><img src="./assets/images/common/starfish.png" alt="ヒトデのアイコン"></div>
+                <p class="footer-link__text">ダイビング情報</p>
+              </a>
+              <div class="footer-link__details">
+                <a href="#" class="footer-link__detail">ライセンス講習</a>
+                <a href="#" class="footer-link__detail">体験ダイビング</a>
+                <a href="#" class="footer-link__detail">ファンダイビング</a>
+              </div>
+            </div>
+            <div class="footer__link footer-link">
+              <a href="#" class="footer-link__main">
+                <div class="footer-link__icon"><img src="./assets/images/common/starfish.png" alt="ヒトデのアイコン"></div>
+                <p class="footer-link__text">ブログ</p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__right">
+          <div class="footer__block-pc">
+            <div class="footer__link footer-link">
+              <a href="#" class="footer-link__main">
+                <div class="footer-link__icon"><img src="./assets/images/common/starfish.png" alt="ヒトデのアイコン"></div>
+                <p class="footer-link__text">お客様の声</p>
+              </a>
+            </div>
+            <div class="footer__link footer-link">
+              <a href="#" class="footer-link__main">
+                <div class="footer-link__icon"><img src="./assets/images/common/starfish.png" alt="ヒトデのアイコン"></div>
+                <p class="footer-link__text">料金一覧</p>
+              </a>
+              <div class="footer-link__details">
+                <a href="#" class="footer-link__detail">ライセンス講習</a>
+                <a href="#" class="footer-link__detail">体験ダイビング</a>
+                <a href="#" class="footer-link__detail">ファンダイビング</a>
+              </div>
+            </div>
+          </div>
+          <div class="footer__block-pc">
+            <div class="footer__link footer-link">
+              <a href="#" class="footer-link__main">
+                <div class="footer-link__icon"><img src="./assets/images/common/starfish.png" alt="ヒトデのアイコン"></div>
+                <p class="footer-link__text">よくある質問</p>
+              </a>
+            </div>
+            <div class="footer__link footer-link">
+              <a href="#" class="footer-link__main">
+                <div class="footer-link__icon"><img src="./assets/images/common/starfish.png" alt="ヒトデのアイコン"></div>
+                <p class="footer-link__text">プライバシー<br>ポリシー</p>
+              </a>
+            </div>
+            <div class="footer__link footer-link">
+              <a href="#" class="footer-link__main">
+                <div class="footer-link__icon"><img src="./assets/images/common/starfish.png" alt="ヒトデのアイコン"></div>
+                <p class="footer-link__text">利用規約</p>
+              </a>
+            </div>
+            <div class="footer__link footer-link">
+              <a href="#" class="footer-link__main">
+                <div class="footer-link__icon"><img src="./assets/images/common/starfish.png" alt="ヒトデのアイコン"></div>
+                <p class="footer-link__text">お問い合わせ</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <small class="footer__copyright">Copyright © 2021 - 2023 CodeUps LLC. All Rights Reserved.</small>
+  </footer>
+
+</body>
+</html>
