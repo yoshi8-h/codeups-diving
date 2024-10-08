@@ -2,7 +2,8 @@
 
 
 .breadcrumbs-area {
-
+  position: relative;
+  z-index: 40;
 }
 
 .breadcrumbs-area__inner {
