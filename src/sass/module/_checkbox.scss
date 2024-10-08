@@ -30,7 +30,7 @@
   padding-left: rem(22);
 }
 
-.checkbox__text::before {  // チェックボックスの外枠の四角。
+.checkbox__text::before {  // チェックボックスの外枠の四角
   content: "";
   width: rem(14);
   height: rem(14);
