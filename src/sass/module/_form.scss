@@ -20,6 +20,10 @@
 .form__sendbtn-wrap {
   text-align: center;
   margin-top: rem(24);
+
+  @include mq(md) {
+    margin-top: rem(40);
+  }
 }
 
 .form__sendbtn {

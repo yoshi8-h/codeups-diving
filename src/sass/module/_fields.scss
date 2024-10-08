@@ -10,7 +10,11 @@
 }
 
 .fields__item.is-agree {
-  margin-top: rem(15);
+  margin-top: rem(15);  // (40-25) →ここだけ、gapの25pxとカンプの40pxとの差分をmargin追加
   width: calc(282px / 375px * 100vw);
   max-width: fit-content;
+
+  @include mq(md) {
+    margin-top: rem(40);  // (80-40)
+  }
 }

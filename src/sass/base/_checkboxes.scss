@@ -2,7 +2,11 @@
 
 
 .checkboxes {
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: rem(4);
 }
 
 .checkboxes__item {

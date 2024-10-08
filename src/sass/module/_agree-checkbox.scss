@@ -35,6 +35,10 @@
   position: absolute;
   top: 0;
   left: 0;
+
+  @include mq(md) {
+    top: rem(2.5);
+  }
 }
 
 .agree-checkbox__text::after {  // チェックボックスのチェックマークアイコン。
@@ -46,4 +50,8 @@
   top: rem(4);
   left: rem(1.4);
   opacity: 0;
+
+  @include mq(md) {
+    top: rem(6.5);
+  }
 }
