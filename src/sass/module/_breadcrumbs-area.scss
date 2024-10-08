@@ -22,4 +22,8 @@
 // .breadcrumbs-area--404 (404ページのパンくずリスト)
 .breadcrumbs-area--404 {
   padding-top: rem(88);
+
+  @include mq(md) {
+    padding-top: rem(98);
+  }
 }

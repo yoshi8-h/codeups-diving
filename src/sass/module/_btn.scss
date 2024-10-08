@@ -83,3 +83,38 @@
 .btn--send {
 
 }
+
+
+// btn--white (404ページの白いボタン)
+.btn--white.btn {
+  border: rem(1) solid #FFF;
+  color: $color-accent1;
+  background: $color-background-base;
+}
+
+.btn--white.btn:hover {
+  color: $color-background-base;
+}
+
+.btn--white.btn:hover .btn__arrow svg path {
+  stroke: $color-background-base;
+}
+
+.btn--white.btn::before {  // 後ろ側の四角
+  border: rem(1) solid $color-background-base;
+}
+
+.btn--white.btn::after {  // hover時に左から表示される緑色(accent1)の背景色
+  background: $color-accent1;
+}
+
+.btn--white .btn__arrow svg path {  // 緑色(accent1)の矢印
+  stroke: $color-accent1;
+}
+
+.btn--white .btn__arrow svg {
+}
+
+.btn--white .btn__arrow svg path {
+  transition: stroke 0.1s ease-out;
+}

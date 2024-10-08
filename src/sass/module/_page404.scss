@@ -2,23 +2,80 @@
 
 
 .page404 {
+  padding-bottom: rem(44);
+  position: relative;
 
+  @include mq(md) {
+    padding-bottom: rem(152);
+  }
+}
+
+.page404__bg-icon {  // 背景のクジラのアイコン
+  width: rem(345);
+  position: absolute;
+  top: rem(-80);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+
+  @include mq(md) {
+    width: rem(698);
+    top: rem(-147);
+    // transform: translateX(-78%);
+    transform: translateX(0);
+
+    left: calc(50% - min(47vw, 34rem));  // *位置を制御
+  }
+}
+
+.page404__bg-icon img {  // 背景のクジラのアイコン
+  aspect-ratio: 1 / 1;
+  width: rem(345);
+  object-fit: cover;
+
+  @include mq(md) {
+    width: rem(698);
+  }
 }
 
 .page404__inner {
-
+  text-align: center;
+  position: relative;
+  z-index: 20;
 }
 
 .page404__title {
+  color: #FFF;
+  font-family: $font-family-en-2;
+  font-size: rem(80);
+  font-weight: $normal;
+  line-height: normal;
+  letter-spacing: 0.5em;
+  text-indent: 0.5em;
 
+  @include mq(md) {
+    font-size: rem(160);
+  }
 }
 
 .page404__text {
+  color: #FFF;
+  font-family: $font-family-en-2;
+  font-size: rem(16);
+  font-weight: $normal;
+  line-height: 1.5;
 
+  @include mq(md) {
+    margin-top: rem(24);
+  }
 }
 
 .page404__btn-wrap {
+  margin-top: rem(40);
 
+  @include mq(md) {
+    margin-top: rem(80);
+  }
 }
 
 .page404__btn {
