@@ -38,3 +38,22 @@
   margin-right: rem(8); /* 区切り記号の余白 */
   color: $color-font-base;
 }
+
+
+
+
+// =======================================
+// モディファイア
+// =======================================
+// .breadcrumbs--white (404ページの、白色のパンくずリスト)
+.breadcrumbs--white {
+  color: #FFF;
+}
+
+.breadcrumbs--white .breadcrumbs__link:hover {  // hover
+  color: #000;
+}
+
+.breadcrumbs--white .breadcrumbs__separator svg path {
+  stroke: #FFF;
+}

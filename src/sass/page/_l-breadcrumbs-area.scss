@@ -1,12 +1,8 @@
 @use "global" as *;
 
 
-.l-footer {
-  margin-top: rem(95);
-
-  @include mq(md) {
-    margin-top: rem(160);
-  }
+.l-breadcrumbs-area {
+  margin-top: rem(8);
 }
 
 
@@ -15,7 +11,7 @@
 // =======================================
 // モディファイア
 // =======================================
-// .l-footer--404 (404ページのfooter)
-.l-footer--404 {
+// .l-breadcrumbs-area--404 (404ページのパンくずリスト)
+.l-breadcrumbs-area--404 {
   margin-top: 0;
 }

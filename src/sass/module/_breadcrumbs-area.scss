@@ -8,3 +8,18 @@
 .breadcrumbs-area__inner {
 
 }
+
+.breadcrumbs-area__breadcrumbs {
+
+}
+
+
+
+
+// =======================================
+// モディファイア
+// =======================================
+// .breadcrumbs-area--404 (404ページのパンくずリスト)
+.breadcrumbs-area--404 {
+  padding-top: rem(88);
+}
