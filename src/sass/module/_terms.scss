@@ -1,0 +1,77 @@
+@use "global" as *;
+
+
+.terms {
+
+}
+
+.terms__inner {
+  max-width: rem(500);
+  position: relative;
+
+  @include mq(md) {
+    max-width: rem(calc(800 + 25 * 2));  // 両サイドのpaddingを考慮
+  }
+}
+
+.terms__inner::before {  // 魚の群れ
+  content: "";
+  background: url(../images/common/fishes.png) no-repeat center center / contain;
+  width: rem(120);
+  max-width: rem(120);
+  height: rem(55);
+  max-height: rem(55);
+  transform: scaleX(-1);  // 左右反転。
+  position: absolute;
+  top: rem(-24);
+  left: calc(50% - min(48vw, 39rem));  // *位置を制御
+  z-index: -1;
+
+  @include mq(md) {
+    width: rem(308);
+    max-width: rem(308);
+    height: rem(145);
+    max-height: rem(145);
+    top: rem(-70);
+    left: calc(50% - min(48vw, 38rem));  // *位置を制御
+  }
+}
+
+.terms__title {
+  color: $color-font-base;
+  font-size: rem(24);
+  font-weight: 500;
+  line-height: normal;
+
+  @include mq(md) {
+    font-size: rem(32);
+  }
+}
+
+.terms__contents-wrap {
+  margin-top: rem(40);
+  color: $color-font-base;
+  font-size: rem(16);
+  font-weight: $normal;
+  line-height: 2.0;
+}
+
+.terms__top {
+
+}
+
+.terms__content {
+  margin-top: rem(32);
+}
+
+.terms__ol {
+  margin-top: rem(32);
+}
+
+.terms__text-normal {
+
+}
+
+.terms__bottom {
+  margin-top: rem(32);
+}
