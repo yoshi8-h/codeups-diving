@@ -1,0 +1,23 @@
+@use "global" as *;
+
+
+.categories2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: rem(21);
+  row-gap: rem(22);
+  align-items: flex-start;  // 上揃えに。
+
+  @include mq(md) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: rem(32);
+    row-gap: rem(16);
+  }
+}
+
+.categories2__item {
+  min-width: rem(162);
+}

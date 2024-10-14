@@ -10,15 +10,7 @@
 
 }
 
-.previouspostslink {
-
-}
-
 .wp-pagenavi__current {
-
-}
-
-.current {
 
 }
 
@@ -26,15 +18,7 @@
 
 }
 
-.page-numbers {
-
-}
-
 .wp-pagenavi__next {
-
-}
-
-.nextpostslink {
 
 }
 
@@ -49,11 +33,13 @@
 }
 
 /* ページ番号リンクのスタイル */
-.wp-pagenavi .page-numbers {
-  display: inline-block;
-  padding-top: rem(8);
-  padding-bottom: rem(9);
-  padding-inline: rem(13);
+.wp-pagenavi .page {
+  height: rem(38);  // ページネーションは高さが絶対に変わらないから、高さを指定してOK。
+  min-width: rem(38);  // 最小幅を指定。
+  padding-inline: rem(3);  // paddingは、横方向のみ最低限を指定。縦方向の指定は不要。
+  display: grid;
+  place-items: center;
+
   border: rem(1) solid $color-accent1;
   background: $color-background-base;
 
@@ -65,17 +51,19 @@
   transition: all 0.2s ease-out;
 }
 
-.wp-pagenavi .page-numbers:hover {  // hover
+.wp-pagenavi .page:hover {  // hover
   background: $color-accent1;
   color: $color-background-base;
 }
 
 /* 現在のページ番号のスタイル */
-.wp-pagenavi .current {
-  display: inline-block;
-  padding-top: rem(8);
-  padding-bottom: rem(9);
-  padding-inline: rem(13);
+.wp-pagenavi .page.current {
+  height: rem(38);  // ページネーションは高さが絶対に変わらないから、高さを指定してOK。
+  min-width: rem(38);  // 最小幅を指定。
+  padding-inline: rem(3);  // paddingは、横方向のみ最低限を指定。縦方向の指定は不要。
+  display: grid;
+  place-items: center;
+
   border: rem(1) solid $color-accent1;
   font-family: $font-family-en-2;
   font-size: rem(16);
@@ -96,13 +84,14 @@
 
 .wp-pagenavi .nextpostslink,
 .wp-pagenavi .previouspostslink {
-  aspect-ratio: 1 / 1;
-  width: rem(38);
-  height: rem(38);
-  border: rem(1) solid $color-accent1;
-  background: $color-background-base;
+  height: rem(38);  // ページネーションは高さが絶対に変わらないから、高さを指定してOK。
+  min-width: rem(38);  // 最小幅を指定。
+  padding-inline: rem(3);  // paddingは、横方向のみ最低限を指定。縦方向の指定は不要。
   display: grid;
   place-items: center;
+
+  border: rem(1) solid $color-accent1;
+  background: $color-background-base;
   transition: background 0.2s ease-out;
 }
 
