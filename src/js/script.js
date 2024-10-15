@@ -185,34 +185,75 @@ document.addEventListener('DOMContentLoaded', function() {
 // 開閉の際にアニメーションを付与。
 // 画面のどこかをタップしたら、モーダルが閉じる仕様に。
 
-// モーダルを開く処理
-document.querySelectorAll(".js-modal-open").forEach(function(button) {
-  button.addEventListener("click", function(e) {
-    e.preventDefault();
-    var modalNumber = this.getAttribute("data-modal");
-    var modal = document.querySelector(".js-gallery-modal-" + modalNumber);
-    modal.showModal();
-    modal.classList.add("is-visible");  // クラスを追加してアニメーションを適用
-    document.documentElement.classList.add("is-fixed");
+// // モーダルを開く処理
+// document.querySelectorAll(".js-modal-open").forEach(function(button) {
+//   button.addEventListener("click", function(e) {
+//     e.preventDefault();
+//     var modalNumber = this.getAttribute("data-modal");
+//     var modal = document.querySelector(".js-gallery-modal-" + modalNumber);
+//     modal.showModal();
+//     modal.classList.add("is-visible");  // クラスを追加してアニメーションを適用
+//     document.documentElement.classList.add("is-fixed");
 
-    // モーダルの枠外をクリックした時の処理を追加
-    modal.addEventListener('click', function(event) {
-      if (event.target === modal) {
-        closeModal(modal);
-      }
+//     // モーダルの枠外をクリックした時の処理を追加
+//     modal.addEventListener('click', function(event) {
+//       if (event.target === modal) {
+//         closeModal(modal);
+//       }
+//     });
+//   });
+// });
+
+// // モーダルを閉じる時のアニメーション処理
+// function closeModal(modal) {
+//   modal.classList.remove("is-visible");  // クラスを削除してアニメーションを適用
+//   // アニメーションが終わるのを待ってからモーダルを閉じる
+//   setTimeout(function() {
+//     modal.close();
+//   }, 200);  // アニメーションの時間と同じに設定
+//   document.documentElement.classList.remove("is-fixed");
+// }
+
+
+/* -------------------------------------------------------------------------------- */
+/* モーダル (gallery セクション) */
+// 開閉時のアニメーションはなし。
+// 画面のどこかをタップしたら、モーダルが閉じる仕様に。
+// モーダルが開いている間は、スクロール不可に。
+
+document.addEventListener("DOMContentLoaded", function() {
+  // モーダルとその要素をクラスで取得
+  const modal = document.querySelector(".modal");
+  const modalImage = document.querySelector(".modal__img");
+
+  // すべての .js-modal-open を取得
+  const galleryItems = document.querySelectorAll(".js-modal-open");
+
+  // 各アイテムにクリックイベントを設定
+  galleryItems.forEach(item => {
+    item.addEventListener("click", function() {
+      const img = item.querySelector("img"); // クリックした要素内のimgタグを取得
+      const imgSrc = img.getAttribute("src"); // そのimgタグのsrc属性を取得
+
+      // モーダルの画像をクリックされた画像に設定
+      modalImage.setAttribute("src", imgSrc);
+
+      // モーダルを表示
+      modal.style.display = "block";
+
+      // モーダルが開いている間はスクロールを無効に
+      document.body.classList.add("modal__open");
     });
   });
-});
 
-// モーダルを閉じる時のアニメーション処理
-function closeModal(modal) {
-  modal.classList.remove("is-visible");  // クラスを削除してアニメーションを適用
-  // アニメーションが終わるのを待ってからモーダルを閉じる
-  setTimeout(function() {
-    modal.close();
-  }, 200);  // アニメーションの時間と同じに設定
-  document.documentElement.classList.remove("is-fixed");
-}
+  // モーダル全体をクリックで閉じる処理
+  modal.addEventListener("click", function() {
+    modal.style.display = "none";
+
+    // モーダルを閉じたらスクロールを有効に戻す
+    document.body.classList.remove("modal__open");
+  });
+});
 
 
 /* -------------------------------------------------------------------------------- */
