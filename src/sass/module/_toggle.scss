@@ -73,6 +73,7 @@
 
 .toggle__body {
   display: none;  // 普段(最初)は「.qa-box__body」は閉じている仕様のため。
+  display: block;
   border: rem(1) solid $color-accent1;
   padding-block: rem(23);
   padding-inline: rem(15);

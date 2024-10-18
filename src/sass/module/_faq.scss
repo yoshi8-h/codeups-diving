@@ -5,8 +5,13 @@
 
 }
 
-.faq__inner {
+.faq__inner.inner {
   position: relative;
+  max-width: rem(calc(500 + 15 * 2));  // 両端のpadding分を考慮
+
+  @include mq(md) {
+    max-width: rem(calc(700 + 25 * 2));  // 両端のpadding分を考慮
+  }
 }
 
 .faq__inner::before {  // 魚の群れ
@@ -33,10 +38,10 @@
 }
 
 .faq__toggles {
-  max-width: rem(500);
-  margin-inline: auto;
+  // max-width: rem(500);
+  // margin-inline: auto;
 
-  @include mq(md) {
-    max-width: rem(700);
-  }
+  // @include mq(md) {
+  //   max-width: rem(700);
+  // }
 }
