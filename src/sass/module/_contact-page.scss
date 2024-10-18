@@ -5,8 +5,13 @@
 
 }
 
-.contact-page__inner {
+.contact-page__inner.inner {
   position: relative;
+  max-width: rem(calc(500 + 15 * 2));  // 両端のpadding分を考慮
+
+  @include mq(md) {
+    max-width: rem(calc(700 + 25 * 2));  // 両端のpadding分を考慮
+  }
 }
 
 .contact-page__inner::before {  // 魚の群れ
@@ -33,12 +38,7 @@
 }
 
 .contact-page__form-wrap {
-  max-width: rem(500);
-  margin-inline: auto;
 
-  @include mq(md) {
-    max-width: rem(700);
-  }
 }
 
 .contact-page__form {  // <form> タグだから、ここにはCSSを指定しない事！！(WordPress化する際に、『Contact Form 7』を使う時に<form>タグは消すため)

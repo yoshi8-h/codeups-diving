@@ -3,6 +3,8 @@
 
 .textarea {
   transition: background 0.2s ease-out;
+  padding-block: rem(8);
+  padding-inline: rem(16);
 }
 
 .textarea:hover,
