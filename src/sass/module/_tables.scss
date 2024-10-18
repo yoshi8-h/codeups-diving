@@ -2,10 +2,7 @@
 
 
 .tables {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
   gap: rem(40);
 
   @include mq(md) {
@@ -15,10 +12,4 @@
 
 .tables__item {
   width: 100%;
-  max-width: rem(500);
-  margin-inline: auto;
-
-  @include mq(md) {
-    max-width: rem(700);
-  }
 }

@@ -7,6 +7,11 @@
 
 .price-page__inner {
   position: relative;
+  max-width: rem(calc(500 + 15 * 2));  // 両端のpadding分を考慮
+
+  @include mq(md) {
+    max-width: rem(calc(700 + 25 * 2));  // 両端のpadding分を考慮
+  }
 }
 
 .price-page__inner::before {  // 魚の群れ

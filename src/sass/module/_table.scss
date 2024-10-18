@@ -10,7 +10,6 @@
 }
 
 .table__head {
-  border: rem(1) solid $color-accent1;
   background: $color-accent1;
 
   @include mq(md) {
@@ -41,10 +40,6 @@
 
 .table__head-cell:nth-of-type(2) {
   display: none;
-
-  // @include mq(md) {
-  //   display: table-cell;
-  // }
 }
 
 .table__head-content {
@@ -86,38 +81,55 @@
 }
 
 .table__row {
+  display: flex;
+  width: 100%;
 }
 
 .table__cell-text {
+  display: grid;
+  place-items: center;
+
   padding-block: rem(8);
   text-align: center;
   font-size: rem(16);
   font-weight: $normal;
   line-height: 1.5;
   width: 69.56%;
-  border: rem(1) solid $color-accent1;
+  border-top: rem(1) solid $color-accent1;
+  border-right: rem(1) solid $color-accent1;
+  border-left: rem(1) solid $color-accent1;
 
   @include mq(md) {
+    display: block;
     padding-block: rem(17);
-    padding-left: rem(16);
+    padding-inline: rem(16);
     text-align: left;
-    // max-width: rem(340);
-    // width: 100%;
-    width: rem(340);
+    width: 68%;
   }
 }
 
 .table__cell-price {
-  padding-right: rem(16);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  padding-block: rem(18);
+  padding-inline: rem(16);
   text-align: right;
   font-size: rem(16);
   font-weight: $normal;
   line-height: 1.5;
   width: 30.43%;
-  border: rem(1) solid $color-accent1;
+  border-top: rem(1) solid $color-accent1;
+  border-right: rem(1) solid $color-accent1;
 
   @include mq(md) {
     padding-block: rem(17);
-    width: rem(162);
+    width: 32.4%;
   }
+}
+
+.table__row:last-child .table__cell-text,
+.table__row:last-child .table__cell-price {  // 最後の行のセルだけ、border-bottomを付与。
+  border-bottom: rem(1) solid $color-accent1;
 }
