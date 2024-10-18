@@ -42,7 +42,7 @@
   }
 }
 
-.single-post__img {
+.single-post__eye-catch {
   margin-top: rem(24);
 
   @include mq(md) {
@@ -50,7 +50,7 @@
   }
 }
 
-.single-post__img img {
+.single-post__eye-catch img {
   aspect-ratio: 345 / 231;
   object-fit: cover;
   width: 100%;
@@ -60,7 +60,13 @@
   }
 }
 
-.single-post__text {
+
+
+.single-post__content {  // WordPressの『the_content()』の親要素
+
+}
+
+.single-post__content p {  // 『the_content()』で出力されるため、タグに指定。
   margin-top: rem(24);
   color: #000;
   font-size: rem(16);
@@ -72,10 +78,48 @@
   }
 }
 
-.single-post__list {
+.single-post__content img {
+  display: block;
   margin-top: rem(24);
+  aspect-ratio: 345 / 231;
+  object-fit: cover;
+  width: 100%;
+
+  @include mq(md) {
+    margin-top: rem(40);
+    aspect-ratio: 700 / 468;
+  }
+}
+
+.single-post__content ul {
+  margin-top: rem(24);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: rem(4);
 
   @include mq(md) {
     margin-top: rem(40);
   }
+}
+
+.single-post__content ul li {
+  color: #000;
+  font-size: rem(16);
+  font-weight: $normal;
+  line-height: 1.5;
+  padding-left: rem(27);
+  position: relative;
+}
+
+.single-post__content ul li::before {  // ヒトデのアイコン
+  content: "";
+  background: url(../images/common/starfish-icon.svg) no-repeat center center / contain;
+  width: rem(18);
+  height: rem(18);
+  position: absolute;
+  top: rem(4);
+  left: 0;
+  z-index: 15;
 }
