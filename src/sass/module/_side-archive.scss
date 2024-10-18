@@ -14,7 +14,13 @@
   line-height: normal;
 }
 
+// 『.side-archive』に『.is-open』が付いた場合は、三角形を下向きに変更する為のCSS (JSで制御)
+.side-archive.is-open .side-archive__parent::before {
+  transform: translateY(-50%) rotate(90deg);
+}
+
 .side-archive__parent {
+  cursor: pointer;
   padding-left: rem(32);
   position: relative;
   transition: opacity 0.2s ease-out;
@@ -29,14 +35,14 @@
   top: 50%;
   left: 0;
   transform: translateY(-50%);
-}
-
-// 『.side-archive__parent』の隣に『.side-archive__children』がある場合は『.has-children』を付与して、『下向き』三角形に変更する為のCSS (JSで制御)
-.side-archive__parent.has-children::before {
-  transform: translateY(-50%) rotate(90deg);
+  transition: transform 0.2s ease-out;
 }
 
 .side-archive__children {
+  display: none;  // デフォルトでは非表示に。
+}
+
+.side-archive__children-wrap {
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -331,19 +331,33 @@ document.addEventListener('DOMContentLoaded', function() {
 /* -------------------------------------------------------------------------------- */
 /* サイドバー (sidebar)の、『アーカイブ』の、三角形の向きを制御 */
 // 『月別』のアーカイブがある場合のみ、親(年)の三角形の向きを変更 (CSSでも制御)
-document.addEventListener('DOMContentLoaded', () => {
-  // すべての年の要素を取得
-  const archiveParents = document.querySelectorAll('.side-archive__parent');
+// document.addEventListener('DOMContentLoaded', () => {
+//   // すべての年の要素を取得
+//   const archiveParents = document.querySelectorAll('.side-archive__parent');
 
-  archiveParents.forEach(parent => {
-    // 年の親要素から、子要素（.side-archive__children）を探す (次の兄弟要素(隣接している要素)を取得)
-    const childrenContainer = parent.nextElementSibling;
+//   archiveParents.forEach(parent => {
+//     // 年の親要素から、子要素（.side-archive__children）を探す (次の兄弟要素(隣接している要素)を取得)
+//     const childrenContainer = parent.nextElementSibling;
 
-    // 親要素の隣に要素がある場合かつ、その要素が『.side-archive__children』である場合かつ、その『.side-archive__children』の中に『.side-archive__child』がある場合
-    if (childrenContainer && childrenContainer.classList.contains('side-archive__children') && childrenContainer.querySelector('.side-archive__child')) {
-      parent.classList.add('has-children');
-    }
-  });
+//     // 親要素の隣に要素がある場合かつ、その要素が『.side-archive__children』である場合かつ、その『.side-archive__children』の中に『.side-archive__child』がある場合
+//     if (childrenContainer && childrenContainer.classList.contains('side-archive__children') && childrenContainer.querySelector('.side-archive__child')) {
+//       parent.classList.add('has-children');
+//     }
+//   });
+// });
+/* -------------------------------------------------------------------------------- */
+/* サイドバー (sidebar)の、『アーカイブ』 */
+// 『年』をクリックした時に、その『年』の『月』を表示/非表示。
+jQuery(".js-accordion-archive").on("click", function (e) {
+  e.preventDefault();
+
+  if (jQuery(this).parent().hasClass("is-open")) {
+    jQuery(this).parent().removeClass("is-open");
+    jQuery(this).next().slideUp();
+  } else {
+    jQuery(this).parent().addClass("is-open");
+    jQuery(this).next().slideDown();
+  }
 });
 
 

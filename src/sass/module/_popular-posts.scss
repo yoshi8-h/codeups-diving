@@ -2,13 +2,8 @@
 
 
 .popular-posts {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
   gap: rem(24);
-
-  // display: grid;
 }
 
 .popular-posts__item {
