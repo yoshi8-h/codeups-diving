@@ -42,6 +42,10 @@
   }
 }
 
+
+
+
+// 不要になったコード
 // .gallery__photos-top {
 //   display: flex;
 //   flex-direction: column;
@@ -186,36 +190,36 @@
 
 // =======================================
 // モーダル (modal)
-.gallery__modal {
-  padding: 0;  // <dialog>タグにデフォルトで当たっている指定を打ち消し。
-  border: none;  // <dialog>タグにデフォルトで当たっている指定を打ち消し。
-  width: calc(330px / 375px * 100vw);
-  max-width: rem(600);
-  z-index: 1000;
+// .gallery__modal {
+//   padding: 0;  // <dialog>タグにデフォルトで当たっている指定を打ち消し。
+//   border: none;  // <dialog>タグにデフォルトで当たっている指定を打ち消し。
+//   width: calc(330px / 375px * 100vw);
+//   max-width: rem(600);
+//   z-index: 1000;
 
-  transform: scale(0.8);  // 初期状態を小さく。
-  opacity: 0;  // 初期状態を透明に
-  transition: transform 0.2s ease-out, opacity 0.3s ease-out;  // アニメーションを設定
+//   transform: scale(0.8);  // 初期状態を小さく。
+//   opacity: 0;  // 初期状態を透明に
+//   transition: transform 0.2s ease-out, opacity 0.3s ease-out;  // アニメーションを設定
 
-  @include mq(md) {
-    width: calc(920px / 1440px * 100vw);
-    max-width: rem(920);
-  }
-}
+//   @include mq(md) {
+//     width: calc(920px / 1440px * 100vw);
+//     max-width: rem(920);
+//   }
+// }
 
-.gallery__modal-01 {  // 1枚目
-}
+// .gallery__modal-01 {  // 1枚目
+// }
 
-// 要素を固定するクラス (スクロール不可に)
-.is-fixed {
-  overflow: hidden;
-}
+// // 要素を固定するクラス (スクロール不可に)
+// .is-fixed {
+//   overflow: hidden;
+// }
 
-.gallery__modal.is-visible {  // モーダルが表示される際のアニメーション
-  transform: scale(1);  // 元のサイズに
-  opacity: 1;  // 不透明に
-}
+// .gallery__modal.is-visible {  // モーダルが表示される際のアニメーション
+//   transform: scale(1);  // 元のサイズに
+//   opacity: 1;  // 不透明に
+// }
 
-.gallery__modal::backdrop {  // モーダルが表示されている間の暗い背景
-  background: rgba(32, 32, 32, 0.80);
-}
+// .gallery__modal::backdrop {  // モーダルが表示されている間の暗い背景
+//   background: rgba(32, 32, 32, 0.80);
+// }

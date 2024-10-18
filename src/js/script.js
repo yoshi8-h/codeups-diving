@@ -132,51 +132,51 @@ window.addEventListener("scroll", function () {
 // 初期値(ページリロード時)は『all』のタブが選択されている状態にして、全てのコンテンツが表示されるように。
 // クリックされたタブ(選択されているタブ)に『.is-selected』クラスを付与して選択中のタブのスタイルのみ変更。
 // クリックされたタブ(選択されているタブ)の『data-category』属性の値と同じ『data-category』属性の値を持つコンテンツのみ表示。
-document.addEventListener('DOMContentLoaded', function() {
-  // タブボタンとコンテンツを取得
-  const tabButtons = document.querySelectorAll('.tab');
-  const tabContents = document.querySelectorAll('.tab-content');
+// document.addEventListener('DOMContentLoaded', function() {
+//   // タブボタンとコンテンツを取得
+//   const tabButtons = document.querySelectorAll('.tab');
+//   const tabContents = document.querySelectorAll('.tab-content');
 
-  // 初期表示設定：「ALL」タブとすべてのコンテンツを表示
-  const initialTab = document.querySelector('.tab[data-category="all"]');
-  initialTab.classList.add('is-selected'); // 「ALL」タブに選択クラスを追加
-  tabContents.forEach(content => {
-      content.classList.add('active'); // すべてのコンテンツを表示
-  });
+//   // 初期表示設定：「ALL」タブとすべてのコンテンツを表示
+//   const initialTab = document.querySelector('.tab[data-category="all"]');
+//   initialTab.classList.add('is-selected'); // 「ALL」タブに選択クラスを追加
+//   tabContents.forEach(content => {
+//       content.classList.add('active'); // すべてのコンテンツを表示
+//   });
 
-  // タブボタンのクリックイベントを設定
-  tabButtons.forEach(button => {
-      button.addEventListener('click', function() {
-          // クリックされたタブのカテゴリーを取得
-          const category = this.getAttribute('data-category');
+//   // タブボタンのクリックイベントを設定
+//   tabButtons.forEach(button => {
+//       button.addEventListener('click', function() {
+//           // クリックされたタブのカテゴリーを取得
+//           const category = this.getAttribute('data-category');
 
-          // すべてのタブから選択クラスを削除
-          tabButtons.forEach(btn => {
-              btn.classList.remove('is-selected');
-          });
+//           // すべてのタブから選択クラスを削除
+//           tabButtons.forEach(btn => {
+//               btn.classList.remove('is-selected');
+//           });
 
-          // クリックされたタブに選択クラスを追加
-          this.classList.add('is-selected');
+//           // クリックされたタブに選択クラスを追加
+//           this.classList.add('is-selected');
 
-          // すべてのコンテンツを非表示にする
-          tabContents.forEach(content => {
-              content.classList.remove('active');
-          });
+//           // すべてのコンテンツを非表示にする
+//           tabContents.forEach(content => {
+//               content.classList.remove('active');
+//           });
 
-          if (category === 'all') {
-              // 「ALL」がクリックされた場合、すべてのコンテンツを表示
-              tabContents.forEach(content => {
-                  content.classList.add('active');
-              });
-          } else {
-              // 対応するカテゴリーのコンテンツを表示
-              document.querySelectorAll(`.tab-content[data-category="${category}"]`).forEach(content => {
-                  content.classList.add('active');
-              });
-          }
-      });
-  });
-});
+//           if (category === 'all') {
+//               // 「ALL」がクリックされた場合、すべてのコンテンツを表示
+//               tabContents.forEach(content => {
+//                   content.classList.add('active');
+//               });
+//           } else {
+//               // 対応するカテゴリーのコンテンツを表示
+//               document.querySelectorAll(`.tab-content[data-category="${category}"]`).forEach(content => {
+//                   content.classList.add('active');
+//               });
+//           }
+//       });
+//   });
+// });
 
 
 
@@ -264,7 +264,7 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener('DOMContentLoaded', function() {
   // タブボタンとコンテンツを取得
   const tabButtons = document.querySelectorAll('.tab2');
-  const tabContents = document.querySelectorAll('.tab-content2');
+  const tabContents = document.querySelectorAll('.js-tab-content');
 
   // 初期表示設定：1つ目のタブとそのコンテンツを表示
   const initialTab = tabButtons[0]; // 最初のタブを取得
@@ -272,7 +272,7 @@ document.addEventListener('DOMContentLoaded', function() {
   initialTab.classList.add('is-selected'); // 最初のタブに選択クラスを追加
 
   // 最初のタブに対応するコンテンツを表示
-  document.querySelectorAll(`.tab-content2[data-category="${initialCategory}"]`).forEach(content => {
+  document.querySelectorAll(`.js-tab-content[data-category="${initialCategory}"]`).forEach(content => {
     content.classList.add('active');
   });
 
@@ -296,7 +296,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
 
       // 対応するカテゴリーのコンテンツを表示
-      document.querySelectorAll(`.tab-content2[data-category="${category}"]`).forEach(content => {
+      document.querySelectorAll(`.js-tab-content[data-category="${category}"]`).forEach(content => {
         content.classList.add('active');
       });
     });
