@@ -224,6 +224,40 @@ window.addEventListener("scroll", function () {
 // 画面のどこかをタップしたら、モーダルが閉じる仕様に。
 // モーダルが開いている間は、スクロール不可に。
 
+// document.addEventListener("DOMContentLoaded", function() {
+//   // モーダルとその要素をクラスで取得
+//   const modal = document.querySelector(".modal");
+//   const modalImage = document.querySelector(".modal__img");
+
+//   // すべての .js-modal-open を取得
+//   const galleryItems = document.querySelectorAll(".js-modal-open");
+
+//   // 各アイテムにクリックイベントを設定
+//   galleryItems.forEach(item => {
+//     item.addEventListener("click", function() {
+//       const img = item.querySelector("img"); // クリックした要素内のimgタグを取得
+//       const imgSrc = img.getAttribute("src"); // そのimgタグのsrc属性を取得
+
+//       // モーダルの画像をクリックされた画像に設定
+//       modalImage.setAttribute("src", imgSrc);
+
+//       // モーダルを表示
+//       modal.style.display = "block";
+
+//       // モーダルが開いている間はスクロールを無効に
+//       document.body.classList.add("modal__open");
+//     });
+//   });
+
+//   // モーダル全体をクリックで閉じる処理
+//   modal.addEventListener("click", function() {
+//     modal.style.display = "none";
+
+//     // モーダルを閉じたらスクロールを有効に戻す
+//     document.body.classList.remove("modal__open");
+//   });
+// });
+
 document.addEventListener("DOMContentLoaded", function () {
   // モーダルとその要素をクラスで取得
   var modal = document.querySelector(".modal");
@@ -232,30 +266,27 @@ document.addEventListener("DOMContentLoaded", function () {
   // すべての .js-modal-open を取得
   var galleryItems = document.querySelectorAll(".js-modal-open");
 
-  // 各アイテムにクリックイベントを設定
-  galleryItems.forEach(function (item) {
-    item.addEventListener("click", function () {
-      var img = item.querySelector("img"); // クリックした要素内のimgタグを取得
-      var imgSrc = img.getAttribute("src"); // そのimgタグのsrc属性を取得
-
-      // モーダルの画像をクリックされた画像に設定
-      modalImage.setAttribute("src", imgSrc);
-
-      // モーダルを表示
-      modal.style.display = "block";
-
-      // モーダルが開いている間はスクロールを無効に
-      document.body.classList.add("modal__open");
+  // modal が存在する場合のみイベントを追加
+  if (modal && modalImage) {
+    // 各アイテムにクリックイベントを設定
+    galleryItems.forEach(function (item) {
+      item.addEventListener("click", function () {
+        var img = item.querySelector("img"); // クリックした要素内のimgタグを取得
+        if (img) {
+          var imgSrc = img.getAttribute("src"); // そのimgタグのsrc属性を取得
+          modalImage.setAttribute("src", imgSrc); // モーダルの画像をクリックされた画像に設定
+          modal.style.display = "block"; // モーダルを表示
+          document.body.classList.add("modal__open"); // モーダルが開いている間はスクロールを無効に
+        }
+      });
     });
-  });
 
-  // モーダル全体をクリックで閉じる処理
-  modal.addEventListener("click", function () {
-    modal.style.display = "none";
-
-    // モーダルを閉じたらスクロールを有効に戻す
-    document.body.classList.remove("modal__open");
-  });
+    // モーダル全体をクリックで閉じる処理
+    modal.addEventListener("click", function () {
+      modal.style.display = "none";
+      document.body.classList.remove("modal__open"); // モーダルを閉じたらスクロールを有効に戻す
+    });
+  }
 });
 
 /* -------------------------------------------------------------------------------- */
@@ -263,6 +294,72 @@ document.addEventListener("DOMContentLoaded", function () {
 // クリックされたタブ(選択されているタブ)に『.is-selected』クラスを付与して選択中のタブのスタイルのみ変更。
 // クリックされたタブ(選択されているタブ)の『data-category』属性の値と同じ『data-category』属性の値を持つコンテンツのみ表示。
 // footerなどのリンクからタブに飛んだ時に、そのタブが選択状態にされた形で『information.html』に遷移する。
+// document.addEventListener('DOMContentLoaded', function() {
+//   const tabButtons = document.querySelectorAll('.tab2');
+//   const tabContents = document.querySelectorAll('.js-tab-content');
+
+//   // URLからクエリパラメータ（category）を取得
+//   const params = new URLSearchParams(window.location.search);
+//   const categoryFromUrl = params.get('category');
+
+//   let activeCategory = categoryFromUrl; // URLのcategoryを優先
+//   let initialTab;
+
+//   if (!activeCategory) {
+//     // URLにcategoryパラメータがない場合は最初のタブをデフォルトで表示
+//     initialTab = tabButtons[0];
+//     activeCategory = initialTab.getAttribute('data-category');
+//   } else {
+//     // URLにcategoryパラメータがある場合、そのcategoryに対応するタブを探す
+//     initialTab = Array.from(tabButtons).find(tab => tab.getAttribute('data-category') === activeCategory);
+//     if (!initialTab) {
+//       // 不正なcategoryの場合はデフォルトで最初のタブを表示
+//       initialTab = tabButtons[0];
+//       activeCategory = initialTab.getAttribute('data-category');
+//     }
+//   }
+
+//   // --- 修正部分: 初期タブの選択をURLパラメータに基づいて行う ---
+//   tabButtons.forEach(tab => {
+//     // URLパラメータと一致するタブにのみ 'is-selected' クラスを付与
+//     if (tab.getAttribute('data-category') === activeCategory) {
+//       tab.classList.add('is-selected');
+//     } else {
+//       tab.classList.remove('is-selected');  // 他のタブは選択を解除
+//     }
+//   });
+
+//   // 対応するコンテンツの表示設定
+//   tabContents.forEach(content => {
+//     if (content.getAttribute('data-category') === activeCategory) {
+//       content.classList.add('active');  // 対応するコンテンツを表示
+//     } else {
+//       content.classList.remove('active');  // 他のコンテンツは非表示
+//     }
+//   });
+
+//   // タブクリック時の処理
+//   tabButtons.forEach(button => {
+//     button.addEventListener('click', function() {
+//       const category = this.getAttribute('data-category');
+
+//       // すべてのタブから選択クラスを削除
+//       tabButtons.forEach(btn => btn.classList.remove('is-selected'));
+
+//       // クリックされたタブに選択クラスを追加
+//       this.classList.add('is-selected');
+
+//       // すべてのコンテンツを非表示にする
+//       tabContents.forEach(content => content.classList.remove('active'));
+
+//       // 対応するカテゴリーのコンテンツを表示
+//       document.querySelectorAll(`.js-tab-content[data-category="${category}"]`).forEach(content => {
+//         content.classList.add('active');
+//       });
+//     });
+//   });
+// });
+
 document.addEventListener('DOMContentLoaded', function () {
   var tabButtons = document.querySelectorAll('.tab2');
   var tabContents = document.querySelectorAll('.js-tab-content');
@@ -272,40 +369,44 @@ document.addEventListener('DOMContentLoaded', function () {
   var categoryFromUrl = params.get('category');
   var activeCategory = categoryFromUrl; // URLのcategoryを優先
   var initialTab;
-  if (!activeCategory) {
-    // URLにcategoryパラメータがない場合は最初のタブをデフォルトで表示
-    initialTab = tabButtons[0];
-    activeCategory = initialTab.getAttribute('data-category');
-  } else {
-    // URLにcategoryパラメータがある場合、そのcategoryに対応するタブを探す
-    initialTab = Array.from(tabButtons).find(function (tab) {
-      return tab.getAttribute('data-category') === activeCategory;
-    });
-    if (!initialTab) {
-      // 不正なcategoryの場合はデフォルトで最初のタブを表示
+
+  // タブボタンが存在する場合のみ初期設定を実行
+  if (tabButtons.length > 0) {
+    if (!activeCategory) {
+      // URLにcategoryパラメータがない場合は最初のタブをデフォルトで表示
       initialTab = tabButtons[0];
       activeCategory = initialTab.getAttribute('data-category');
+    } else {
+      // URLにcategoryパラメータがある場合、そのcategoryに対応するタブを探す
+      initialTab = Array.from(tabButtons).find(function (tab) {
+        return tab.getAttribute('data-category') === activeCategory;
+      });
+      if (!initialTab) {
+        // 不正なcategoryの場合はデフォルトで最初のタブを表示
+        initialTab = tabButtons[0];
+        activeCategory = initialTab.getAttribute('data-category');
+      }
     }
+
+    // --- 修正部分: 初期タブの選択をURLパラメータに基づいて行う ---
+    tabButtons.forEach(function (tab) {
+      // URLパラメータと一致するタブにのみ 'is-selected' クラスを付与
+      if (tab.getAttribute('data-category') === activeCategory) {
+        tab.classList.add('is-selected');
+      } else {
+        tab.classList.remove('is-selected'); // 他のタブは選択を解除
+      }
+    });
+
+    // 対応するコンテンツの表示設定
+    tabContents.forEach(function (content) {
+      if (content.getAttribute('data-category') === activeCategory) {
+        content.classList.add('active'); // 対応するコンテンツを表示
+      } else {
+        content.classList.remove('active'); // 他のコンテンツは非表示
+      }
+    });
   }
-
-  // --- 修正部分: 初期タブの選択をURLパラメータに基づいて行う ---
-  tabButtons.forEach(function (tab) {
-    // URLパラメータと一致するタブにのみ 'is-selected' クラスを付与
-    if (tab.getAttribute('data-category') === activeCategory) {
-      tab.classList.add('is-selected');
-    } else {
-      tab.classList.remove('is-selected'); // 他のタブは選択を解除
-    }
-  });
-
-  // 対応するコンテンツの表示設定
-  tabContents.forEach(function (content) {
-    if (content.getAttribute('data-category') === activeCategory) {
-      content.classList.add('active'); // 対応するコンテンツを表示
-    } else {
-      content.classList.remove('active'); // 他のコンテンツは非表示
-    }
-  });
 
   // タブクリック時の処理
   tabButtons.forEach(function (button) {
@@ -379,63 +480,121 @@ jQuery(".js-accordion").on("click", function (e) {
 
 /* -------------------------------------------------------------------------------- */
 /* 『お問い合わせフォーム』のバリデーション */
-document.querySelector('.form').addEventListener('submit', function (event) {
-  event.preventDefault(); // デフォルト送信をキャンセル
+// document.querySelector('.form').addEventListener('submit', function(event) {
+//   event.preventDefault(); // デフォルト送信をキャンセル
 
-  var isValid = true;
+//   let isValid = true;
 
-  // エラーメッセージの削除
-  var errorMessage = document.querySelector('.form__error-message');
-  if (errorMessage) {
-    errorMessage.remove();
-  }
+//   // エラーメッセージの削除
+//   const errorMessage = document.querySelector('.form__error-message');
+//   if (errorMessage) {
+//     errorMessage.remove();
+//   }
 
-  // 必須項目のチェック
-  var requiredFields = document.querySelectorAll('.js-form-input[required]');
-  requiredFields.forEach(function (field) {
-    if (!field.value.trim()) {
+//   // 必須項目のチェック
+//   const requiredFields = document.querySelectorAll('.js-form-input[required]');
+//   requiredFields.forEach(function(field) {
+//     if (!field.value.trim()) {
+//       isValid = false;
+//       field.classList.add('is-error');  // エラークラスを追加
+//     } else {
+//       field.classList.remove('is-error');  // エラークラスを削除
+//     }
+//   });
+
+//   // お問い合わせ項目（どれか1つがチェックされているか確認）
+//   const categoryCheckboxes = document.querySelectorAll('input[name="your-category"].checkbox__input');
+//   const isAnyCategoryChecked = Array.from(categoryCheckboxes).some(checkbox => checkbox.checked);
+
+//   if (!isAnyCategoryChecked) {
+//     isValid = false;
+//     categoryCheckboxes.forEach(checkbox => checkbox.classList.add('is-error')); // すべてのチェックボックスにエラークラスを追加
+//   } else {
+//     categoryCheckboxes.forEach(checkbox => checkbox.classList.remove('is-error')); // エラーがなければクラスを削除
+//   }
+
+//   // 同意チェックボックスのバリデーション
+//   const agreeCheckbox = document.querySelector('input.agree-checkbox__input');
+//   if (!agreeCheckbox.checked) {
+//     isValid = false;
+//     agreeCheckbox.classList.add('is-error'); // エラークラスを追加
+//   } else {
+//     agreeCheckbox.classList.remove('is-error'); // エラークラスを削除
+//   }
+
+//   // エラーメッセージの表示
+//   if (!isValid) {
+//     const errorDiv = document.createElement('div');
+//     errorDiv.classList.add('form__error-message');
+//     errorDiv.style.color = '#C94800';
+//     errorDiv.innerText = '※必須項目が入力されていません。入力してください。';
+//     document.querySelector('.form').insertBefore(errorDiv, document.querySelector('.form').firstChild);
+//   } else {
+//     event.target.submit();  // バリデーションに成功した場合のみフォームを送信
+//   }
+// });
+
+// .form 要素が存在する場合のみ addEventListener を追加
+var formElement = document.querySelector('.form');
+if (formElement) {
+  formElement.addEventListener('submit', function (event) {
+    event.preventDefault(); // デフォルト送信をキャンセル
+
+    var isValid = true;
+
+    // エラーメッセージの削除
+    var errorMessage = document.querySelector('.form__error-message');
+    if (errorMessage) {
+      errorMessage.remove();
+    }
+
+    // 必須項目のチェック
+    var requiredFields = document.querySelectorAll('.js-form-input[required]');
+    requiredFields.forEach(function (field) {
+      if (!field.value.trim()) {
+        isValid = false;
+        field.classList.add('is-error'); // エラークラスを追加
+      } else {
+        field.classList.remove('is-error'); // エラークラスを削除
+      }
+    });
+
+    // お問い合わせ項目（どれか1つがチェックされているか確認）
+    var categoryCheckboxes = document.querySelectorAll('input[name="your-category"].checkbox__input');
+    var isAnyCategoryChecked = Array.from(categoryCheckboxes).some(function (checkbox) {
+      return checkbox.checked;
+    });
+    if (!isAnyCategoryChecked) {
       isValid = false;
-      field.classList.add('is-error'); // エラークラスを追加
+      categoryCheckboxes.forEach(function (checkbox) {
+        return checkbox.classList.add('is-error');
+      }); // すべてのチェックボックスにエラークラスを追加
     } else {
-      field.classList.remove('is-error'); // エラークラスを削除
+      categoryCheckboxes.forEach(function (checkbox) {
+        return checkbox.classList.remove('is-error');
+      }); // エラーがなければクラスを削除
+    }
+
+    // 同意チェックボックスのバリデーション
+    var agreeCheckbox = document.querySelector('input.agree-checkbox__input');
+    if (!agreeCheckbox.checked) {
+      isValid = false;
+      agreeCheckbox.classList.add('is-error'); // エラークラスを追加
+    } else {
+      agreeCheckbox.classList.remove('is-error'); // エラークラスを削除
+    }
+
+    // エラーメッセージの表示
+    if (!isValid) {
+      var errorDiv = document.createElement('div');
+      errorDiv.classList.add('form__error-message');
+      errorDiv.style.color = '#C94800';
+      errorDiv.innerText = '※必須項目が入力されていません。入力してください。';
+      formElement.insertBefore(errorDiv, formElement.firstChild);
+    } else {
+      event.target.submit(); // バリデーションに成功した場合のみフォームを送信
     }
   });
-
-  // お問い合わせ項目（どれか1つがチェックされているか確認）
-  var categoryCheckboxes = document.querySelectorAll('input[name="your-category"].checkbox__input');
-  var isAnyCategoryChecked = Array.from(categoryCheckboxes).some(function (checkbox) {
-    return checkbox.checked;
-  });
-  if (!isAnyCategoryChecked) {
-    isValid = false;
-    categoryCheckboxes.forEach(function (checkbox) {
-      return checkbox.classList.add('is-error');
-    }); // すべてのチェックボックスにエラークラスを追加
-  } else {
-    categoryCheckboxes.forEach(function (checkbox) {
-      return checkbox.classList.remove('is-error');
-    }); // エラーがなければクラスを削除
-  }
-
-  // 同意チェックボックスのバリデーション
-  var agreeCheckbox = document.querySelector('input.agree-checkbox__input');
-  if (!agreeCheckbox.checked) {
-    isValid = false;
-    agreeCheckbox.classList.add('is-error'); // エラークラスを追加
-  } else {
-    agreeCheckbox.classList.remove('is-error'); // エラークラスを削除
-  }
-
-  // エラーメッセージの表示
-  if (!isValid) {
-    var errorDiv = document.createElement('div');
-    errorDiv.classList.add('form__error-message');
-    errorDiv.style.color = '#C94800';
-    errorDiv.innerText = '※必須項目が入力されていません。入力してください。';
-    document.querySelector('.form').insertBefore(errorDiv, document.querySelector('.form').firstChild);
-  } else {
-    event.target.submit(); // バリデーションに成功した場合のみフォームを送信
-  }
-});
+}
 
 /* -------------------------------------------------------------------------------- */

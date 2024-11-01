@@ -3729,7 +3729,6 @@ html {
 }
 
 .about::after {
-	background: url(../images/common/sango.png) no-repeat center center/contain;
 	bottom: -5.625rem;
 	content: "";
 	display: block;
